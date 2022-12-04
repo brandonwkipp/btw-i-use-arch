@@ -1,0 +1,18 @@
+- name: Install base dependencies
+  pacman:
+    name:
+      - base
+      - base-devel
+      - efibootmgr
+      - firefox
+      - git
+      - grub
+      - i3
+      - iwd
+      - linux
+      - linux-firmware
+      - vim
+      - xorg-xinit
+      - xorg-server
+      - xterm
+    state: present

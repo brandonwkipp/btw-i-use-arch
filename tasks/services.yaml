@@ -1,0 +1,7 @@
+- name: Ansible enable service
+  tasks:
+    - name: Enable systemd services
+      systemd:
+        name: systemd-resolved.service
+        enabled: true
+        masked: no

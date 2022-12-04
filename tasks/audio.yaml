@@ -1,0 +1,12 @@
+- name: Install Audio dependencies
+  pacman:
+    name:
+      - ardour
+      - pipewire
+      - pipewire-alsa
+      - pipewire-audio
+      - pipewire-jack
+      - pipewire-pulse
+      - qpwgraph
+      - wireplumber
+    state: present

@@ -1,0 +1,8 @@
+# Bootstrap base dependencies
+- include: base.yaml
+
+# Get audio dependencies
+- include: audio.yaml
+
+# Configure services
+- include: services.yaml
