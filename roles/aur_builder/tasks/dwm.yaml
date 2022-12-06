@@ -1,0 +1,22 @@
+- name: Install dmenu
+  pacman:
+    name:
+      - dmenu
+    state: present
+
+- name: Install st
+  kewlfft.aur.aur:
+    name: st
+    use: makepkg
+    state: present
+  become: yes
+  become_user: aur_builder
+
+- name: Install dwm
+  shell: |
+    mkdir -p /home/aur_builder/builds
+    cd /home/aur_builder/builds
+    git clone git://git.suckless.org/dwm
+    cd dwm
+    make
+    make install

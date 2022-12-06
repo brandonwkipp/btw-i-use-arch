@@ -3,11 +3,12 @@
     name:
       - base
       - base-devel
+      - bitwarden
+      - bitwarden-cli  
       - efibootmgr
       - firefox
       - git
       - grub
-      - i3
       - iwd
       - linux
       - linux-firmware

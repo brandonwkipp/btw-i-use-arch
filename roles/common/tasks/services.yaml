@@ -1,0 +1,11 @@
+- name: Ansible enable service
+  ansible.builtin.systemd:
+    name: systemd-resolved.service
+    enabled: yes
+    state: started
+
+- name: Enable Bluetooth
+  ansible.builtin.systemd:
+    name: bluetooth
+    enabled: yes
+    state: started

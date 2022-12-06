@@ -2,6 +2,8 @@
   pacman:
     name:
       - ardour
+      - bluez
+      - bluez-utils
       - pipewire
       - pipewire-alsa
       - pipewire-audio

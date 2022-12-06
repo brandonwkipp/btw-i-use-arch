@@ -1,0 +1,7 @@
+- name: Install vital-synth
+  kewlfft.aur.aur:
+    name: vital-synth
+    use: makepkg
+    state: present
+  become: yes
+  become_user: aur_builder

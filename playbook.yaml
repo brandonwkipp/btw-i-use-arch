@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  become: yes
+  roles: 
+    - { role: aur_builder, tags: ['aur_builder']}
+    - { role: common, tags: ['common']}
