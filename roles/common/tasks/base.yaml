@@ -13,6 +13,7 @@
       - linux
       - linux-firmware
       - vim
+      - xclip
       - xorg-xinit
       - xorg-server
       - xterm
