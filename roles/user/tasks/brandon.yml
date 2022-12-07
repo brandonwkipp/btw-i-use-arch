@@ -5,6 +5,13 @@
     create_home: yes
     group: wheel
 
+- name: Create builds dir
+  ansible.builtin.file:
+    path: /home/brandon/builds
+    state: directory
+    owner: brandon
+    group: wheel
+
 - name: Copy .xinitrc
   ansible.builtin.copy:
     src: ../files/brandon/.xinitrc
@@ -13,3 +20,11 @@
     group: wheel
     mode: u=rw,g=r,o=r
     backup: yes
+
+- name: Allow brandon to run pacman without password
+  become: yes
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/11-install-brandon
+    line: 'brandon ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    create: yes
+    validate: 'visudo -cf %s'

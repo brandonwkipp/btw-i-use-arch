@@ -4,19 +4,26 @@
       - dmenu
     state: present
 
-- name: Install st
-  kewlfft.aur.aur:
-    name: st
-    use: makepkg
-    state: present
+- name: Clone st
+  ansible.builtin.git:
+    repo: https://git.suckless.org/st
+    dest: /home/brandon/builds/st
   become: yes
-  become_user: aur_builder
+  become_user: brandon
+
+- name: Install st
+  ansible.builtin.shell:
+    chdir: /home/brandon/builds/st
+    cmd: make clean install
 
 - name: Install dwm
-  shell: |
-    mkdir -p /home/aur_builder/builds
-    cd /home/aur_builder/builds
-    git clone git://git.suckless.org/dwm
-    cd dwm
-    make
-    make install
+  ansible.builtin.git:
+    repo: https://git.suckless.org/dwm
+    dest: /home/brandon/builds/dwm
+  become: yes
+  become_user: brandon
+
+- name: Install dwm
+  ansible.builtin.shell:
+    chdir: /home/brandon/builds/dwm
+    cmd: make clean install
