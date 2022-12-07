@@ -1,0 +1,5 @@
+# Configure networking services
+- include_tasks: networking.yml
+
+# Configure audio services
+- include_tasks: audio.yml

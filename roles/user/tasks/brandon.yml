@@ -1,0 +1,6 @@
+- name: Create the brandon user
+  become: yes
+  ansible.builtin.user:
+    name: brandon
+    create_home: yes
+    group: wheel

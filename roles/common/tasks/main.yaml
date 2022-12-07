@@ -1,9 +1,0 @@
----
-# Bootstrap base dependencies
-- include_tasks: base.yaml
-
-# Get audio dependencies
-- include_tasks: audio.yaml
-
-# Configure services
-- include_tasks: services.yaml

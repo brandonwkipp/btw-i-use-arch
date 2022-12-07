@@ -1,0 +1,5 @@
+- name: Enable systemd-resolved
+  ansible.builtin.systemd:
+    name: systemd-resolved.service
+    enabled: yes
+    state: started

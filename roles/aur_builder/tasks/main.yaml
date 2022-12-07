@@ -1,6 +1,0 @@
-- include_tasks: user.yaml
-- include_tasks: dwm.yaml
-
-# Audio packages
-- include_tasks: bitwig-studio.yaml
-- include_tasks: vital-synth.yaml

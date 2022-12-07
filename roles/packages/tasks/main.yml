@@ -1,0 +1,9 @@
+---
+# Install base packages
+- include_tasks: base.yml
+
+# Install dwm
+- include_tasks: dwm.yml
+
+# Install audio packages
+- include_tasks: audio.yml
