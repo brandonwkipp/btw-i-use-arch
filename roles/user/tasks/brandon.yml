@@ -4,3 +4,12 @@
     name: brandon
     create_home: yes
     group: wheel
+
+- name: Copy .xinitrc
+  ansible.builtin.copy:
+    src: ../files/brandon/.xinitrc
+    dest: /home/brandon/.xinitrc
+    owner: brandon
+    group: wheel
+    mode: u=rw,g=r,o=r
+    backup: yes

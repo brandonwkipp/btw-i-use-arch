@@ -12,16 +12,10 @@
       - qpwgraph
       - wireplumber
     state: present
+
 - name: Install bitwig-studio
   kewlfft.aur.aur:
     name: bitwig-studio
-    use: makepkg
-    state: present
-  become: yes
-  become_user: aur_builder
-- name: Install vital-synth
-  kewlfft.aur.aur:
-    name: vital-synth
     use: makepkg
     state: present
   become: yes
