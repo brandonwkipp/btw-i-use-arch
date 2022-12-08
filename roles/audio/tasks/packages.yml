@@ -4,6 +4,7 @@
       - ardour
       - bluez
       - bluez-utils
+      - calf
       - dragonfly-reverb
       - pipewire
       - pipewire-alsa
@@ -11,6 +12,7 @@
       - pipewire-jack
       - pipewire-pulse
       - qpwgraph
+      - vlc
       - wireplumber
     state: present
 

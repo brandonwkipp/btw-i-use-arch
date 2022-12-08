@@ -1,4 +1,7 @@
 ---
+# Enable additional repositories
+- include_tasks: repo.yml
+
 # Install base packages
 - include_tasks: packages.yml
 

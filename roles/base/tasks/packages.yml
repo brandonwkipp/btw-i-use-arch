@@ -13,8 +13,11 @@
       - linux
       - linux-firmware
       - linux-rt
+      - samba
       - ttf-hack
       - vim
+      - wine
+      - winetricks
       - xclip
       - xorg-xinit
       - xorg-server
