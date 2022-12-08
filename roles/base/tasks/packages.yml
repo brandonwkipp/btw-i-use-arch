@@ -20,3 +20,11 @@
       - xorg-server
       - xterm
     state: present
+
+- name: Install viber
+  kewlfft.aur.aur:
+    name: viber
+    use: makepkg
+    state: present
+  become: yes
+  become_user: brandon
