@@ -1,9 +1,10 @@
-- name: Install Audio dependencies
+- name: Install audio packages
   pacman:
     name:
       - ardour
       - bluez
       - bluez-utils
+      - dragonfly-reverb
       - pipewire
       - pipewire-alsa
       - pipewire-audio

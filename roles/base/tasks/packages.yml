@@ -12,6 +12,8 @@
       - iwd
       - linux
       - linux-firmware
+      - linux-rt
+      - ttf-hack
       - vim
       - xclip
       - xorg-xinit

@@ -16,7 +16,7 @@
     chdir: /home/brandon/builds/st
     cmd: make clean install
 
-- name: Install dwm
+- name: Clone dwm
   ansible.builtin.git:
     repo: https://git.suckless.org/dwm
     dest: /home/brandon/builds/dwm

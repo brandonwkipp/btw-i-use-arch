@@ -1,0 +1,6 @@
+---
+# Install base packages
+- include_tasks: packages.yml
+
+# Install dwm
+- include_tasks: dwm.yml
