@@ -13,7 +13,7 @@
       - linux
       - linux-firmware
       - linux-rt
-      - samba
+      - smbclient
       - ttf-hack
       - vim
       - wine

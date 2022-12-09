@@ -1,0 +1,16 @@
+Section "InputClass"
+	Identifier "brandon touchpad catchall"
+	MatchIsTouchpad "on"
+	MatchDevicePath "/dev/input/event*"
+	Driver "libinput"
+
+	Option "ClickMethod" "buttonareas"
+	Option "DragLockButtons" "0"
+	Option "MiddleEmulation" "false"
+	Option "NaturalScrolling" "false"
+	Option "ScrollMethod" "twofinger"
+	Option "Tapping" "off"
+	Option "TappingDrag" "false"
+	Option "TappingDragLock" "false"
+
+EndSection

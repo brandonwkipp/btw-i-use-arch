@@ -21,6 +21,14 @@
     mode: u=rw,g=r,o=r
     backup: yes
 
+- name: Copy libinput for X
+  ansible.builtin.copy:
+    src: ../files/brandon/libinput
+    dest: /etc/X11/xorg.conf.d/99-brandon.conf
+    owner: brandon
+    group: wheel
+    mode: u=rw,g=r,o=r
+
 - name: Allow brandon to run pacman without password
   become: yes
   ansible.builtin.lineinfile:
