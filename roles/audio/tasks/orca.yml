@@ -1,0 +1,34 @@
+---
+- name: Install uxn dependencies
+  pacman:
+    name:
+      - sdl2
+    state: present
+
+- name: Clone uxn
+  ansible.builtin.git:
+    repo: https://git.sr.ht/~rabbits/uxn
+    dest: /home/brandon/builds/uxn
+  become: yes
+  become_user: brandon
+
+- name: Install uxn
+  shell: |
+    mkdir -p /home/brandon/bin
+    cd /home/brandon/builds/uxn
+    ./build.sh --no-run
+    cp ./bin/uxncli /usr/local/bin/uxncli
+
+- name: Clone orca
+  ansible.builtin.git:
+    repo: https://git.sr.ht/~rabbits/orca-toy
+    dest: /home/brandon/builds/orca-toy
+  become: yes
+  become_user: brandon
+
+- name: Install orca
+  shell: |
+    cd /home/brandon/builds/orca-toy
+    ./build.sh --no-run
+  become: yes
+  become_user: brandon

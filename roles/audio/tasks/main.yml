@@ -1,4 +1,7 @@
 ---
 
-# Packages
+# Install Packages
 - include_tasks: packages.yml
+
+# Install Orca
+- include_tasks: orca.yml
