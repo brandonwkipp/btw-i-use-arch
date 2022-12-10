@@ -1,6 +1,12 @@
 ---
+# Create dirs
+- include_tasks: dir.yml
+
 # Copy configs
 - include_tasks: config.yml
+
+# Install packages
+- include_tasks: packages.yml
 
 # Install aur packages for brandon
 - include_tasks: aur.yml

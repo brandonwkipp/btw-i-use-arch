@@ -1,0 +1,12 @@
+---
+- name: Install packages
+  pacman:
+    name:
+      - bitwarden
+      - bitwarden-cli
+      - docker
+      - docker-compose
+      - ttf-hack
+      - wine
+      - winetricks
+    state: present

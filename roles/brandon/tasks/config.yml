@@ -1,10 +1,4 @@
-- name: Create builds dir
-  ansible.builtin.file:
-    path: /home/brandon/builds
-    state: directory
-    owner: brandon
-    group: wheel
-
+---
 - name: Copy libinput for X
   ansible.builtin.copy:
     src: ../files/config/libinput

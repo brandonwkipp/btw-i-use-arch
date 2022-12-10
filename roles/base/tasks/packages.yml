@@ -3,8 +3,6 @@
     name:
       - base
       - base-devel
-      - bitwarden
-      - bitwarden-cli  
       - efibootmgr
       - firefox
       - git
@@ -13,11 +11,9 @@
       - linux
       - linux-firmware
       - linux-rt
+      - reflector
       - smbclient
-      - ttf-hack
       - vim
-      - wine
-      - winetricks
       - xclip
       - xorg-xinit
       - xorg-server

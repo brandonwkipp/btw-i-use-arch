@@ -1,0 +1,14 @@
+---
+- name: Create ~/builds
+  ansible.builtin.file:
+    path: /home/brandon/builds
+    state: directory
+    owner: brandon
+    group: wheel
+
+- name: Create ~/.local/bin
+  ansible.builtin.file:
+    path: /home/brandon/.local/bin
+    state: directory
+    owner: brandon
+    group: wheel
