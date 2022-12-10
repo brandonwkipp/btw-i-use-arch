@@ -13,3 +13,5 @@ compinit
 # End of lines added by compinstall
 
 PS1='%n@%m %~$ '
+
+alias brightness="xrandr --output eDP-1 --brightness"
