@@ -12,6 +12,14 @@
     owner: brandon
     group: wheel
 
+- name: Copy libinput for X
+  ansible.builtin.copy:
+    src: ../files/brandon/libinput
+    dest: /etc/X11/xorg.conf.d/99-brandon.conf
+    owner: brandon
+    group: wheel
+    mode: u=rw,g=r,o=r
+
 - name: Copy .xinitrc
   ansible.builtin.copy:
     src: ../files/brandon/.xinitrc
@@ -21,10 +29,10 @@
     mode: u=rw,g=r,o=r
     backup: yes
 
-- name: Copy libinput for X
+- name: Copy .zshrc
   ansible.builtin.copy:
-    src: ../files/brandon/libinput
-    dest: /etc/X11/xorg.conf.d/99-brandon.conf
+    src: ../files/brandon/.zshrc
+    dest: /home/brandon/.zshrc
     owner: brandon
     group: wheel
     mode: u=rw,g=r,o=r
@@ -36,3 +44,8 @@
     line: 'brandon ALL=(ALL) NOPASSWD: /usr/bin/pacman'
     create: yes
     validate: 'visudo -cf %s'
+
+- name: Set zsh as shell of choice
+  user:
+    name: brandon
+    shell: /usr/bin/zsh
