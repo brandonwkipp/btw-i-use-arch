@@ -1,41 +1,10 @@
+---
 - name: Create the brandon user
   become: yes
   ansible.builtin.user:
     name: brandon
     create_home: yes
     group: wheel
-
-- name: Create builds dir
-  ansible.builtin.file:
-    path: /home/brandon/builds
-    state: directory
-    owner: brandon
-    group: wheel
-
-- name: Copy libinput for X
-  ansible.builtin.copy:
-    src: ../files/brandon/libinput
-    dest: /etc/X11/xorg.conf.d/99-brandon.conf
-    owner: brandon
-    group: wheel
-    mode: u=rw,g=r,o=r
-
-- name: Copy .xinitrc
-  ansible.builtin.copy:
-    src: ../files/brandon/.xinitrc
-    dest: /home/brandon/.xinitrc
-    owner: brandon
-    group: wheel
-    mode: u=rw,g=r,o=r
-    backup: yes
-
-- name: Copy .zshrc
-  ansible.builtin.copy:
-    src: ../files/brandon/.zshrc
-    dest: /home/brandon/.zshrc
-    owner: brandon
-    group: wheel
-    mode: u=rw,g=r,o=r
 
 - name: Allow brandon to run pacman without password
   become: yes
@@ -44,8 +13,3 @@
     line: 'brandon ALL=(ALL) NOPASSWD: /usr/bin/pacman'
     create: yes
     validate: 'visudo -cf %s'
-
-- name: Set zsh as shell of choice
-  user:
-    name: brandon
-    shell: /usr/bin/zsh

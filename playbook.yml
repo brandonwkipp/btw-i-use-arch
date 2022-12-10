@@ -4,5 +4,6 @@
   roles: 
     - { role: base, tags: ['base']}
     - { role: user, tags: ['user']}
+    - { role: brandon, tags: ['brandon']}
     - { role: audio, tags: ['audio']}
     - { role: services, tags: ['services']}

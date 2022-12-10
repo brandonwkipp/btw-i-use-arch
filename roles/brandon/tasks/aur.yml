@@ -1,0 +1,16 @@
+---
+- name: Install viber
+  kewlfft.aur.aur:
+    name: viber
+    use: makepkg
+    state: present
+  become: yes
+  become_user: brandon
+
+- name: Install vscode
+  kewlfft.aur.aur:
+    name: visual-studio-code-bin
+    use: makepkg
+    state: present
+  become: yes
+  become_user: brandon

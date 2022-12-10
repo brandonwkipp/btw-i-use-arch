@@ -1,0 +1,9 @@
+---
+# Copy configs
+- include_tasks: config.yml
+
+# Install aur packages for brandon
+- include_tasks: aur.yml
+
+# Install dwm
+- include_tasks: dwm.yml

@@ -17,6 +17,7 @@
     mkdir -p /home/brandon/bin
     cd /home/brandon/builds/uxn
     ./build.sh --no-run
+    cp ./bin/uxnasm /usr/local/bin/uxnasm
     cp ./bin/uxncli /usr/local/bin/uxncli
 
 - name: Clone orca
@@ -29,6 +30,7 @@
 - name: Install orca
   shell: |
     cd /home/brandon/builds/orca-toy
-    ./build.sh --no-run
+    mkdir -p /home/brandon/builds/orca-toy/bin
+    uxnasm src/orca.tal /home/brandon/builds/orca-toy/bin/orca.rom
   become: yes
   become_user: brandon
