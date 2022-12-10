@@ -2,7 +2,7 @@
 - hosts: localhost
   become: yes
   roles: 
-    - { role: user, tags: ['user']}
     - { role: base, tags: ['base']}
+    - { role: user, tags: ['user']}
     - { role: audio, tags: ['audio']}
     - { role: services, tags: ['services']}
