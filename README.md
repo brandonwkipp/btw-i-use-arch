@@ -23,7 +23,6 @@ It is very much a work in progress.
 - mail client
 - printer
 - talon
-- flipper
 - hostname
 - timezone
 - nvm
