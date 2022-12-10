@@ -6,6 +6,7 @@
       - bitwarden-cli
       - docker
       - docker-compose
+      - go
       - ttf-hack
       - wine
       - winetricks
