@@ -1,11 +1,10 @@
-# arch-setup
+# btw-i-use-arch
 
 This repository holds the `ansible` configurations for my adventures in tuning an `Arch Linux` system to combine my two favorite interests: audio and programming.
 
 It is very much a work in progress.
 
 ## TODO
-- rename repo to `btw-i-use-arch`
 - get dwm status bar setup
 - get fan controls
 - configure wine
