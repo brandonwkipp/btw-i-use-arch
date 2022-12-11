@@ -4,3 +4,6 @@
 
 # Install base packages
 - include_tasks: packages.yml
+
+# Configure GRUB
+- include_tasks: grub.yml
