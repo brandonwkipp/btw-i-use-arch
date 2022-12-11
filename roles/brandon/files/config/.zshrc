@@ -12,6 +12,14 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+############################################################
+
+# Set terminal prompt
 PS1='%n@%m %~$ '
 
+
+# Set up Node Version Manager
+source /usr/share/nvm/init-nvm.sh
+
+# Aliases
 alias brightness="xrandr --output eDP-1 --brightness"

@@ -1,0 +1,3 @@
+---
+# Install brightness packages
+- include_tasks: brightness.yml

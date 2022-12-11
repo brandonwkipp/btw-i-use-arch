@@ -1,4 +1,12 @@
 ---
+- name: Install nvm
+  kewlfft.aur.aur:
+    name: nvm
+    use: makepkg
+    state: present
+  become: yes
+  become_user: brandon
+
 - name: Install qFlipper
   kewlfft.aur.aur:
     name: qflipper-git
