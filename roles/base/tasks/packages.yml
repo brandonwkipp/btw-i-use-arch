@@ -1,6 +1,7 @@
 - name: Install base dependencies
   pacman:
     name:
+      - acpi
       - base
       - base-devel
       - efibootmgr
