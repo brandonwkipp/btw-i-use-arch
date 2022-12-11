@@ -4,6 +4,7 @@
     name:
       - bitwarden
       - bitwarden-cli
+      - cups
       - docker
       - docker-compose
       - go
