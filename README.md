@@ -14,7 +14,7 @@ It is very much a work in progress.
 - vital synth
 - figure out `bw` workflow
 - command aliasing (no `sudo`)
-- backups
+- backups (timeshift, betterFs)
 - python sanity
 - talon
 - hostname

@@ -11,7 +11,9 @@
       - iwd
       - linux
       - linux-firmware
+      - linux-lts
       - linux-rt
+      - linux-rt-lts
       - reflector
       - smbclient
       - vim
