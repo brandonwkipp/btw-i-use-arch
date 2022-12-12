@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# Set wallpaper
+xwallpaper --center ~/Downloads/wall.png
+
+# For transparency
+xcompmgr &

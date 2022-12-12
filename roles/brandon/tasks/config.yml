@@ -16,6 +16,15 @@
     mode: u=rw,g=r,o=r
     backup: yes
 
+- name: Copy .xprofile
+  ansible.builtin.copy:
+    src: ../files/config/.xprofile
+    dest: /home/brandon/.xprofile
+    owner: brandon
+    group: wheel
+    mode: u=rwx,g=r,o=r
+    backup: yes
+
 - name: Copy .zprofile
   ansible.builtin.copy:
     src: ../files/config/.zprofile

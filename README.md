@@ -8,7 +8,6 @@ It is very much a work in progress.
 - get fan controls
 - configure wine
 - samba client mounting
-- cool background
 - disable middle button paste
 - vital synth
 - figure out `bw` workflow

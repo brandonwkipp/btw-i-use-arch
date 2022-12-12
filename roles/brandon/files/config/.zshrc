@@ -15,7 +15,7 @@ compinit
 ############################################################
 
 # Set terminal prompt
-PS1='%n@%m %~$ '
+PS1='[%n@%m %~]$ '
 
 
 # Set up Node Version Manager
