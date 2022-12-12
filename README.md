@@ -15,7 +15,9 @@ It is very much a work in progress.
 - command aliasing (no `sudo`)
 - backups (timeshift, betterFs)
 - python sanity
+- blender
 - talon
+- track pad freezing
 - hostname
 - timezone
 - terraform
