@@ -16,6 +16,14 @@
     mode: u=rw,g=r,o=r
     backup: yes
 
+- name: Copy .zprofile
+  ansible.builtin.copy:
+    src: ../files/config/.zprofile
+    dest: /home/brandon/.zprofile
+    owner: brandon
+    group: wheel
+    mode: u=rw,g=r,o=r
+
 - name: Copy .zshrc
   ansible.builtin.copy:
     src: ../files/config/.zshrc

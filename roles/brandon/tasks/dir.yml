@@ -12,3 +12,11 @@
     state: directory
     owner: brandon
     group: wheel
+
+- name: Copy scripts into ~/.local/bin
+  ansible.builtin.copy:
+    src: ../files/scripts/
+    dest: /home/brandon/.local/bin
+    owner: brandon
+    group: wheel
+    mode: u=rwx,g=r,o=r

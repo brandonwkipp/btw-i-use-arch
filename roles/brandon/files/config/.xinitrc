@@ -50,4 +50,5 @@ fi
 
 systemctl --user start pipewire-pulse
 
+dwmblocks &
 exec dwm

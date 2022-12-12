@@ -16,6 +16,25 @@
     chdir: /home/brandon/builds/st
     cmd: make clean install
 
+- name: Clone dwmblocks
+  ansible.builtin.git:
+    repo: https://github.com/torrinfail/dwmblocks
+    dest: /home/brandon/builds/dwmblocks
+  become: yes
+  become_user: brandon
+
+- name: Clone dwmblocks blocks.h
+  ansible.builtin.copy:
+    src: ../files/config/dwmblocks/blocks.h
+    dest: /home/brandon/builds/dwmblocks
+  become: yes
+  become_user: brandon
+
+- name: Install dwmblocks
+  ansible.builtin.shell:
+    chdir: /home/brandon/builds/dwmblocks
+    cmd: make && make clean install
+
 - name: Clone dwm
   ansible.builtin.git:
     repo: https://git.suckless.org/dwm
