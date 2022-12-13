@@ -23,6 +23,7 @@ It is very much a work in progress.
 - firefox extensions?
 - aws cli
 - firewire?
+- man pages
 
 ### Wine
 - Ozone
