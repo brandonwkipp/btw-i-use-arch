@@ -13,10 +13,8 @@ It is very much a work in progress.
 - figure out `bw` workflow
 - command aliasing (no `sudo`)
 - backups (timeshift, betterFs)
-- python sanity
-- blender
-- talon
 - track pad freezing
+- talon
 - hostname
 - timezone
 - terraform

@@ -4,11 +4,13 @@
     name:
       - bitwarden
       - bitwarden-cli
+      - blender
       - cups
       - docker
       - docker-compose
       - gimp
       - go
+      - python
       - sxiv
       - thunderbird
       - ttf-hack
