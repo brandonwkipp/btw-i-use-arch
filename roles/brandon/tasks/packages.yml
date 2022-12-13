@@ -19,3 +19,15 @@
       - xcompmgr
       - xwallpaper
     state: present
+
+- name: Install AUR packages
+  kewlfft.aur.aur:
+    name:
+      - authy
+      - nvm
+      - qFlipper
+      - viber
+    use: makepkg
+    state: present
+  become: yes
+  become_user: brandon
