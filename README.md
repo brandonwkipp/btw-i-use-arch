@@ -20,6 +20,7 @@ It is very much a work in progress.
 - firewire?
 
 ### Wine
+- LinVST
 - Ozone
 - Autotune
 - Waves
