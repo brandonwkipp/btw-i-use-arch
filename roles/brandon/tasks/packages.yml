@@ -10,8 +10,10 @@
       - docker-compose
       - gimp
       - go
+      - jq
       - python
       - sxiv
+      - terraform
       - thunderbird
       - ttf-hack
       - wine

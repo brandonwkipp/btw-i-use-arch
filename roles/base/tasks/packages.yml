@@ -6,6 +6,7 @@
       - base-devel
       - efibootmgr
       - firefox
+      - firefox-ublock-origin
       - git
       - grub
       - iwd
@@ -17,6 +18,7 @@
       - man-db
       - reflector
       - smbclient
+      - usbutils
       - vim
       - xclip
       - xorg-xinit

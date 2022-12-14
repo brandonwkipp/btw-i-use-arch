@@ -10,15 +10,12 @@ It is very much a work in progress.
 - samba client mounting
 - disable middle button paste
 - vital synth
-- figure out `bw` workflow
 - command aliasing (no `sudo`)
 - backups (timeshift, betterFs)
 - track pad freezing
 - talon
 - hostname
 - timezone
-- terraform
-- firefox extensions?
 - aws cli
 - firewire?
 
