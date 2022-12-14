@@ -1,0 +1,31 @@
+#!/bin/bash
+
+set -e
+
+# Command to copy to clipboard
+COPY="xclip -sel clip"
+
+# Search for passwords using the search term
+logins="$(bw list items --search $1)"
+
+if [ $(printf "%s" "$logins" | jq ". | length") -eq 1 ]
+then
+  login="$(printf "%s" "$logins" | jq ".[0]")"
+else
+  name="$(printf "%s" "$logins" | jq -r ".[].name" | fzf --reverse)"
+  login="$(printf "%s" "$logins" | jq ".[] | select(.name == \"$name\")")"
+fi
+
+# Print the name of the selected login
+echo "Item Name: $(printf "%s" $login | jq -r ".name")"
+
+# Display the username
+echo "Username: $(printf "%s" $login | jq -r ".login.username")"
+
+# Wait for user input before coping the password
+echo "> Press any key to copy password..."
+read
+echo "> Copying Password"
+
+# Copy the password to the clipboard
+printf "%s" $login | jq -r ".login.password" | $COPY
