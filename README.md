@@ -18,9 +18,10 @@ It is very much a work in progress.
 - timezone
 - aws cli
 - firewire?
+- lv2-plugins (group?)
+- LinVST
 
 ### Wine
-- LinVST
 - Ozone
 - Autotune
 - Waves
