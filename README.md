@@ -6,7 +6,6 @@ It is very much a work in progress.
 
 ## TODO
 - get fan controls
-- configure wine
 - samba client mounting
 - disable middle button paste
 - vital synth
@@ -20,6 +19,7 @@ It is very much a work in progress.
 - firewire?
 - lv2-plugins (group?)
 - LinVST
+- Consolidate dwm & st builds
 
 ### Wine
 - Ozone
