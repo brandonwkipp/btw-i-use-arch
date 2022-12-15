@@ -32,3 +32,9 @@ It is very much a work in progress.
 - MPC?
 - ProTools?
 - Serum?
+
+### Evaluation
+- Ardour
+- Bitwig Studio
+- Harrison Mixbus
+- Reaper
