@@ -18,6 +18,8 @@
       - ttf-hack
       - wine
       - winetricks
+      - wireshark-cli
+      - wireshark-qt
       - xcompmgr
       - xwallpaper
     state: present
