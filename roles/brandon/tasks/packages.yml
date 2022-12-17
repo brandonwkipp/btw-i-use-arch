@@ -2,6 +2,7 @@
 - name: Install packages
   pacman:
     name:
+      - arduino
       - bitwarden
       - bitwarden-cli
       - blender
@@ -11,6 +12,7 @@
       - gimp
       - go
       - jq
+      - pcmanfm
       - python
       - sxiv
       - terraform

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# TODO: Clean this sorry excuse for a script up
+
+if [[ $# -eq 0 ]] ; then
+    echo 'mountshare: args "server" and "share" required'
+    exit 1
+fi
+
+if [[ $# -eq 1 ]] ; then
+    echo 'mountshare: args "server" and "share" required'
+    exit 1
+fi
+
+mount --mkdir -t cifs //$1/$2 /mnt/$1/$2 \
+-o credentials=/etc/samba/credentials/helium \
+-o workgroup=workgroup \
+-o iocharset=utf8 \
+-o uid=brandon \
+-o gid=wheel
