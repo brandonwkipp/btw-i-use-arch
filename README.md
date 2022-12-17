@@ -6,7 +6,6 @@ It is very much a work in progress.
 
 ## TODO
 - get fan controls
-- samba client mounting
 - disable middle button paste
 - vital synth
 - command aliasing (no `sudo`)
