@@ -8,13 +8,15 @@ It is very much a work in progress.
 - get fan controls
 - disable middle button paste
 - vital synth
-- command aliasing (no `sudo`)
 - backups (timeshift, betterFs)
 - track pad freezing
 - talon
 - hostname
+- dwm/st clone (patching)
+- volume button shortcuts dwm
 - timezone
 - aws cli
+- samba credentials file
 - firewire?
 - lv2-plugins (group?)
 - LinVST

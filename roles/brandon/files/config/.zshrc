@@ -22,4 +22,9 @@ PS1='[%n@%m %~]$ '
 source /usr/share/nvm/init-nvm.sh
 
 # Aliases
-alias brightness="xrandr --output eDP-1 --brightness"
+alias ansible-playbook="sudo ansible-playbook"
+alias dmesg="sudo dmesg"
+alias mount="sudo mount"
+alias mountshare="sudo mountshare"
+alias pacman="sudo pacman"
+alias umount="sudo umount -R"
