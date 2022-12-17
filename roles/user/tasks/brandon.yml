@@ -10,6 +10,6 @@
   become: yes
   ansible.builtin.lineinfile:
     path: /etc/sudoers.d/11-install-brandon
-    line: 'brandon ALL=(ALL) NOPASSWD: /usr/bin/dmesg, /usr/bin/mount, /usr/bin/pacman, /usr/bin/umount'
+    line: 'brandon ALL=(ALL) NOPASSWD: /usr/bin/dmesg, /usr/bin/mount, /usr/bin/pacman, /usr/bin/umount, /home/brandon/.local/bin/mountshare'
     create: yes
     validate: 'visudo -cf %s'

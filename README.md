@@ -6,13 +6,12 @@ It is very much a work in progress.
 
 ## TODO
 - get fan controls
-- disable middle button paste
 - vital synth
 - backups (timeshift, betterFs)
 - track pad freezing
 - talon
 - hostname
-- dwm/st clone (patching)
+- dwm/st clone & list/compile patches
 - volume button shortcuts dwm
 - timezone
 - aws cli
