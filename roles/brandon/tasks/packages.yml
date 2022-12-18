@@ -3,6 +3,7 @@
   pacman:
     name:
       - arduino
+      - aws-cli-v2
       - bitwarden
       - bitwarden-cli
       - blender

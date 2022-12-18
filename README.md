@@ -14,7 +14,6 @@ It is very much a work in progress.
 - dwm/st clone & list/compile patches
 - volume button shortcuts dwm
 - timezone
-- aws cli
 - samba credentials file
 - firewire?
 - lv2-plugins (group?)
