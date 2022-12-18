@@ -37,12 +37,12 @@
 
 - name: Clone dwm
   ansible.builtin.git:
-    repo: https://git.suckless.org/dwm
-    dest: /home/brandon/builds/dwm
+    repo: https://github.com/brandonwkipp/dwm
+    dest: /home/brandon/www/dwm
   become: yes
   become_user: brandon
 
 - name: Install dwm
   ansible.builtin.shell:
-    chdir: /home/brandon/builds/dwm
+    chdir: /home/brandon/www/dwm
     cmd: make clean install
