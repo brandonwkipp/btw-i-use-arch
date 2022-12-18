@@ -6,14 +6,14 @@
 
 - name: Clone st
   ansible.builtin.git:
-    repo: https://git.suckless.org/st
-    dest: /home/brandon/builds/st
+    repo: https://github.com/brandonwkipp/st
+    dest: /home/brandon/www/st
   become: yes
   become_user: brandon
 
 - name: Install st
   ansible.builtin.shell:
-    chdir: /home/brandon/builds/st
+    chdir: /home/brandon/www/st
     cmd: make clean install
 
 - name: Clone dwmblocks
