@@ -5,20 +5,18 @@ This repository holds the `ansible` configurations for my adventures in tuning a
 It is very much a work in progress.
 
 ## TODO
-- get fan controls
 - vital synth
 - backups (timeshift, betterFs)
 - track pad freezing
 - talon
 - hostname
-- dwm/st clone & list/compile patches
+- dwmblocks clone & list/compile patches
 - volume button shortcuts dwm
 - timezone
 - samba credentials file
 - firewire?
 - lv2-plugins (group?)
 - LinVST
-- Consolidate dwm & st builds
 
 ### Wine
 - Ozone

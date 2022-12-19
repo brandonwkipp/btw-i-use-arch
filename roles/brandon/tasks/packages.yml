@@ -3,7 +3,7 @@
   pacman:
     name:
       - arduino
-      - aws-cli-v2
+      - aws-cli
       - bitwarden
       - bitwarden-cli
       - blender
@@ -14,13 +14,14 @@
       - go
       - jq
       - libreoffice-still
+      - lm_sensors
       - pcmanfm
       - python
       - sxiv
       - terraform
       - thunderbird
       - ttf-hack
-      - wine
+      - wine-staging
       - winetricks
       - wireshark-cli
       - wireshark-qt
@@ -34,6 +35,7 @@
       - authy
       - nvm
       - qFlipper
+      - thinkfan
       - viber
     use: makepkg
     state: present
