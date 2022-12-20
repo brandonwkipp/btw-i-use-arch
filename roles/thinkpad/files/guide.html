@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US" class="no-js">
+<!--<![endif]-->
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="profile"  href="https://gmpg.org/xfn/11" />
+  <link rel="pingback" href="https://blog.monosoul.dev/xmlrpc.php" />
+<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+        <style id="wfc-base-style" type="text/css">
+             .wfc-reset-menu-item-first-letter .navbar .nav>li>a:first-letter {font-size: inherit;}.format-icon:before {color: #5A5A5A;}article .format-icon.tc-hide-icon:before, .safari article.format-video .format-icon.tc-hide-icon:before, .chrome article.format-video .format-icon.tc-hide-icon:before, .safari article.format-image .format-icon.tc-hide-icon:before, .chrome article.format-image .format-icon.tc-hide-icon:before, .safari article.format-gallery .format-icon.tc-hide-icon:before, .safari article.attachment .format-icon.tc-hide-icon:before, .chrome article.format-gallery .format-icon.tc-hide-icon:before, .chrome article.attachment .format-icon.tc-hide-icon:before {content: none!important;}h2#tc-comment-title.tc-hide-icon:before {content: none!important;}.archive .archive-header h1.format-icon.tc-hide-icon:before {content: none!important;}.tc-sidebar h3.widget-title.tc-hide-icon:before {content: none!important;}.footer-widgets h3.widget-title.tc-hide-icon:before {content: none!important;}.tc-hide-icon i, i.tc-hide-icon {display: none !important;}.carousel-control {font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;}.social-block a {font-size: 18px;}footer#footer .colophon .social-block a {font-size: 16px;}.social-block.widget_social a {font-size: 14px;}
+        </style>
+        <style id="wfc-style-fonts-custom" type="text/css" data-origin="server">
+/* Setting : Custom : code */ 
+:not(pre.wp-block-code) > code {
+font-family : Courier New,Courier New,Courier,monospace!important;
+}
+
+</style>		<style type="text/css">
+					.heateor_sss_button_instagram span.heateor_sss_svg,a.heateor_sss_instagram span.heateor_sss_svg{background:radial-gradient(circle at 30% 107%,#fdf497 0,#fdf497 5%,#fd5949 45%,#d6249f 60%,#285aeb 90%)}
+											.heateor_sss_horizontal_sharing .heateor_sss_svg,.heateor_sss_standard_follow_icons_container .heateor_sss_svg{
+							color: #fff;
+						border-width: 0px;
+			border-style: solid;
+			border-color: transparent;
+		}
+					.heateor_sss_horizontal_sharing .heateorSssTCBackground{
+				color:#666;
+			}
+					.heateor_sss_horizontal_sharing span.heateor_sss_svg:hover,.heateor_sss_standard_follow_icons_container span.heateor_sss_svg:hover{
+						border-color: transparent;
+		}
+		.heateor_sss_vertical_sharing span.heateor_sss_svg,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg{
+							color: #fff;
+						border-width: 0px;
+			border-style: solid;
+			border-color: transparent;
+		}
+				.heateor_sss_vertical_sharing .heateorSssTCBackground{
+			color:#666;
+		}
+						.heateor_sss_vertical_sharing span.heateor_sss_svg:hover,.heateor_sss_floating_follow_icons_container span.heateor_sss_svg:hover{
+						border-color: transparent;
+		}
+		@media screen and (max-width:783px) {.heateor_sss_vertical_sharing{display:none!important}}		</style>
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v19.10 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>How to control ThinkPad P14s&#039; fan speed in Linux - Monosoul&#039;s Dev Blog</title>
+	<meta name="description" content="Got yourself Lenovo ThinkPad P14s and it&#039;s fan is too loud? Here&#039;s how to control the fan speed in Linux using thinkfan utility!" />
+	<link rel="canonical" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="How to control ThinkPad P14s&#039; fan speed in Linux - Monosoul&#039;s Dev Blog" />
+	<meta property="og:description" content="Got yourself Lenovo ThinkPad P14s and it&#039;s fan is too loud? Here&#039;s how to control the fan speed in Linux using thinkfan utility!" />
+	<meta property="og:url" content="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/" />
+	<meta property="og:site_name" content="Monosoul&#039;s Dev Blog" />
+	<meta property="article:published_time" content="2021-10-17T12:41:17+00:00" />
+	<meta property="article:modified_time" content="2022-09-18T16:32:48+00:00" />
+	<meta property="og:image" content="https://blog.monosoul.dev/wp-content/uploads/2021/10/ThinkPad_P14s_thinkfan-.webp" />
+	<meta property="og:image:width" content="1213" />
+	<meta property="og:image:height" content="427" />
+	<meta property="og:image:type" content="image/webp" />
+	<meta name="author" content="Andrei Nevedomskii" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Written by" />
+	<meta name="twitter:data1" content="Andrei Nevedomskii" />
+	<meta name="twitter:label2" content="Est. reading time" />
+	<meta name="twitter:data2" content="7 minutes" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#article","isPartOf":{"@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/"},"author":{"name":"Andrei Nevedomskii","@id":"https://blog.monosoul.dev/#/schema/person/76ae634f6a5bfccab19d81fd11e4a405"},"headline":"How to control ThinkPad P14s&#8217; fan speed in Linux","datePublished":"2021-10-17T12:41:17+00:00","dateModified":"2022-09-18T16:32:48+00:00","mainEntityOfPage":{"@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/"},"wordCount":1231,"commentCount":29,"publisher":{"@id":"https://blog.monosoul.dev/#/schema/person/76ae634f6a5bfccab19d81fd11e4a405"},"image":{"@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#primaryimage"},"thumbnailUrl":"https://blog.monosoul.dev/wp-content/uploads/2021/10/ThinkPad_P14s_thinkfan-.webp","keywords":["linux","opensource"],"articleSection":["linux","offtopic"],"inLanguage":"en-US","potentialAction":[{"@type":"CommentAction","name":"Comment","target":["https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#respond"]}]},{"@type":"WebPage","@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/","url":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/","name":"How to control ThinkPad P14s' fan speed in Linux - Monosoul&#039;s Dev Blog","isPartOf":{"@id":"https://blog.monosoul.dev/#website"},"primaryImageOfPage":{"@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#primaryimage"},"image":{"@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#primaryimage"},"thumbnailUrl":"https://blog.monosoul.dev/wp-content/uploads/2021/10/ThinkPad_P14s_thinkfan-.webp","datePublished":"2021-10-17T12:41:17+00:00","dateModified":"2022-09-18T16:32:48+00:00","description":"Got yourself Lenovo ThinkPad P14s and it's fan is too loud? Here's how to control the fan speed in Linux using thinkfan utility!","breadcrumb":{"@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#primaryimage","url":"https://blog.monosoul.dev/wp-content/uploads/2021/10/ThinkPad_P14s_thinkfan-.webp","contentUrl":"https://blog.monosoul.dev/wp-content/uploads/2021/10/ThinkPad_P14s_thinkfan-.webp","width":1213,"height":427,"caption":"How to control ThinkPad P14s fan speed in Linux"},{"@type":"BreadcrumbList","@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://blog.monosoul.dev/"},{"@type":"ListItem","position":2,"name":"How to control ThinkPad P14s&#8217; fan speed in Linux"}]},{"@type":"WebSite","@id":"https://blog.monosoul.dev/#website","url":"https://blog.monosoul.dev/","name":"Monosoul&#039;s Dev Blog","description":"A blog to write down dev-related stuff I face","publisher":{"@id":"https://blog.monosoul.dev/#/schema/person/76ae634f6a5bfccab19d81fd11e4a405"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://blog.monosoul.dev/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":["Person","Organization"],"@id":"https://blog.monosoul.dev/#/schema/person/76ae634f6a5bfccab19d81fd11e4a405","name":"Andrei Nevedomskii","image":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://blog.monosoul.dev/#/schema/person/image/","url":"https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06.jpg","contentUrl":"https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06.jpg","width":640,"height":640,"caption":"Andrei Nevedomskii"},"logo":{"@id":"https://blog.monosoul.dev/#/schema/person/image/"},"description":"I'm a software engineer with 10+ years of experience in IT. I'm passionate about backend engineering, high load, testing, open source and hacking.","sameAs":["https://blog.monosoul.dev","https://www.linkedin.com/in/monosoul/"]},{"@type":"HowTo","@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#howto-1","name":"How to control ThinkPad P14s&#8217; fan speed in Linux","mainEntityOfPage":{"@id":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#article"},"description":"Here's how to set everything up","totalTime":"P0DT0H5M","step":[{"@type":"HowToStep","url":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#how-to-step-1634422728346","name":"Enable fan control","itemListElement":[{"@type":"HowToDirection","text":"echo 'options thinkpad_acpi fan_control=1' | sudo tee /lib/modprobe.d/thinkpad_acpi.conf"}]},{"@type":"HowToStep","url":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#how-to-step-1634423065939","name":"Install thinkfan package","itemListElement":[{"@type":"HowToDirection","text":"sudo apt install thinkfan"}]},{"@type":"HowToStep","url":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#how-to-step-1634423115226","name":"Create a new thinkfan configuration file","itemListElement":[{"@type":"HowToDirection","text":"sudo touch /etc/thinkfan.conf"}]},{"@type":"HowToStep","url":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#how-to-step-1634423198830","name":"Put the following lines into /etc/thinkfan.conf","itemListElement":[{"@type":"HowToDirection","text":"sensors:<br/>  # GPU<br/>  - tpacpi: /proc/acpi/ibm/thermal<br/>    indices: [1]<br/>  # CPU<br/>  - hwmon: /sys/class/hwmon<br/>    name: coretemp<br/>    indices: [2, 3, 4, 5]<br/>  # Chassis<br/>  - hwmon: /sys/class/hwmon<br/>    name: thinkpad<br/>    indices: [3, 5, 6, 7]<br/>  # SSD<br/>  - hwmon: /sys/class/hwmon<br/>    name: nvme<br/>    indices: [1, 2, 3]<br/>    correction: [-5, 0, 0]<br/>  # MB<br/>  - hwmon: /sys/class/hwmon<br/>    name: acpitz<br/>    indices: [1]<br/><br/>fans:<br/>  - tpacpi: /proc/acpi/ibm/fan<br/><br/>levels:<br/>  - [0, 0, 37]<br/>  - [1, 35, 42]<br/>  - [2, 40, 45]<br/>  - [3, 43, 47]<br/>  - [4, 45, 52]<br/>  - [5, 50, 57]<br/>  - [6, 55, 72]<br/>  - [7, 70, 82]<br/>  - [\"level full-speed\", 77, 32767]"}]},{"@type":"HowToStep","url":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#how-to-step-1634423476260","name":"Configure thinkfan to use the newly created file","itemListElement":[{"@type":"HowToDirection","text":"echo 'THINKFAN_ARGS=\"-c /etc/thinkfan.conf\"' | sudo tee -a /etc/default/thinkfan"}]},{"@type":"HowToStep","url":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#how-to-step-1634423651262","name":"Enable thinkfan service","itemListElement":[{"@type":"HowToDirection","text":"sudo systemctl enable thinkfan"}]},{"@type":"HowToStep","url":"https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#how-to-step-1634423743261","name":"Reboot","itemListElement":[{"@type":"HowToDirection","text":"sudo reboot"}]}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Monosoul&#039;s Dev Blog &raquo; Feed" href="https://blog.monosoul.dev/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Monosoul&#039;s Dev Blog &raquo; Comments Feed" href="https://blog.monosoul.dev/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Monosoul&#039;s Dev Blog &raquo; How to control ThinkPad P14s&#8217; fan speed in Linux Comments Feed" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/feed/" />
+<link rel="preload" href="https://blog.monosoul.dev/wp-content/themes/customizr-pro/assets/shared/fonts/fa/css/fontawesome-all.min.css" as="style" media="all" onload="this.onload=null;this.rel='stylesheet'" />
+<link rel="stylesheet" href="https://blog.monosoul.dev/wp-content/themes/customizr-pro/assets/shared/fonts/fa/css/fontawesome-all.min.css" media="all" />
+<noscript><link rel="stylesheet" href="https://blog.monosoul.dev/wp-content/themes/customizr-pro/assets/shared/fonts/fa/css/fontawesome-all.min.css" media="all" /></noscript>
+<!--[if IE]><link rel="stylesheet" href="https://blog.monosoul.dev/wp-content/themes/customizr-pro/assets/shared/fonts/fa/css/fontawesome-all.min.css" media="all" /><![endif]-->
+<link rel="preload" href="https://blog.monosoul.dev/wp-content/uploads/omgf/omgf-stylesheet-99/omgf-stylesheet-99.css?ver=1663774016" as="style" media="all" onload="this.onload=null;this.rel='stylesheet'" />
+<link rel="stylesheet" href="https://blog.monosoul.dev/wp-content/uploads/omgf/omgf-stylesheet-99/omgf-stylesheet-99.css?ver=1663774016" media="all" />
+<noscript><link rel="stylesheet" href="https://blog.monosoul.dev/wp-content/uploads/omgf/omgf-stylesheet-99/omgf-stylesheet-99.css?ver=1663774016" media="all" /></noscript>
+<!--[if IE]><link rel="stylesheet" href="https://blog.monosoul.dev/wp-content/uploads/omgf/omgf-stylesheet-99/omgf-stylesheet-99.css?ver=1663774016" media="all" /><![endif]-->
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='wpo_min-header-0-css'  href='https://blog.monosoul.dev/wp-content/cache/wpo-minify/1664466435/assets/wpo-minify-header-e8e925dd.min.css' media='all' />
+<script id='wpo_min-header-0-js-extra'>
+var CZRParams = {"assetsPath":"https:\/\/blog.monosoul.dev\/wp-content\/themes\/customizr-pro\/assets\/front\/","mainScriptUrl":"https:\/\/blog.monosoul.dev\/wp-content\/themes\/customizr-pro\/assets\/front\/js\/tc-scripts.min.js?2.4.23","deferFontAwesome":"","fontAwesomeUrl":"https:\/\/blog.monosoul.dev\/wp-content\/themes\/customizr-pro\/assets\/shared\/fonts\/fa\/css\/fontawesome-all.min.css?2.4.23","_disabled":[],"centerSliderImg":"1","isLightBoxEnabled":"1","SmoothScroll":{"Enabled":true,"Options":{"touchpadSupport":false}},"isAnchorScrollEnabled":"","anchorSmoothScrollExclude":{"simple":["[class*=edd]",".carousel-control","[data-toggle=\"modal\"]","[data-toggle=\"dropdown\"]","[data-toggle=\"czr-dropdown\"]","[data-toggle=\"tooltip\"]","[data-toggle=\"popover\"]","[data-toggle=\"collapse\"]","[data-toggle=\"czr-collapse\"]","[data-toggle=\"tab\"]","[data-toggle=\"pill\"]","[data-toggle=\"czr-pill\"]","[class*=upme]","[class*=um-]"],"deep":{"classes":[],"ids":[]}},"timerOnScrollAllBrowsers":"1","centerAllImg":"1","HasComments":"1","LoadModernizr":"1","stickyHeader":"","extLinksStyle":"","extLinksTargetExt":"","extLinksSkipSelectors":{"classes":["btn","button"],"ids":[]},"dropcapEnabled":"","dropcapWhere":{"post":"","page":""},"dropcapMinWords":"","dropcapSkipSelectors":{"tags":["IMG","IFRAME","H1","H2","H3","H4","H5","H6","BLOCKQUOTE","UL","OL"],"classes":["btn"],"id":[]},"imgSmartLoadEnabled":"1","imgSmartLoadOpts":{"parentSelectors":["[class*=grid-container], .article-container",".__before_main_wrapper",".widget-front",".post-related-articles",".tc-singular-thumbnail-wrapper",".sek-module-inner"],"opts":{"excludeImg":[".tc-holder-img"]}},"imgSmartLoadsForSliders":"1","pluginCompats":[],"isWPMobile":"","menuStickyUserSettings":{"desktop":"stick_up","mobile":"stick_up"},"adminAjaxUrl":"https:\/\/blog.monosoul.dev\/wp-admin\/admin-ajax.php","ajaxUrl":"https:\/\/blog.monosoul.dev\/?czrajax=1","frontNonce":{"id":"CZRFrontNonce","handle":"a10a5c2da0"},"isDevMode":"","isModernStyle":"1","i18n":{"Permanently dismiss":"Permanently dismiss"},"frontNotifications":{"welcome":{"enabled":false,"content":"","dismissAction":"dismiss_welcome_note_front"}},"preloadGfonts":"","googleFonts":"Bitter:400%7CSource+Sans+Pro","version":"2.4.23"};
+</script>
+<script defer src='https://blog.monosoul.dev/wp-content/cache/wpo-minify/1664466435/assets/wpo-minify-header-0be4249b.min.js' id='wpo_min-header-0-js'></script>
+<link rel="https://api.w.org/" href="https://blog.monosoul.dev/wp-json/" /><link rel="alternate" type="application/json" href="https://blog.monosoul.dev/wp-json/wp/v2/posts/451" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://blog.monosoul.dev/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://blog.monosoul.dev/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 6.0.3" />
+<link rel='shortlink' href='https://blog.monosoul.dev/?p=451' />
+<link rel="alternate" type="application/json+oembed" href="https://blog.monosoul.dev/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.monosoul.dev%2F2021%2F10%2F17%2Fhow-to-control-thinkpad-p14s-fan-speed-in-linux%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://blog.monosoul.dev/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fblog.monosoul.dev%2F2021%2F10%2F17%2Fhow-to-control-thinkpad-p14s-fan-speed-in-linux%2F&#038;format=xml" />
+              <link rel="preload" as="font" type="font/woff2" href="https://blog.monosoul.dev/wp-content/themes/customizr-pro/assets/shared/fonts/customizr/customizr.woff2?128396981" crossorigin="anonymous"/>
+            <style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://blog.monosoul.dev/wp-content/uploads/2020/09/cropped-Logo-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://blog.monosoul.dev/wp-content/uploads/2020/09/cropped-Logo-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://blog.monosoul.dev/wp-content/uploads/2020/09/cropped-Logo-180x180.png" />
+<meta name="msapplication-TileImage" content="https://blog.monosoul.dev/wp-content/uploads/2020/09/cropped-Logo-270x270.png" />
+		<style id="wp-custom-css">
+			input#cren_subscribe_to_comment, input#cren_gdpr {
+  margin-right: 0.5em;
+}
+		</style>
+		<style id="wfc-style-custom" type="text/css" data-origin="server">
+/* Setting : Custom : code */ 
+:not(pre.wp-block-code) > code {
+}
+
+</style></head>
+
+  <body class="post-template-default single single-post postid-451 single-format-standard wp-custom-logo wp-embed-responsive czr-link-hover-underline header-skin-dark footer-skin-dark czr-no-sidebar tc-center-images czr-full-layout customizr-pro-2-4-23 czr-sticky-footer">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>      <a class="screen-reader-text skip-link" href="#content">Skip to content</a>
+    
+    
+    <div id="tc-page-wrap" class="">
+
+      <header class="tpnav-header__header tc-header sl-logo_left sticky-brand-shrink-on sticky-transparent czr-submenu-fade czr-submenu-move czr-highlight-contextual-menu-items" >
+    <div class="topbar-navbar__wrapper " >
+  <div class="container-fluid">
+        <div class="row flex-row flex-lg-nowrap justify-content-start justify-content-lg-end align-items-center topbar-navbar__row">
+                                <div class="topbar-nav__socials social-links col col-auto ">
+          <ul class="socials " >
+  <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-github"  title="Follow me on GitHub" aria-label="Follow me on GitHub" href="https://github.com/monosoul"  target="_blank"  style="font-size:20px"><i class="fab fa-github"></i></a></li> <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-telegram"  title="Follow me on Telegram" aria-label="Follow me on Telegram" href="https://t.me/monosouldev"  target="_blank"  style="font-size:20px"><i class="fab fa-telegram"></i></a></li> <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-linkedin"  title="Follow me on Linkedin" aria-label="Follow me on Linkedin" href="https://www.linkedin.com/in/monosoul/"  target="_blank"  style="font-size:20px"><i class="fab fa-linkedin"></i></a></li> <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-feed"  title="Subscribe to my rss feed" aria-label="Subscribe to my rss feed" href="https://blog.monosoul.dev/feed/rss/"  target="_blank"  style="font-size:20px"><i class="fas fa-rss"></i></a></li></ul>
+        </div>
+                </div>
+      </div>
+</div>    <div class="primary-navbar__wrapper d-none d-lg-block has-horizontal-menu has-branding-aside desktop-sticky" >
+  <div class="container-fluid">
+    <div class="row align-items-center flex-row primary-navbar__row">
+      <div class="branding__container col col-auto" >
+  <div class="branding align-items-center flex-column ">
+    <div class="branding-row d-flex flex-row align-items-center align-self-start">
+      <div class="navbar-brand col-auto " >
+  <a class="navbar-brand-sitelogo" href="https://blog.monosoul.dev/"  aria-label="Monosoul&#039;s Dev Blog | A blog to write down dev-related stuff I face" >
+    <img src="https://blog.monosoul.dev/wp-content/uploads/2020/09/Logo.png" alt="Back Home" class="" width="512" height="512" style="max-width:250px;max-height:100px" data-no-retina>  </a>
+</div>
+          <div class="branding-aside col-auto flex-column d-flex">
+          <span class="navbar-brand col-auto " >
+    <a class="navbar-brand-sitename  czr-underline" href="https://blog.monosoul.dev/">
+    <span>Monosoul&#039;s Dev Blog</span>
+  </a>
+</span>
+<span class="header-tagline " >
+  A blog to write down dev-related stuff I face</span>
+
+          </div>
+                </div>
+      </div>
+</div>
+      <div class="primary-nav__container justify-content-lg-around col col-lg-auto flex-lg-column" >
+  <div class="primary-nav__wrapper flex-lg-row align-items-center justify-content-end">
+              <nav class="primary-nav__nav col" id="primary-nav">
+          <div class="nav__menu-wrapper primary-nav__menu-wrapper justify-content-end czr-open-on-hover" >
+<ul id="main-menu" class="primary-nav__menu regular-nav nav__menu nav"><li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-26"><a href="https://blog.monosoul.dev" class="nav__link"><span class="nav__title">Home</span></a></li>
+<li id="menu-item-373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-373"><a href="https://blog.monosoul.dev/archives/" class="nav__link"><span class="nav__title">Archives</span></a></li>
+<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="https://blog.monosoul.dev/about/" class="nav__link"><span class="nav__title">About</span></a></li>
+</ul></div>        </nav>
+    <div class="primary-nav__utils nav__utils col-auto" >
+    <ul class="nav utils flex-row flex-nowrap regular-nav">
+      <li class="nav__search " >
+  <a href="#" class="search-toggle_btn icn-search czr-overlay-toggle_btn"  aria-expanded="false"><span class="sr-only">Search</span></a>
+        <div class="czr-search-expand">
+      <div class="czr-search-expand-inner"><div class="search-form__container " >
+  <form action="https://blog.monosoul.dev/" method="get" class="czr-form search-form">
+    <div class="form-group czr-focus">
+            <label for="s-6373f77c1c092" id="lsearch-6373f77c1c092">
+        <span class="screen-reader-text">Search</span>
+        <input id="s-6373f77c1c092" class="form-control czr-search-field" name="s" type="search" value="" aria-describedby="lsearch-6373f77c1c092" placeholder="Search &hellip;">
+      </label>
+      <button type="submit" class="button"><i class="icn-search"></i><span class="screen-reader-text">Search &hellip;</span></button>
+    </div>
+  </form>
+</div></div>
+    </div>
+    </li>
+    </ul>
+</div>  </div>
+</div>
+    </div>
+  </div>
+</div>    <div class="mobile-navbar__wrapper d-lg-none mobile-sticky" >
+    <div class="branding__container justify-content-between align-items-center container-fluid" >
+  <div class="branding flex-column">
+    <div class="branding-row d-flex align-self-start flex-row align-items-center">
+      <div class="navbar-brand col-auto " >
+  <a class="navbar-brand-sitelogo" href="https://blog.monosoul.dev/"  aria-label="Monosoul&#039;s Dev Blog | A blog to write down dev-related stuff I face" >
+    <img src="https://blog.monosoul.dev/wp-content/uploads/2020/09/Logo.png" alt="Back Home" class="" width="512" height="512" style="max-width:250px;max-height:100px" data-no-retina>  </a>
+</div>
+            <div class="branding-aside col-auto">
+              <span class="navbar-brand col-auto " >
+    <a class="navbar-brand-sitename  czr-underline" href="https://blog.monosoul.dev/">
+    <span>Monosoul&#039;s Dev Blog</span>
+  </a>
+</span>
+            </div>
+            </div>
+      </div>
+  <div class="mobile-utils__wrapper nav__utils regular-nav">
+    <ul class="nav utils row flex-row flex-nowrap">
+      <li class="nav__search " >
+  <a href="#" class="search-toggle_btn icn-search czr-dropdown" data-aria-haspopup="true" aria-expanded="false"><span class="sr-only">Search</span></a>
+        <div class="czr-search-expand">
+      <div class="czr-search-expand-inner"><div class="search-form__container " >
+  <form action="https://blog.monosoul.dev/" method="get" class="czr-form search-form">
+    <div class="form-group czr-focus">
+            <label for="s-6373f77c1c785" id="lsearch-6373f77c1c785">
+        <span class="screen-reader-text">Search</span>
+        <input id="s-6373f77c1c785" class="form-control czr-search-field" name="s" type="search" value="" aria-describedby="lsearch-6373f77c1c785" placeholder="Search &hellip;">
+      </label>
+      <button type="submit" class="button"><i class="icn-search"></i><span class="screen-reader-text">Search &hellip;</span></button>
+    </div>
+  </form>
+</div></div>
+    </div>
+        <ul class="dropdown-menu czr-dropdown-menu">
+      <li class="header-search__container container-fluid">
+  <div class="search-form__container " >
+  <form action="https://blog.monosoul.dev/" method="get" class="czr-form search-form">
+    <div class="form-group czr-focus">
+            <label for="s-6373f77c1c962" id="lsearch-6373f77c1c962">
+        <span class="screen-reader-text">Search</span>
+        <input id="s-6373f77c1c962" class="form-control czr-search-field" name="s" type="search" value="" aria-describedby="lsearch-6373f77c1c962" placeholder="Search &hellip;">
+      </label>
+      <button type="submit" class="button"><i class="icn-search"></i><span class="screen-reader-text">Search &hellip;</span></button>
+    </div>
+  </form>
+</div></li>    </ul>
+  </li>
+<li class="hamburger-toggler__container " >
+  <button class="ham-toggler-menu czr-collapsed" data-toggle="czr-collapse" data-target="#mobile-nav"><span class="ham__toggler-span-wrapper"><span class="line line-1"></span><span class="line line-2"></span><span class="line line-3"></span></span><span class="screen-reader-text">Menu</span></button>
+</li>
+    </ul>
+  </div>
+</div>
+<div class="mobile-nav__container " >
+   <nav class="mobile-nav__nav flex-column czr-collapse" id="mobile-nav">
+      <div class="mobile-nav__inner container-fluid">
+      <div class="nav__menu-wrapper mobile-nav__menu-wrapper czr-open-on-click" >
+<ul id="mobile-nav-menu" class="mobile-nav__menu vertical-nav nav__menu flex-column nav"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-26"><a href="https://blog.monosoul.dev" class="nav__link"><span class="nav__title">Home</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-373"><a href="https://blog.monosoul.dev/archives/" class="nav__link"><span class="nav__title">Archives</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="https://blog.monosoul.dev/about/" class="nav__link"><span class="nav__title">About</span></a></li>
+</ul></div>      </div>
+  </nav>
+</div></div></header>
+
+
+  
+    <div id="main-wrapper" class="section">
+
+                      
+
+          <div class="czr-hot-crumble container page-breadcrumbs" role="navigation" >
+  <div class="row">
+        <div class="col-12"><span><span><a href="https://blog.monosoul.dev/">Home</a> » <span class="breadcrumb_last" aria-current="page">How to control ThinkPad P14s&#8217; fan speed in Linux</span></span></span></div>  </div>
+</div>
+          <div class="container" role="main">
+
+            
+            <div class="flex-row row column-content-wrapper">
+
+                
+                <div id="content" class="col-12 article-container">
+
+                  <article id="post-451" class="post-451 post type-post status-publish format-standard has-post-thumbnail category-linux category-offtopic tag-linux tag-opensource czr-hentry" >
+    <header class="entry-header " >
+  <div class="entry-header-inner">
+    <section class="tc-thumbnail entry-media__holder tc-singular-thumbnail-wrapper __before_regular_heading_title" >
+  <div class="entry-media__wrapper czr__r-i js-centering">
+  <img width="1213" height="427" src="https://blog.monosoul.dev/wp-content/uploads/2021/10/ThinkPad_P14s_thinkfan-.webp" class="attachment-full size-full wp-post-image" alt="How to control ThinkPad P14s fan speed in Linux" srcset="https://blog.monosoul.dev/wp-content/uploads/2021/10/ThinkPad_P14s_thinkfan-.webp 1213w, https://blog.monosoul.dev/wp-content/uploads/2021/10/ThinkPad_P14s_thinkfan--300x106.webp 300w, https://blog.monosoul.dev/wp-content/uploads/2021/10/ThinkPad_P14s_thinkfan--1024x360.webp 1024w, https://blog.monosoul.dev/wp-content/uploads/2021/10/ThinkPad_P14s_thinkfan--768x270.webp 768w" sizes="(max-width: 1213px) 100vw, 1213px" />  </div>
+</section>            <div class="tax__container post-info entry-meta">
+          <a class="tax__link" href="https://blog.monosoul.dev/category/linux/" title="View all posts in linux"> <span>linux</span> </a><a class="tax__link" href="https://blog.monosoul.dev/category/offtopic/" title="View all posts in offtopic"> <span>offtopic</span> </a>        </div>
+        <h1 class="entry-title">How to control ThinkPad P14s&#8217; fan speed in Linux</h1>
+        <div class="header-bottom">
+      <div class="post-info">
+                  <span class="entry-meta">
+        <span class="author-meta">by <span class="author vcard"><span class="author_name"><a class="url fn n" href="https://blog.monosoul.dev/author/monosoul/" title="View all posts by Andrei Nevedomskii" rel="author">Andrei Nevedomskii</a></span></span></span><span class="v-separator">|</span>Published <a href="https://blog.monosoul.dev/2021/10/17/" title="14:41" rel="bookmark"><time class="entry-date published updated" datetime="October 17, 2021">October 17, 2021</time></a><span class="v-separator">|</span></span><a class="comments__link" data-anchor-scroll="true" href="#czr-comments" title="29 Comments on How to control ThinkPad P14s&#8217; fan speed in Linux" ><span>29 comments</span></a>      </div>
+    </div>
+      </div>
+</header>  <div class="post-entry tc-content-inner">
+    <section class="post-content entry-content " >
+            <div class="czr-wp-the-content">
+        
+<p>Recently I got a new laptop for work &#8211; <a href="https://www.lenovo.com/ie/en/laptops/thinkpad/p-series/ThinkPad-P14s-Gen-2-14%E2%80%9D-Intel/p/22WSP14P4S2" target="_blank" rel="noreferrer noopener">Lenovo ThinkPad P14s (Gen 2)</a>. I prefer running Linux on my working machines, and this one is not an exclusion. While using it I noticed that the fan speed is sometimes too high for no reason creating undesirable noise. Here&#8217;s how to control ThinkPad P14s&#8217; fan speed in Linux using a nice tool &#8211; <a href="https://github.com/vmatare/thinkfan" target="_blank" rel="noreferrer noopener">thinkfan</a>.</p>
+
+
+
+<span id="more-451"></span>
+
+
+
+<p>The steps described below are valid for <a href="https://releases.ubuntu.com/21.10/" target="_blank" rel="noreferrer noopener">Ubuntu 21.10</a>, but probably shouldn&#8217;t be much different for any other distrib.</p>
+
+
+
+<div id="toc_container" class="no_bullets"><p class="toc_title">Contents</p><ul class="toc_list"><li><a href="#TLDR"><span class="toc_number toc_depth_1">1</span> TL;DR</a></li><li><a href="#Configuration_deep_dive"><span class="toc_number toc_depth_1">2</span> Configuration deep dive</a><ul><li><a href="#Sensors_section"><span class="toc_number toc_depth_2">2.1</span> Sensors section</a></li><li><a href="#Fans_section"><span class="toc_number toc_depth_2">2.2</span> Fans section</a></li><li><a href="#Levels_section"><span class="toc_number toc_depth_2">2.3</span> Levels section</a></li></ul></li><li><a href="#Check_fan_speeds_available"><span class="toc_number toc_depth_1">3</span> Check fan speeds available</a></li><li><a href="#Bonus"><span class="toc_number toc_depth_1">4</span> Bonus</a><ul><li><ul><li><a href="#thinkfan-sleepservice"><span class="toc_number toc_depth_3">4.0.1</span> thinkfan-sleep.service</a></li><li><a href="#thinkfan-wakeupservice"><span class="toc_number toc_depth_3">4.0.2</span> thinkfan-wakeup.service</a></li><li><a href="#Apply_the_changes"><span class="toc_number toc_depth_3">4.0.3</span> Apply the changes</a></li></ul></li></ul></li><li><a href="#Summary"><span class="toc_number toc_depth_1">5</span> Summary</a></li></ul></div>
+<h2 id="tldr"><span id="TLDR">TL;DR</span></h2>
+
+
+
+<div class="schema-how-to wp-block-yoast-how-to-block"><p class="schema-how-to-total-time"><span class="schema-how-to-duration-time-text">Time needed: </span>5 minutes. </p><p class="schema-how-to-description">Here&#8217;s how to set everything up</p> <ol class="schema-how-to-steps"><li class="schema-how-to-step" id="how-to-step-1634422728346"><strong class="schema-how-to-step-name">Enable fan control</strong> <p class="schema-how-to-step-text"><code>echo 'options thinkpad_acpi fan_control=1' | sudo tee /lib/modprobe.d/thinkpad_acpi.conf</code></p> </li><li class="schema-how-to-step" id="how-to-step-1634423065939"><strong class="schema-how-to-step-name">Install thinkfan package</strong> <p class="schema-how-to-step-text"><code>sudo apt install thinkfan</code></p> </li><li class="schema-how-to-step" id="how-to-step-1634423115226"><strong class="schema-how-to-step-name">Create a new thinkfan configuration file</strong> <p class="schema-how-to-step-text"><code>sudo touch /etc/thinkfan.conf</code></p> </li><li class="schema-how-to-step" id="how-to-step-1634423198830"><strong class="schema-how-to-step-name">Put the following lines into /etc/thinkfan.conf</strong> <p class="schema-how-to-step-text"><code>sensors:<br/>  # GPU<br/>  - tpacpi: /proc/acpi/ibm/thermal<br/>    indices: [1]<br/>  # CPU<br/>  - hwmon: /sys/class/hwmon<br/>    name: coretemp<br/>    indices: [2, 3, 4, 5]<br/>  # Chassis<br/>  - hwmon: /sys/class/hwmon<br/>    name: thinkpad<br/>    indices: [3, 5, 6, 7]<br/>  # SSD<br/>  - hwmon: /sys/class/hwmon<br/>    name: nvme<br/>    indices: [1, 2, 3]<br/>    correction: [-5, 0, 0]<br/>  # MB<br/>  - hwmon: /sys/class/hwmon<br/>    name: acpitz<br/>    indices: [1]<br/><br/>fans:<br/>  - tpacpi: /proc/acpi/ibm/fan<br/><br/>levels:<br/>  - [0, 0, 37]<br/>  - [1, 35, 42]<br/>  - [2, 40, 45]<br/>  - [3, 43, 47]<br/>  - [4, 45, 52]<br/>  - [5, 50, 57]<br/>  - [6, 55, 72]<br/>  - [7, 70, 82]<br/>  - ["level full-speed", 77, 32767]</code></p> </li><li class="schema-how-to-step" id="how-to-step-1634423476260"><strong class="schema-how-to-step-name">Configure thinkfan to use the newly created file</strong> <p class="schema-how-to-step-text"><code>echo 'THINKFAN_ARGS="-c /etc/thinkfan.conf"' | sudo tee -a /etc/default/thinkfan</code></p> </li><li class="schema-how-to-step" id="how-to-step-1634423651262"><strong class="schema-how-to-step-name">Enable thinkfan service</strong> <p class="schema-how-to-step-text"><code>sudo systemctl enable thinkfan</code></p> </li><li class="schema-how-to-step" id="how-to-step-1634423743261"><strong class="schema-how-to-step-name">Reboot</strong> <p class="schema-how-to-step-text"><code>sudo reboot</code></p> </li></ol></div>
+
+
+
+<p>With this configuration the fan will be kept at a reasonably quiet level while still allowing you to use the ThinkPad on top of your laps. 🙂</p>
+
+
+
+<h2 id="configuration-deep-dive"><span id="Configuration_deep_dive">Configuration deep dive</span></h2>
+
+
+
+<p>If you&#8217;re interested in what exactly all the above-mentioned configuration options do, welcome to this deep dive section.</p>
+
+
+
+<h3 id="sensors-section"><span id="Sensors_section">Sensors section</span></h3>
+
+
+
+<p>Sensors section of the configuration file describes all the thermal sensors thinkfan will use to keep an eye on the temperature.</p>
+
+
+
+<p class="has-medium-font-size">&#x203c;&#xfe0f; <strong>IMPORTANT&#x203c;&#xfe0f;: avoid using nvml option (temperatures read from proprietary nVidia GPU driver).</strong></p>
+
+
+
+<p>Using <strong>nvml</strong> prevents the GPU from switching to suspend power state, causing battery drain and high temperatures.</p>
+
+
+
+<p>Here&#8217;s what we have there:</p>
+
+
+
+<ul><li><strong>hwmon</strong> &#8211; specifies a generic temperature sensor. We use it to monitor CPU, SSD, WLAN and other devices&#8217; temperature. A you can see, we have multiple <strong>hwmon</strong> entries having different names in the configuration file, here&#8217;s what they are:<br><ul><li><strong>tpacpi</strong> (#GPU) &#8211; this array of sensors represents pretty much the same temperatures as the one below (the chassis one), but with a little difference: the sensors are never missing here even if the device is offline (like GPU for example). Instead such sensors show negative values here. And this is what we&#8217;re using the sensor with index 1 for &#8211; to measure the GPU temperature.<br>Technically, thinkfan should support devices that can be removed/suspended, but there&#8217;s <a href="https://github.com/vmatare/thinkfan/issues/161" target="_blank" rel="noreferrer noopener">a bug preventing it from working properly in daemon mode</a>.</li><li><strong>coretemp</strong> (#CPU) &#8211; measures CPU temperature. My ThinkPad P14s has 4 physical cores, therefore there are 5 sensors available: 1 sensor for the whole package + 1 sensor per core. Since there are sensors for every core, it feels redundant to use the package sensor as well, therefore we ignore it with this option:<br><code>indices: [2, 3, 4, 5]</code><br>Notice we skip sensor having index 1.</li><li><strong>thinkpad</strong> (#Chassis) &#8211; measures CPU, GPU and chassis temperature. In my case sensor with index 8 is unavailable and sensor with index 4 always return 0, therefore I excluded them. Sensors 1 and 2 report CPU and GPU temperatures respectively, and since I already have other sensors to monitor CPU and GPU, I&#8217;ve excluded them as well. After all exclusions, this is what we have in the configuration:<br><code>indices: [3, 5, 6, 7]</code></li></ul><ul><li><strong>nvme</strong> &#8211; measures SSD temperature. There are 3 sensors available, where the first one is a composite sensor. I&#8217;ve noticed that during light internet browsing temperature of that sensor was typically higher than CPU temperature (I suppose because of browser using cache), while during heavy load CPU was hotter. Therefore I decided to correct this sensor&#8217;s temperature by -5 degrees to prevent the fan spinning up when it&#8217;s not really needed. So, we use all sensors available:<br><code>indices: [1, 2, 3]</code><br>And correct the temperature of the first sensor by -5 degrees:<br><code>correction: [-5, 0, 0]</code></li><li><strong>acpitz</strong> &#8211; measures motherboard temperature (or at least this is what I expect it to measure, not 100% sure about it). Has only 1 sensor that we use as is.</li></ul></li></ul>
+
+
+
+<h3 id="fans-section"><span id="Fans_section">Fans section</span></h3>
+
+
+
+<p>ThinkPad P14s only has one fan, therefore not much to configure in that section. It has only 1 entry:</p>
+
+
+
+<p><code>tpacpi: /proc/acpi/ibm/fan</code></p>
+
+
+
+<p>It specifies the path to the interface to control fan. By the way, make sure you did the first step of <a href="#tldr">TL;DR</a> section in order to be able to control the fan speed.</p>
+
+
+
+<h3 id="levels-section"><span id="Levels_section">Levels section</span></h3>
+
+
+
+<p>In this section we configure the fan speed and temperature levels to enable this fan speed. Thinkfan has 2 modes of fan speed configuration &#8211; <a href="https://github.com/vmatare/thinkfan/blob/master/examples/thinkfan.yaml#L131" target="_blank" rel="noreferrer noopener">simple</a> and <a href="https://github.com/vmatare/thinkfan/blob/master/examples/thinkfan.yaml#L155" target="_blank" rel="noreferrer noopener">detailed</a>.</p>
+
+
+
+<p>In simple mode thinkfan will use the highest temperature of all sensors to determine fan speed, while with detailed mode you can configure fan speed on per sensor basis.</p>
+
+
+
+<p>I use the simple mode here, since ThinkPad P14s is a relatively small device and one component heating up contributes to the heating of the whole device, so using the highest temperature of all sensors work well.</p>
+
+
+
+<p>Each entry of this section is an array of 3 values, where:</p>
+
+
+
+<ul><li>first item &#8211; is the fan speed level to use;</li><li>second item &#8211; is the temperature at which thinkfan should drop the fan speed to the previous level;</li><li>third item &#8211; is the temperature at which thinkfan should step up the fan speed to the next level.</li></ul>
+
+
+
+<p>Let&#8217;s take a few entries as an example to better understand what happens there:</p>
+
+
+
+<p><code>- [1, 35, 42]<br>- [2, 40, 45]</code></p>
+
+
+
+<p>When the temperature reaches 42°C, thinkfan will change the fan speed to level 2. Once the temperature drops down to 40 degrees thinkfan will change the fan speed to level 1.</p>
+
+
+
+<p>Having a bit of overlapping between ramp up and drop down make the speed changes a bit smoother.</p>
+
+
+
+<h2 id="check-fan-speeds-available"><span id="Check_fan_speeds_available">Check fan speeds available</span></h2>
+
+
+
+<p>To check what fan speeds you can use with your laptop, you can run the following command:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-1" data-shcb-language-name="Bash" data-shcb-language-slug="bash"><link rel='stylesheet' id='syntax-highlighting-code-block-css'  href='https://blog.monosoul.dev/wp-content/plugins/syntax-highlighting-code-block/vendor/scrivo/highlight-php/styles/atom-one-dark.css' media='all' /><style>.wp-block-code {
+	border: 0;
+	padding: 0;
+}
+
+.wp-block-code > div {
+	overflow: auto;
+}
+
+.shcb-language {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	-webkit-clip-path: inset(50%);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal;
+	word-break: normal;
+}
+
+.hljs {
+	box-sizing: border-box;
+}
+
+.hljs.shcb-code-table {
+	display: table;
+	width: 100%;
+}
+
+.hljs.shcb-code-table > .shcb-loc {
+	color: inherit;
+	display: table-row;
+	width: 100%;
+}
+
+.hljs.shcb-code-table .shcb-loc > span {
+	display: table-cell;
+}
+
+.wp-block-code code.hljs:not(.shcb-wrap-lines) {
+	white-space: pre;
+}
+
+.wp-block-code code.hljs.shcb-wrap-lines {
+	white-space: pre-wrap;
+}
+
+.hljs.shcb-line-numbers {
+	border-spacing: 0;
+	counter-reset: line;
+}
+
+.hljs.shcb-line-numbers > .shcb-loc {
+	counter-increment: line;
+}
+
+.hljs.shcb-line-numbers .shcb-loc > span {
+	padding-left: 0.75em;
+}
+
+.hljs.shcb-line-numbers .shcb-loc::before {
+	border-right: 1px solid #ddd;
+	content: counter(line);
+	display: table-cell;
+	padding: 0 0.75em;
+	text-align: right;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	white-space: nowrap;
+	width: 1%;
+}
+</style><div><code class="hljs language-bash">cat /proc/acpi/ibm/fan</code></div><small class="shcb-language" id="shcb-language-1"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">Bash</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">bash</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<p>The output should look somewhat like this:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-2" data-shcb-language-name="Gradle" data-shcb-language-slug="gradle"><div><code class="hljs language-gradle">status:         enabled
+speed:          <span class="hljs-number">3370</span>
+level:          <span class="hljs-number">4</span>
+commands:       level &lt;level&gt; (&lt;level&gt; is <span class="hljs-number">0</span>-<span class="hljs-number">7</span>, auto, disengaged, full-speed)
+commands:       enable, disable
+commands:       watchdog &lt;timeout&gt; (&lt;timeout&gt; is <span class="hljs-number">0</span> (off), <span class="hljs-number">1</span>-<span class="hljs-number">120</span> (seconds))</code></div><small class="shcb-language" id="shcb-language-2"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">Gradle</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">gradle</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<h2><span id="Bonus">Bonus</span></h2>
+
+
+
+<p>If you&#8217;re also using ThinkPad P14s (Gen 2) with Intel CPU, you might have noticed that it doesn&#8217;t support <a href="https://www.kernel.org/doc/html/v5.13/admin-guide/pm/sleep-states.html#suspend-to-ram" target="_blank" rel="noreferrer noopener">S3 sleep state</a>. You can technically turn it on in the BIOS, but I found it not working well. For example, the touchscreen didn&#8217;t work after laptop wakes up. Therefore I decided to stick with the default <a href="https://www.kernel.org/doc/html/v5.13/admin-guide/pm/sleep-states.html#suspend-to-idle" target="_blank" rel="noreferrer noopener">S2idle</a> (used for Windows 10 and Linux by default).</p>
+
+
+
+<p>Apart from power saving issues of that sleep state (we are not going to discuss those in this article), there&#8217;s another rather annoying issue: the fan doesn&#8217;t power off after you close the laptop lid and it enters the sleep state.</p>
+
+
+
+<p>Luckily, if you already have thinkfan installed, it can help you with that issue as well!</p>
+
+
+
+<p>Apart from <code>thinkfan.service</code> <a href="https://systemd.io/" target="_blank" rel="noreferrer noopener">systemd</a> unit, thinkfan provides a few extra units: </p>
+
+
+
+<ul><li><code>thinkfan-sleep.service</code> &#8211; executed when the system is going to sleep;</li><li><code>thinkfan-wakeup.service</code> &#8211; executed when the system is waking up from sleep.</li></ul>
+
+
+
+<p>We&#8217;re going to use those units to disable the fan when the system goes to sleep and to enable when it wakes up.</p>
+
+
+
+<h4 id="thinkfan-sleep-service"><span id="thinkfan-sleepservice">thinkfan-sleep.service</span></h4>
+
+
+
+<p>First, let&#8217;s change <code>thinkfan-sleep.service</code>.</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-3" data-shcb-language-name="Bash" data-shcb-language-slug="bash"><div><code class="hljs language-bash">sudo nano /lib/systemd/system/thinkfan-sleep.service</code></div><small class="shcb-language" id="shcb-language-3"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">Bash</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">bash</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<p>You should put a new line at the end of Service block:<br><code>ExecStart=/usr/bin/bash -c '/usr/bin/echo disable &gt; /proc/acpi/ibm/fan'</code></p>
+
+
+
+<p>So the file would look like that:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-4" data-shcb-language-name="Properties" data-shcb-language-slug="properties"><div><code class="hljs language-properties"><span class="hljs-attr">[Unit]</span>
+<span class="hljs-attr">Description</span>=<span class="hljs-string">Notify thinkfan of imminent sleep</span>
+<span class="hljs-attr">Before</span>=<span class="hljs-string">sleep.target</span>
+
+<span class="hljs-attr">[Service]</span>
+<span class="hljs-attr">Type</span>=<span class="hljs-string">oneshot</span>
+<span class="hljs-attr">ExecStart</span>=<span class="hljs-string">/usr/bin/pkill -x -winch thinkfan</span>
+<span class="hljs-comment"># Hack: Since the signal handler races with the sleep, we need to delay a bit</span>
+<span class="hljs-attr">ExecStart</span>=<span class="hljs-string">/usr/bin/sleep 1</span>
+<span class="hljs-attr">ExecStart</span>=<span class="hljs-string">/usr/bin/bash -c '/usr/bin/echo disable &gt; /proc/acpi/ibm/fan'</span>
+
+<span class="hljs-attr">[Install]</span>
+<span class="hljs-attr">WantedBy</span>=<span class="hljs-string">sleep.target</span></code></div><small class="shcb-language" id="shcb-language-4"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">Properties</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">properties</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<h4 id="thinkfan-wakeup-service"><span id="thinkfan-wakeupservice">thinkfan-wakeup.service</span></h4>
+
+
+
+<p>Now, let&#8217;s change <code>thinkfan-wakeup.service</code>.</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-5" data-shcb-language-name="Bash" data-shcb-language-slug="bash"><div><code class="hljs language-bash">sudo nano /lib/systemd/system/thinkfan-wakeup.service</code></div><small class="shcb-language" id="shcb-language-5"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">Bash</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">bash</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<p>You should put a new line into Service block, right after <code>Type=oneshot</code>, but before <code>ExecStart=...</code>:<br><code>ExecStart=/usr/bin/bash -c '/usr/bin/echo enable &gt; /proc/acpi/ibm/fan'</code></p>
+
+
+
+<p>So the file would look like that:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-6" data-shcb-language-name="Properties" data-shcb-language-slug="properties"><div><code class="hljs language-properties"><span class="hljs-attr">[Unit]</span>
+<span class="hljs-attr">Description</span>=<span class="hljs-string">Reload thinkfan after waking up from suspend</span>
+<span class="hljs-attr">After</span>=<span class="hljs-string">sysinit.target</span>
+<span class="hljs-attr">After</span>=<span class="hljs-string">suspend.target</span>
+<span class="hljs-attr">After</span>=<span class="hljs-string">suspend-then-hibernate.target</span>
+<span class="hljs-attr">After</span>=<span class="hljs-string">hybrid-sleep.target</span>
+<span class="hljs-attr">After</span>=<span class="hljs-string">hibernate.target</span>
+
+<span class="hljs-attr">[Service]</span>
+<span class="hljs-attr">Type</span>=<span class="hljs-string">oneshot</span>
+<span class="hljs-attr">ExecStart</span>=<span class="hljs-string">/usr/bin/bash -c '/usr/bin/echo enable &gt; /proc/acpi/ibm/fan'</span>
+<span class="hljs-attr">ExecStart</span>=<span class="hljs-string">/usr/bin/pkill -x -usr2 thinkfan</span>
+
+<span class="hljs-attr">[Install]</span>
+<span class="hljs-attr">WantedBy</span>=<span class="hljs-string">sleep.target</span></code></div><small class="shcb-language" id="shcb-language-6"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">Properties</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">properties</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<h4 id="apply-the-changes"><span id="Apply_the_changes">Apply the changes</span></h4>
+
+
+
+<p>Now to apply the changes run:</p>
+
+
+<pre class="wp-block-code" aria-describedby="shcb-language-7" data-shcb-language-name="Bash" data-shcb-language-slug="bash"><div><code class="hljs language-bash">sudo systemctl daemon-reload</code></div><small class="shcb-language" id="shcb-language-7"><span class="shcb-language__label">Code language:</span> <span class="shcb-language__name">Bash</span> <span class="shcb-language__paren">(</span><span class="shcb-language__slug">bash</span><span class="shcb-language__paren">)</span></small></pre>
+
+
+<p>And you&#8217;re good. Now whenever your laptop goes to sleep, even in s2idle state the fan will be turned off.</p>
+
+
+
+<h2 id="summary"><span id="Summary">Summary</span></h2>
+
+
+
+<p>Thanks to the flexibility of Linux we can control the fan speed however we want, regardless of the factory setup.</p>
+
+
+
+<p>I hope this wasn&#8217;t too hard and you got a better understanding of how to set thinkfan up.</p>
+
+
+
+<p>If you were able to come up with fan speed settings that you like more, please, do let me know about your configs in the comment section below.</p>
+
+
+
+<p>Thank you and happy hacking!</p>
+<div class='heateorSssClear'></div><div  class='heateor_sss_sharing_container heateor_sss_horizontal_sharing' data-heateor-sss-href='https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/'><div class='heateor_sss_sharing_title' style="font-weight:bold" >Like it? Share it!</div><div class="heateor_sss_sharing_ul"><a class="heateor_sss_button_telegram" href="https://telegram.me/share/url?url=https%3A%2F%2Fblog.monosoul.dev%2F2021%2F10%2F17%2Fhow-to-control-thinkpad-p14s-fan-speed-in-linux%2F&text=How%20to%20control%20ThinkPad%20P14s%27%20fan%20speed%20in%20Linux" title="Telegram" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_telegram" style="background-color:#3da5f1;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32"><path fill="#fff" d="M25.515 6.896L6.027 14.41c-1.33.534-1.322 1.276-.243 1.606l5 1.56 1.72 5.66c.226.625.115.873.77.873.506 0 .73-.235 1.012-.51l2.43-2.363 5.056 3.734c.93.514 1.602.25 1.834-.863l3.32-15.638c.338-1.363-.52-1.98-1.41-1.577z"></path></svg></span></a><a class="heateor_sss_facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fblog.monosoul.dev%2F2021%2F10%2F17%2Fhow-to-control-thinkpad-p14s-fan-speed-in-linux%2F" title="Facebook" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg" style="background-color:#3c589a;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-5 -5 42 42"><path d="M17.78 27.5V17.008h3.522l.527-4.09h-4.05v-2.61c0-1.182.33-1.99 2.023-1.99h2.166V4.66c-.375-.05-1.66-.16-3.155-.16-3.123 0-5.26 1.905-5.26 5.405v3.016h-3.53v4.09h3.53V27.5h4.223z" fill="#fff"></path></svg></span></a><a class="heateor_sss_button_twitter" href="https://twitter.com/intent/tweet?via=m0n0s0u1&text=How%20to%20control%20ThinkPad%20P14s%27%20fan%20speed%20in%20Linux&url=https%3A%2F%2Fblog.monosoul.dev%2F2021%2F10%2F17%2Fhow-to-control-thinkpad-p14s-fan-speed-in-linux%2F" title="Twitter" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_twitter" style="background-color:#55acee;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-4 -4 39 39"><path d="M28 8.557a9.913 9.913 0 0 1-2.828.775 4.93 4.93 0 0 0 2.166-2.725 9.738 9.738 0 0 1-3.13 1.194 4.92 4.92 0 0 0-3.593-1.55 4.924 4.924 0 0 0-4.794 6.049c-4.09-.21-7.72-2.17-10.15-5.15a4.942 4.942 0 0 0-.665 2.477c0 1.71.87 3.214 2.19 4.1a4.968 4.968 0 0 1-2.23-.616v.06c0 2.39 1.7 4.38 3.952 4.83-.414.115-.85.174-1.297.174-.318 0-.626-.03-.928-.086a4.935 4.935 0 0 0 4.6 3.42 9.893 9.893 0 0 1-6.114 2.107c-.398 0-.79-.023-1.175-.068a13.953 13.953 0 0 0 7.55 2.213c9.056 0 14.01-7.507 14.01-14.013 0-.213-.005-.426-.015-.637.96-.695 1.795-1.56 2.455-2.55z" fill="#fff"></path></svg></span></a><a class="heateor_sss_button_reddit" href="https://reddit.com/submit?url=https%3A%2F%2Fblog.monosoul.dev%2F2021%2F10%2F17%2Fhow-to-control-thinkpad-p14s-fan-speed-in-linux%2F&title=How%20to%20control%20ThinkPad%20P14s%27%20fan%20speed%20in%20Linux" title="Reddit" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_reddit" style="background-color:#ff5700;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-3.5 -3.5 39 39"><path d="M28.543 15.774a2.953 2.953 0 0 0-2.951-2.949 2.882 2.882 0 0 0-1.9.713 14.075 14.075 0 0 0-6.85-2.044l1.38-4.349 3.768.884a2.452 2.452 0 1 0 .24-1.176l-4.274-1a.6.6 0 0 0-.709.4l-1.659 5.224a14.314 14.314 0 0 0-7.316 2.029 2.908 2.908 0 0 0-1.872-.681 2.942 2.942 0 0 0-1.618 5.4 5.109 5.109 0 0 0-.062.765c0 4.158 5.037 7.541 11.229 7.541s11.22-3.383 11.22-7.541a5.2 5.2 0 0 0-.053-.706 2.963 2.963 0 0 0 1.427-2.51zm-18.008 1.88a1.753 1.753 0 0 1 1.73-1.74 1.73 1.73 0 0 1 1.709 1.74 1.709 1.709 0 0 1-1.709 1.711 1.733 1.733 0 0 1-1.73-1.711zm9.565 4.968a5.573 5.573 0 0 1-4.081 1.272h-.032a5.576 5.576 0 0 1-4.087-1.272.6.6 0 0 1 .844-.854 4.5 4.5 0 0 0 3.238.927h.032a4.5 4.5 0 0 0 3.237-.927.6.6 0 1 1 .844.854zm-.331-3.256a1.726 1.726 0 1 1 1.709-1.712 1.717 1.717 0 0 1-1.712 1.712z" fill="#fff"/></svg></span></a><a class="heateor_sss_button_linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fblog.monosoul.dev%2F2021%2F10%2F17%2Fhow-to-control-thinkpad-p14s-fan-speed-in-linux%2F&title=How%20to%20control%20ThinkPad%20P14s%27%20fan%20speed%20in%20Linux" title="Linkedin" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_linkedin" style="background-color:#0077b5;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32"><path d="M6.227 12.61h4.19v13.48h-4.19V12.61zm2.095-6.7a2.43 2.43 0 0 1 0 4.86c-1.344 0-2.428-1.09-2.428-2.43s1.084-2.43 2.428-2.43m4.72 6.7h4.02v1.84h.058c.56-1.058 1.927-2.176 3.965-2.176 4.238 0 5.02 2.792 5.02 6.42v7.395h-4.183v-6.56c0-1.564-.03-3.574-2.178-3.574-2.18 0-2.514 1.7-2.514 3.46v6.668h-4.187V12.61z" fill="#fff"></path></svg></span></a><a class="heateor_sss_whatsapp" href="https://api.whatsapp.com/send?text=How%20to%20control%20ThinkPad%20P14s%27%20fan%20speed%20in%20Linux https%3A%2F%2Fblog.monosoul.dev%2F2021%2F10%2F17%2Fhow-to-control-thinkpad-p14s-fan-speed-in-linux%2F" title="Whatsapp" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg" style="background-color:#55eb4c;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="-6 -5 40 40"><path class="heateor_sss_svg_stroke heateor_sss_no_fill" stroke="#fff" stroke-width="2" fill="none" d="M 11.579798566743314 24.396926207859085 A 10 10 0 1 0 6.808479557110079 20.73576436351046"></path><path d="M 7 19 l -1 6 l 6 -1" class="heateor_sss_no_fill heateor_sss_svg_stroke" stroke="#fff" stroke-width="2" fill="none"></path><path d="M 10 10 q -1 8 8 11 c 5 -1 0 -6 -1 -3 q -4 -3 -5 -5 c 4 -2 -1 -5 -1 -4" fill="#fff"></path></svg></span></a><a class="heateor_sss_button_vkontakte" href="https://vk.com/share.php?&url=https%3A%2F%2Fblog.monosoul.dev%2F2021%2F10%2F17%2Fhow-to-control-thinkpad-p14s-fan-speed-in-linux%2F" title="Vkontakte" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_vkontakte" style="background-color:#0077FF;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg fill="none" height="100%" width="100%" viewBox="0.75 15 46 17" xmlns="http://www.w3.org/2000/svg"><path d="M25.54 34.58c-10.94 0-17.18-7.5-17.44-19.98h5.48c.18 9.16 4.22 13.04 7.42 13.84V14.6h5.16v7.9c3.16-.34 6.48-3.94 7.6-7.9h5.16c-.86 4.88-4.46 8.48-7.02 9.96 2.56 1.2 6.66 4.34 8.22 10.02h-5.68c-1.22-3.8-4.26-6.74-8.28-7.14v7.14z" fill="#FFFFFF"></path></svg></span></a><a class="heateor_sss_button_pocket" href="https://getpocket.com/edit?url=https%3A%2F%2Fblog.monosoul.dev%2F2021%2F10%2F17%2Fhow-to-control-thinkpad-p14s-fan-speed-in-linux%2F&title=How%20to%20control%20ThinkPad%20P14s%27%20fan%20speed%20in%20Linux" title="Pocket" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg aheateor_sss_s__default heateor_sss_s_pocket" style="background-color:#ee4056;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 -1 32 32"><path fill="#fff" d="M16.005 6.244c2.927 0 5.854-.002 8.782 0 1.396.002 2.195.78 2.188 2.165-.015 2.485.116 4.987-.11 7.456-.75 8.204-10.027 12.607-16.91 8.064-3.086-2.036-4.82-4.925-4.917-8.672-.06-2.34-.034-4.684-.018-7.025.008-1.214.812-1.98 2.056-1.983 2.975-.01 5.952-.004 8.93-.006zm-5.037 5.483c-.867.093-1.365.396-1.62 1.025-.27.67-.078 1.256.417 1.732 1.688 1.62 3.378 3.238 5.09 4.838.745.695 1.537.687 2.278-.01 1.654-1.55 3.298-3.112 4.93-4.686.827-.797.91-1.714.252-2.38-.694-.704-1.583-.647-2.447.17-1.097 1.04-2.215 2.06-3.266 3.143-.485.494-.77.434-1.227-.025-1.1-1.107-2.234-2.18-3.39-3.225-.325-.29-.77-.447-1.017-.583z"></path></svg></span></a><a class="heateor_sss_button_evernote" href="https://www.evernote.com/clip.action?url=https%3A%2F%2Fblog.monosoul.dev%2F2021%2F10%2F17%2Fhow-to-control-thinkpad-p14s-fan-speed-in-linux%2F&title=How%20to%20control%20ThinkPad%20P14s%27%20fan%20speed%20in%20Linux" title="Evernote" rel="nofollow noopener" target="_blank" style="font-size:32px!important;box-shadow:none;display:inline-block;vertical-align:middle"><span class="heateor_sss_svg heateor_sss_s__default heateor_sss_s_evernote" style="background-color:#8be056;width:35px;height:35px;border-radius:999px;display:inline-block;opacity:1;float:left;font-size:32px;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box"><svg style="display:block;border-radius:999px;" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 32 32"><path fill="#fff" d="M7.884 8.573h2.276c.13 0 .236-.106.236-.235 0 0-.027-1.95-.027-2.494v-.006c0-.445.09-.833.253-1.16l.078-.145c-.007 0-.017.005-.025.014l-4.42 4.385c-.01.007-.014.016-.017.026.09-.046.215-.107.233-.115.386-.175.85-.27 1.41-.27zm17.704-.477c-.18-.968-.755-1.444-1.275-1.632-.56-.203-1.698-.413-3.127-.58-1.15-.137-2.504-.126-3.318-.1-.1-.672-.568-1.285-1.096-1.498-1.404-.564-3.573-.428-4.13-.272-.442.125-.932.378-1.205.768-.183.262-.302.595-.302 1.062 0 .265.007.886.015 1.44l.014 1.054c0 .494-.4.896-.896.897H7.99c-.485 0-.856.082-1.14.21-.284.128-.484.303-.636.508-.304.408-.357.912-.355 1.426 0 0 0 .416.102 1.23.084.63.767 5.02 1.414 6.356.25.522.42.736.912.966 1.1.47 3.61.994 4.787 1.146 1.174.15 1.912.466 2.35-.457.002 0 .088-.227.208-.56.382-1.156.435-2.18.435-2.924 0-.076.11-.078.11 0 0 .524-.1 2.38 1.303 2.875.554.197 1.7.373 2.864.51 1.055.12 1.82.537 1.82 3.24 0 1.645-.346 1.87-2.152 1.87-1.464 0-2.02.038-2.02-1.125 0-.938.93-.842 1.616-.842.31 0 .086-.23.086-.81 0-.576.36-.91.02-.918-2.384-.065-3.786-.004-3.786 2.978 0 2.706 1.036 3.208 4.418 3.208 2.65 0 3.588-.086 4.682-3.483.22-.67.742-2.718 1.06-6.154.197-2.173-.194-8.732-.502-10.388zm-4.622 7.25c-.327-.012-.643.01-.937.056.08-.667.353-1.488 1.332-1.453 1.08.033 1.23 1.056 1.237 1.75-.457-.205-1.02-.335-1.635-.357z"/></svg></span></a><a class="heateor_sss_more" title="More" rel="nofollow noopener" style="font-size: 32px!important;border:0;box-shadow:none;display:inline-block!important;font-size:16px;padding:0 4px;vertical-align: middle;display:inline;" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/" onclick="event.preventDefault()"><span class="heateor_sss_svg" style="background-color:#ee8e2d;width:35px;height:35px;border-radius:999px;display:inline-block!important;opacity:1;float:left;font-size:32px!important;box-shadow:none;display:inline-block;font-size:16px;padding:0 4px;vertical-align:middle;display:inline;background-repeat:repeat;overflow:hidden;padding:0;cursor:pointer;box-sizing:content-box;" onclick="heateorSssMoreSharingPopup(this, 'https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/', 'How%20to%20control%20ThinkPad%20P14s%27%20fan%20speed%20in%20Linux', '' )"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-.3 0 32 32" version="1.1" width="100%" height="100%" style="display:block;border-radius:999px;" xml:space="preserve"><g><path fill="#fff" d="M18 14V8h-4v6H8v4h6v6h4v-6h6v-4h-6z" fill-rule="evenodd"></path></g></svg></span></a></div><div class="heateorSssClear"></div></div><div class='heateorSssClear'></div>      </div>
+      <footer class="post-footer clearfix">
+                <div class="row entry-meta justify-content-between align-items-center">
+                    <div class="post-tags col-xs-12 col-sm-auto col-sm">
+            <ul class="tags">
+              <li><a class="tag__link btn btn-skin-dark-oh inverted" href="https://blog.monosoul.dev/tag/linux/" title="View all posts in linux"> <span>linux</span> </a></li><li><a class="tag__link btn btn-skin-dark-oh inverted" href="https://blog.monosoul.dev/tag/opensource/" title="View all posts in opensource"> <span>opensource</span> </a></li>            </ul>
+          </div>
+                          </div>
+      </footer>
+    </section><!-- .entry-content -->
+  </div><!-- .post-entry -->
+  </article><section class="post-author " >
+  <div class="post-author__wrapper">
+    <h4 class="post-author-title">AUTHOR</h4>
+      <figure class="author-info">
+      <span class="author-avatar"><img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-120x120.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-240x240.jpg 2x' class='avatar avatar-120 photo' height='120' width='120' loading='lazy'/></span>
+      <figcaption>
+        <h5 class="post-author-name author_name">Andrei Nevedomskii</h5>
+        <div class="post-author-description">I'm a software engineer with 10+ years of experience in IT. I'm passionate about backend engineering, high load, testing, open source and hacking.</div>
+        <a href="https://blog.monosoul.dev/author/monosoul/" rel="author" class="action-link" title="View all the posts of the author">
+          15 posts        </a>
+        <!-- fake need to have social links somewhere -->
+              </figcaption>
+    </figure>
+    </div>
+</section><section class="post-related-articles czr-carousel " id="related-posts-section" >
+  <header class="row flex-row">
+    <h3 class="related-posts_title col">You may also like</h3>
+          <div class="related-posts_nav col col-auto">
+        <span class="btn btn-skin-dark inverted czr-carousel-prev slider-control czr-carousel-control disabled icn-left-open-big" title="Previous related articles" tabindex="0"></span>
+        <span class="btn btn-skin-dark inverted czr-carousel-next slider-control czr-carousel-control icn-right-open-big" title="Next related articles" tabindex="0"></span>
+      </div>
+      </header>
+  <div class="row grid-container__square-mini carousel-inner">
+  <article id="post-27_related_posts" class="col-6 grid-item czr-related-post post-27 post type-post status-publish format-standard has-post-thumbnail category-development category-linux tag-containers tag-development tag-docker tag-linux tag-ubuntu czr-hentry" >
+  <div class="grid__item flex-wrap flex-lg-nowrap flex-row">
+    <section class="tc-thumbnail entry-media__holder col-12 col-lg-6 czr__r-w1by1" >
+  <div class="entry-media__wrapper czr__r-i js-centering">
+        <a class="bg-link" rel="bookmark" href="https://blog.monosoul.dev/2020/09/15/using-cgroups-to-make-local-test-runs-less-painful/"></a>
+  <img  width="510" height="309"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://blog.monosoul.dev/wp-content/uploads/2020/09/Docker_logo-510x309.png"  class="attachment-tc-sq-thumb tc-thumb-type-thumb czr-img wp-post-image" alt="Using CGroups to make local test runs less painful" loading="lazy" /><div class="post-action btn btn-skin-dark-shaded inverted"><a href="https://blog.monosoul.dev/wp-content/uploads/2020/09/Docker_logo.png" class="expand-img icn-expand"></a></div>  </div>
+</section>      <section class="tc-content entry-content__holder col-12 col-lg-6 czr__r-w1by1">
+        <div class="entry-content__wrapper">
+        <header class="entry-header " >
+  <div class="entry-header-inner ">
+          <div class="entry-meta post-info">
+          Published <a href="https://blog.monosoul.dev/2020/09/15/using-cgroups-to-make-local-test-runs-less-painful/" title="Permalink to:&nbsp;Using CGroups to make local test runs less painful" rel="bookmark"><time class="entry-date published updated" datetime="September 15, 2020">September 15, 2020</time></a>      </div>
+              <h2 class="entry-title ">
+      <a class="czr-title" href="https://blog.monosoul.dev/2020/09/15/using-cgroups-to-make-local-test-runs-less-painful/" rel="bookmark">Using CGroups to make local test runs less painful</a>
+    </h2>
+            </div>
+</header><div class="tc-content-inner entry-summary"  >
+            <div class="czr-wp-the-content">
+              <p>In my team we&#8217;re using Docker a lot, especially in pair with testcontainers. When we&#8217;re running functional tests locally, there might be spinned up localstack, WireMock, Postgres and a container with the service itself. Running them all at the same time as well as the tests might heat up your laptop a lot, as well as make it next to unusable for quite some time. Luckily, thanks to having Linux on my laptop, this issue can be solved using CGroups.</p>
+          </div>
+      </div>        </div>
+      </section>
+  </div>
+</article><article id="post-708_related_posts" class="col-6 grid-item czr-related-post post-708 post type-post status-publish format-standard has-post-thumbnail category-linux category-offtopic tag-linux tag-opensource czr-hentry" >
+  <div class="grid__item flex-wrap flex-lg-nowrap flex-row">
+    <section class="tc-thumbnail entry-media__holder col-12 col-lg-6 czr__r-w1by1" >
+  <div class="entry-media__wrapper czr__r-i js-centering">
+        <a class="bg-link" rel="bookmark" href="https://blog.monosoul.dev/2022/05/17/automatically-sign-nvidia-kernel-module-in-fedora-36/"></a>
+  <img  width="510" height="427"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://blog.monosoul.dev/wp-content/uploads/2022/05/Automatically_signing_nVidia_kernel_module_in_Fedora_36-510x427.png"  class="attachment-tc-sq-thumb tc-thumb-type-thumb czr-img wp-post-image" alt="Automatically signing nVidia kernel module in Fedora 36" loading="lazy" /><div class="post-action btn btn-skin-dark-shaded inverted"><a href="https://blog.monosoul.dev/wp-content/uploads/2022/05/Automatically_signing_nVidia_kernel_module_in_Fedora_36.png" class="expand-img icn-expand"></a></div>  </div>
+</section>      <section class="tc-content entry-content__holder col-12 col-lg-6 czr__r-w1by1">
+        <div class="entry-content__wrapper">
+        <header class="entry-header " >
+  <div class="entry-header-inner ">
+          <div class="entry-meta post-info">
+          Published <a href="https://blog.monosoul.dev/2022/05/17/automatically-sign-nvidia-kernel-module-in-fedora-36/" title="Permalink to:&nbsp;Automatically sign NVidia Kernel module in Fedora 36" rel="bookmark"><time class="entry-date published updated" datetime="May 17, 2022">May 17, 2022</time></a>      </div>
+              <h2 class="entry-title ">
+      <a class="czr-title" href="https://blog.monosoul.dev/2022/05/17/automatically-sign-nvidia-kernel-module-in-fedora-36/" rel="bookmark">Automatically sign NVidia Kernel module in Fedora 36</a>
+    </h2>
+          <div class="post-info"><a class="comments__link" data-anchor-scroll="true" href="https://blog.monosoul.dev/2022/05/17/automatically-sign-nvidia-kernel-module-in-fedora-36/#czr-comments" title="43 Comments on Automatically sign NVidia Kernel module in Fedora 36" ><span>43 comments</span></a></div>  </div>
+</header><div class="tc-content-inner entry-summary"  >
+            <div class="czr-wp-the-content">
+              <p>Here&#8217;s how to automatically sign NVIDIA Kernel module in Fedora to make it more convenient to use with Secure Boot enabled.</p>
+          </div>
+      </div>        </div>
+      </section>
+  </div>
+</article><article id="post-12_related_posts" class="col-6 grid-item czr-related-post post-12 post type-post status-publish format-standard category-offtopic tag-developer tag-development tag-java tag-kotlin tag-opensource tag-software czr-hentry" >
+  <div class="grid__item flex-wrap flex-lg-nowrap flex-row">
+    <section class="tc-thumbnail entry-media__holder col-12 col-lg-6 czr__r-w1by1" >
+  <div class="entry-media__wrapper czr__r-i js-centering">
+        <a class="bg-link" rel="bookmark" href="https://blog.monosoul.dev/2020/09/14/hello-there/"></a>
+          <svg class="czr-svg-placeholder thumb-standard-empty" id="6373f77c280de" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M928 832q0-14-9-23t-23-9q-66 0-113 47t-47 113q0 14 9 23t23 9 23-9 9-23q0-40 28-68t68-28q14 0 23-9t9-23zm224 130q0 106-75 181t-181 75-181-75-75-181 75-181 181-75 181 75 75 181zm-1024 574h1536v-128h-1536v128zm1152-574q0-159-112.5-271.5t-271.5-112.5-271.5 112.5-112.5 271.5 112.5 271.5 271.5 112.5 271.5-112.5 112.5-271.5zm-1024-642h384v-128h-384v128zm-128 192h1536v-256h-828l-64 128h-644v128zm1664-256v1280q0 53-37.5 90.5t-90.5 37.5h-1536q-53 0-90.5-37.5t-37.5-90.5v-1280q0-53 37.5-90.5t90.5-37.5h1536q53 0 90.5 37.5t37.5 90.5z"/></svg>
+        <img class="czr-img-placeholder" src="https://blog.monosoul.dev/wp-content/themes/customizr-pro/assets/front/img/thumb-standard-empty.png" alt="Hello there!" data-czr-post-id="6373f77c280de" width="300" height="300"/>  </div>
+</section>      <section class="tc-content entry-content__holder col-12 col-lg-6 czr__r-w1by1">
+        <div class="entry-content__wrapper">
+        <header class="entry-header " >
+  <div class="entry-header-inner ">
+          <div class="entry-meta post-info">
+          Published <a href="https://blog.monosoul.dev/2020/09/14/hello-there/" title="Permalink to:&nbsp;Hello there!" rel="bookmark"><time class="entry-date published updated" datetime="September 14, 2020">September 14, 2020</time></a>      </div>
+              <h2 class="entry-title ">
+      <a class="czr-title" href="https://blog.monosoul.dev/2020/09/14/hello-there/" rel="bookmark">Hello there!</a>
+    </h2>
+            </div>
+</header>        </div>
+      </section>
+  </div>
+</article><article id="post-544_related_posts" class="col-6 grid-item czr-related-post post-544 post type-post status-publish format-standard has-post-thumbnail category-linux category-offtopic tag-linux tag-opensource czr-hentry" >
+  <div class="grid__item flex-wrap flex-lg-nowrap flex-row">
+    <section class="tc-thumbnail entry-media__holder col-12 col-lg-6 czr__r-w1by1" >
+  <div class="entry-media__wrapper czr__r-i js-centering">
+        <a class="bg-link" rel="bookmark" href="https://blog.monosoul.dev/2021/12/29/automatically-sign-nvidia-kernel-module-in-fedora/"></a>
+  <img  width="510" height="427"  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="https://blog.monosoul.dev/wp-content/uploads/2021/12/Automatically_signing_nVidia_kernel_module_in_Fedora-510x427.png"  class="attachment-tc-sq-thumb tc-thumb-type-thumb czr-img wp-post-image" alt="Automatically signing nVidia kernel module in Fedora 35" loading="lazy" /><div class="post-action btn btn-skin-dark-shaded inverted"><a href="https://blog.monosoul.dev/wp-content/uploads/2021/12/Automatically_signing_nVidia_kernel_module_in_Fedora.png" class="expand-img icn-expand"></a></div>  </div>
+</section>      <section class="tc-content entry-content__holder col-12 col-lg-6 czr__r-w1by1">
+        <div class="entry-content__wrapper">
+        <header class="entry-header " >
+  <div class="entry-header-inner ">
+          <div class="entry-meta post-info">
+          Published <a href="https://blog.monosoul.dev/2021/12/29/automatically-sign-nvidia-kernel-module-in-fedora/" title="Permalink to:&nbsp;Automatically sign NVidia Kernel module in Fedora 35" rel="bookmark"><time class="entry-date published updated" datetime="December 29, 2021">December 29, 2021</time></a>      </div>
+              <h2 class="entry-title ">
+      <a class="czr-title" href="https://blog.monosoul.dev/2021/12/29/automatically-sign-nvidia-kernel-module-in-fedora/" rel="bookmark">Automatically sign NVidia Kernel module in Fedora 35</a>
+    </h2>
+          <div class="post-info"><a class="comments__link" data-anchor-scroll="true" href="https://blog.monosoul.dev/2021/12/29/automatically-sign-nvidia-kernel-module-in-fedora/#czr-comments" title="18 Comments on Automatically sign NVidia Kernel module in Fedora 35" ><span>18 comments</span></a></div>  </div>
+</header><div class="tc-content-inner entry-summary"  >
+            <div class="czr-wp-the-content">
+              <p>Here&#8217;s how to automatically sign NVIDIA Kernel module in Fedora 35 to make it more convenient to use with Secure Boot enabled.</p>
+          </div>
+      </div>        </div>
+      </section>
+  </div>
+</article>  </div>
+</section>
+                </div>
+
+                
+<div id="czr-comments" class="comments-area col-12 order-md-last" >
+    <div id="comments" class="comments_container comments czr-comments-block">
+  <section class="post-comments">
+    	<div id="respond" class="comment-respond">
+		<h4 id="reply-title" class="comment-reply-title">Leave a comment <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#respond" style="display:none;">Cancel reply</a></small></h4><form action="https://blog.monosoul.dev/wp-comments-post.php" method="post" id="commentform" class="czr-form comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> <span class="required-field-message" aria-hidden="true">Required fields are marked <span class="required" aria-hidden="true">*</span></span></p><p class="comment-form-comment"><label for="comment">Comment <span class="required" aria-hidden="true">*</span></label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required" aria-hidden="true">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required" aria-hidden="true">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="comment-form-comment-subscribe"><label for="cren_subscribe_to_comment"><input id="cren_subscribe_to_comment" name="cren_subscribe_to_comment" type="checkbox" value="on" checked>Notify me via e-mail if anyone answers my comment.</label></p>
+<p class="comment-form-comment-subscribe"><label for="cren_gdpr"><input id="cren_gdpr" name="cren_gdpr" type="checkbox" value="yes" required="required">I consent to Monosoul&#039;s Dev Blog collecting and storing the data I submit in this form. <a target='_blank' href='https://blog.monosoul.dev/privacy-policy/'>(Privacy Policy)</a> <span class="required">*</span></label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='451' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="3fe0a38e4c" /></p><p style="display: none !important;"><label>&#916;<textarea name="ak_hp_textarea" cols="45" rows="8" maxlength="100"></textarea></label><input type="hidden" id="ak_js_1" name="ak_js" value="118"/><script>document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );</script></p></form>	</div><!-- #respond -->
+	<h2 id="czr-comments-title" class="comments-title" >29 thoughts on &ldquo;</span>How to control ThinkPad P14s&#8217; fan speed in Linux</span>&rdquo;</h2>
+
+<ul class="nav nav-pills tabs">
+    <!-- WITH COMMENTS PAGINATION THE COMMENT/PINGBACK COUNT IS WRONG AS IS COUNTS JUST THE NUMBER OF ELEMENTS OF THE CURRENT (PAEG) QUERY -->
+    <li class="nav-item"><a href="#commentlist-container" class="nav-link active" data-toggle="czr-pill" role="tab">29&nbspcomments</a></li>
+    </ul>
+<div id="comments" class="tab-content">
+      <div id="commentlist-container" class="tab-pane comments active" role="tabpanel">
+      <ul class="comment-list">
+        <li class="comment even thread-even depth-1" id="comment-190" >
+  <div id ="div-comment-190" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/399a8b331370cbd3a4dfb6b7b0c23378?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/399a8b331370cbd3a4dfb6b7b0c23378?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            Sergio                      </div>
+          <time class="comment-date comment-metadata" datetime="10:53">
+            <span>September 19, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-190">10:53</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hi Andrei,<br />
+in my Lenovo T15 Gen 2 &#8211; Type 20W4 &#8211; i had to set this indices on SSD section, as sensor 3 seems missing:</p>
+<p>&#8220;`<br />
+  # SSD<br />
+  &#8211; hwmon: /sys/class/hwmon<br />
+    name: nvme<br />
+    indices: [1, 2]<br />
+    correction: [-5, 0]<br />
+&#8220;`</p>
+<p>Error was:<br />
+&#8220;`<br />
+set 19 09:38:12 sergio-ThinkPad-T15-Gen-2i systemd[1]: Starting Thinkfan, the minimalist fan control program&#8230;<br />
+set 19 09:38:12 sergio-ThinkPad-T15-Gen-2i thinkfan[1166]: ERROR: /etc/thinkfan.conf:16:<br />
+                                                               indices: [1, 2, 3]<br />
+                                                                        ^<br />
+                                                           Unable to find requested temperature inputs in /sys/class/hwmon/hwmon3..<br />
+set 19 09:38:12 sergio-ThinkPad-T15-Gen-2i systemd[1]: thinkfan.service: Control process exited, code=exited, status=1/FAILURE<br />
+set 19 09:38:12 sergio-ThinkPad-T15-Gen-2i systemd[1]: thinkfan.service: Failed with result &#8216;exit-code&#8217;.<br />
+set 19 09:38:12 sergio-ThinkPad-T15-Gen-2i systemd[1]: Failed to start Thinkfan, the minimalist fan control program.<br />
+&#8220;`</p>
+<p>Thanks,<br />
+Sergio</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-190' data-commentid="190" data-postid="451" data-belowelement="div-comment-190" data-respondelement="respond" data-replyto="Reply to Sergio" aria-label='Reply to Sergio'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor odd alt depth-2" id="comment-191" >
+  <div id ="div-comment-191" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="10:58">
+            <span>September 19, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-191">10:58</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hey Sergio,</p>
+<p>Thanks for sharing! Probably it depends on the SSD model.</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-191' data-commentid="191" data-postid="451" data-belowelement="div-comment-191" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div></li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-odd thread-alt depth-1" id="comment-115" >
+  <div id ="div-comment-115" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/28552446bb04def739b34aafc0f3a691?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/28552446bb04def739b34aafc0f3a691?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            BlaY0                      </div>
+          <time class="comment-date comment-metadata" datetime="14:41">
+            <span>June 24, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-115">14:41</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hi Andrei,</p>
+<p>Just an observation&#8230; I also have P14s but Gen 2i (Intel). What I see is that in my case both Composite and Sensor 1 of hwmon3 (nvme) are approx. 5 degrees higher than Sensor 2, around 50 degrees both. I&#8217;m also not quite sure about the impact that higher fan RPM would have on nvme module itself. I tried with full-speed for some time to see if temp would go down and it actually didn&#8217;t so I guess if I go with -10 for both Composite and Sensor 1 and -5 for Sensor 2 it is good enough. I will do some more stress tests for nvme to see if fan speed has any impact on it at all. There might also be a hwmon problem (kernel bug)&#8230; wrongly reporting those temps?</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-115' data-commentid="115" data-postid="451" data-belowelement="div-comment-115" data-respondelement="respond" data-replyto="Reply to BlaY0" aria-label='Reply to BlaY0'>Reply</a>    </div>
+  </div></li><!-- #comment-## -->
+<li class="comment odd alt thread-even depth-1" id="comment-64" >
+  <div id ="div-comment-64" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/217347f27db1b7d1576ef61828266e06?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/217347f27db1b7d1576ef61828266e06?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href="https://github.com/ispanos" rel='external nofollow ugc' class='url'>Yiannis</a>                      </div>
+          <time class="comment-date comment-metadata" datetime="23:07">
+            <span>March 17, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-64">23:07</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hello Andrei,</p>
+<p>Thanks for sharing this to the rest of us. I just got the P14s G2 (intel) a few weeks ago. It doesn&#8217;t have the touch screen and after updating the firmware, I think I don&#8217;t have any issues with s3 state and having the fan always on. However, after following the first 7 steps of your guide, thinkfan is crashing.</p>
+<p>&#8220;`<br />
+× thinkfan.service &#8211; Thinkfan, the minimalist fan control program<br />
+     Loaded: loaded (/usr/lib/systemd/system/thinkfan.service; enabled; vendor preset: disabled)<br />
+     Active: failed (Result: core-dump) since Thu 2022-03-17 23:59:25 EET; 6min ago<br />
+    Process: 7388 ExecStart=/usr/sbin/thinkfan -n $OPTIONS (code=dumped, signal=ABRT)<br />
+   Main PID: 7388 (code=dumped, signal=ABRT)<br />
+        CPU: 17ms</p>
+<p>Mar 17 23:59:25 gon systemd[1]: Started Thinkfan, the minimalist fan control program.<br />
+Mar 17 23:59:25 gon systemd[1]: thinkfan.service: Main process exited, code=dumped, status=6/ABRT<br />
+Mar 17 23:59:25 gon systemd[1]: thinkfan.service: Failed with result &#8216;core-dump&#8217;.<br />
+&#8220;`</p>
+<p>&#8220;`<br />
+sudo thinkfan -c /etc/thinkfan.conf<br />
+/usr/include/c++/11/bits/stl_vector.h:1063: std::vector::const_reference std::vector::operator[](std::vector::size_type) const [with _Tp = int; _Alloc = std::allocator; std::vector::const_reference = const int&amp;; std::vector::size_type = long unsigned int]: Assertion &#8216;__n size()&#8217; failed.<br />
+zsh: IOT instruction  sudo thinkfan -c /etc/thinkfan.conf<br />
+&#8220;`</p>
+<p>I am on Fedora 35</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-64' data-commentid="64" data-postid="451" data-belowelement="div-comment-64" data-respondelement="respond" data-replyto="Reply to Yiannis" aria-label='Reply to Yiannis'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor even depth-2" id="comment-65" >
+  <div id ="div-comment-65" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="01:01">
+            <span>March 18, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-65">01:01</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hey Yiannis,<br />
+I&#8217;m using Fedora 35 myself and I don&#8217;t use thinkfan with it, since on Fedora the fan is quiet for me out of the box</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-65' data-commentid="65" data-postid="451" data-belowelement="div-comment-65" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment odd alt depth-3" id="comment-66" >
+  <div id ="div-comment-66" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/217347f27db1b7d1576ef61828266e06?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/217347f27db1b7d1576ef61828266e06?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href="https://github.com/ispanos" rel='external nofollow ugc' class='url'>Yiannis</a>                      </div>
+          <time class="comment-date comment-metadata" datetime="11:46">
+            <span>March 18, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-66">11:46</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>What do you use for power management?<br />
+The out of the box  battery saver power-profile was throttling the cpu too far, and balanced turned the fan higher than I like. I installed cpufreq (+gnome extention) which allowed the cpu to turbo boost, and performance was ok even in power saving mode.</p>
+<p>I then uninstalled both of those and tried powertop &#8211;auto-tune with tlp. Now I don&#8217;t have any control over the power profile, but most of the time the laptop is quite and fast. But, sometimes, after finishing a demanding task, where the fan has to ramp up, it takes too long to slow back down, even when CPU temps are low.</p>
+<p>Do you have a recent article about your power management settings?</p>
+<p>Do you suggest I uninstall thinkfan since I am on Fedora? I thought it would be nice to have a little more control.</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-66' data-commentid="66" data-postid="451" data-belowelement="div-comment-66" data-respondelement="respond" data-replyto="Reply to Yiannis" aria-label='Reply to Yiannis'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor even depth-4" id="comment-67" >
+  <div id ="div-comment-67" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="12:21">
+            <span>March 18, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-67">12:21</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>I don&#8217;t use anything specific, just default &#8220;balanced&#8221; profile. TBH, I don&#8217;t experience any performance issues with it, works great for me. At least when I&#8217;m on AC power. When it runs on battery, then yes, the laptop gets noticeably slower.  But I&#8217;m fine with it since at least it&#8217;s quiet and cool enough to sit on my laps 🙂</p>
+<p>I&#8217;ve tried using TLP as well, but I think it was giving me some weird issues, I don&#8217;t remember exactly, but at some point I decided to uninstall it.</p>
+<p>The thing is Fedora 35 comes with the latest version of <a href="https://github.com/intel/thermal_daemon" rel="nofollow ugc">thermald</a> and I think it gets the job done quite well. At least I&#8217;m pretty happy with what I get out of the box in comparison to how it was with Ubuntu.</p>
+<p>People have different use cases, so what works for me might not work for you. If you want to have more control over your fan, I&#8217;d say go for it. 🙂</p>
+<p>I&#8217;m not 100% sure what&#8217;s the issue you have with thinkfan, the error doesn&#8217;t tell much to me. Might be just a bug. One thing you can try &#8211; is to remove items from sensors list one by one and see if thinkfan works after each removal. Maybe it&#8217;s one of the sensors that makes it crash. A good candidate to start would be the GPU sensor definition.</p>
+<p>Also, since Fedora has a newer version of thinkfan, you can actually replace GPU sensor definition with this one:<br />
+<code><br />
+  - hwmon: /sys/class/hwmon<br />
+    name: thinkpad<br />
+    indices: [ 2 ]<br />
+    optional: true<br />
+</code><br />
+It should work a bit better</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-67' data-commentid="67" data-postid="451" data-belowelement="div-comment-67" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div></li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-49" >
+  <div id ="div-comment-49" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/7d2f2fbc79aee6b1d7c5eefb1dc788f1?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/7d2f2fbc79aee6b1d7c5eefb1dc788f1?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            George                      </div>
+          <time class="comment-date comment-metadata" datetime="17:14">
+            <span>February 3, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-49">17:14</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hello, thanks for your guide, i want to ask you about this line:<br />
+Configure thinkfan to use the newly created file<br />
+echo &#8216;THINKFAN_ARGS=&#8221;-c /etc/thinkfan.conf&#8221;&#8216; | sudo tee -a /etc/default/thinkfan<br />
+What is the point of that? I haven&#8217;t seen that anywhere, not even on the author&#8217;s github</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-49' data-commentid="49" data-postid="451" data-belowelement="div-comment-49" data-respondelement="respond" data-replyto="Reply to George" aria-label='Reply to George'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor even depth-2" id="comment-50" >
+  <div id ="div-comment-50" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="17:39">
+            <span>February 3, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-50">17:39</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hey George,<br />
+Thinkfan package in Ubuntu uses a different config location by default, this line is only needed in Ubuntu to make thinkfan use the newly created configuration.</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-50' data-commentid="50" data-postid="451" data-belowelement="div-comment-50" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div></li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-even depth-1" id="comment-47" >
+  <div id ="div-comment-47" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/6bac95326f192bbe21ce75ae8f448b62?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/6bac95326f192bbe21ce75ae8f448b62?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            Christoph                      </div>
+          <time class="comment-date comment-metadata" datetime="15:12">
+            <span>February 2, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-47">15:12</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hi Andrei,</p>
+<p>I&#8217;m on Bebian Bullseye 11.2 with a Lenovo Thinkpad P14s Gen2. Installed is thinkfan 0.9.1 (thinkfan-0.9.3-2).<br />
+I pasted your /etc/thinkfan.conf:<br />
+&#8212; snip &#8212;<br />
+# 2022-02-02, 11:54:13, haasc:<br />
+sensors:<br />
+# GPU<br />
+&#8211; tpacpi /proc/acpi/ibm/thermal<br />
+  indices: [1]<br />
+# CPU<br />
+&#8211; hwmon: /sys/class/hwmon<br />
+  name: coretemp<br />
+  indices: [2, 3, 4, 5]<br />
+# Chassis<br />
+&#8211; hwmon: /sys/class/hwmon<br />
+  name: thinkpad<br />
+  indices: [3, 5, 6, 7]<br />
+# SSD<br />
+&#8211; hwmon: /sys/class/hwmon<br />
+  name: nvme<br />
+  indices: [1, 2, 3]<br />
+  correction: [-5, 0, 0]<br />
+# MB<br />
+&#8211; hwmon: /sys/class/hwmon<br />
+  name: acpitz<br />
+  indices: [1]</p>
+<p># fans:<br />
+&#8211; tpacpi: /proc/acpi/ibm/fan</p>
+<p>levels:<br />
+&#8211; [0, 0, 37]<br />
+&#8211; [1, 35, 42]<br />
+&#8211; [2, 40, 45]<br />
+&#8211; [3, 43, 47]<br />
+&#8211; [4, 45, 52]<br />
+&#8211; [5, 50, 57]<br />
+&#8211; [6, 55, 72]<br />
+&#8211; [7, 70, 82]<br />
+&#8211; [&#8220;level full-speed&#8221;, 77, 32767]<br />
+&#8212; snap &#8212;<br />
+but when I&#8217;m trying to start thinkfan, it fails with<br />
+The unit thinkfan.service has entered the &#8216;failed&#8217; state with result &#8216;exit-code&#8217;.<br />
+thinkfan[28373]: /etc/thinkfan.conf:4:- tpacpi /proc/acpi/ibm/thermal<br />
+thinkfan[28373]: Syntax error.<br />
+thinkfan[28373]: Refusing to run without usable config file!<br />
+systemd[1]: Failed to start simple and lightweight fan control program.<br />
+░░ Subject: A start job for unit thinkfan.service has failed<br />
+░░ Defined-By: systemd</p>
+<p>Your syntax for the thinkfan.conf seems quite different from what is in /usr/share/doc/thinkfan/examples.</p>
+<p>I have no clue, what is wrong and how it can be fixed. Can you point me in the right direction?<br />
+Is maybe the version of thinkfan shipped with Debian Bullseye too old? Do I have to install v1.2 from Debian Testing?</p>
+<p>Thanks<br />
+Christoph.</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-47' data-commentid="47" data-postid="451" data-belowelement="div-comment-47" data-respondelement="respond" data-replyto="Reply to Christoph" aria-label='Reply to Christoph'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor even depth-2" id="comment-48" >
+  <div id ="div-comment-48" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="17:10">
+            <span>February 2, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-48">17:10</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hey Christoph,</p>
+<p>Thinkfan supports 2 syntaxes: flat and structured. The syntax I use here is YAML (the structured one), I think it was introduced to thinkfan at version 1.0, so yeah, probably your version is too old. If you can, I&#8217;d recommend installing version 1.2 from Debian testing since it has quite a few bugfixes. Also, I it should work with the config example from here after you do that.</p>
+<p>Although, if you&#8217;re not very fond of Debian, I can recommend installing Fedora 35 on your laptop. I&#8217;m running it right now on my P14s and it works great, I don&#8217;t even use <code>thinkfan</code> anymore, since the fan is quiet out of the box.</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-48' data-commentid="48" data-postid="451" data-belowelement="div-comment-48" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div></li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-27" >
+  <div id ="div-comment-27" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/b3a2021944766a4d984612e52e55f1d0?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/b3a2021944766a4d984612e52e55f1d0?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            druizz                      </div>
+          <time class="comment-date comment-metadata" datetime="11:13">
+            <span>December 15, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-27">11:13</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hi Andrei, thank you for the tutorial.</p>
+<p>I am using Arch and I configured `thinkfan` with your guide, but I have problems.</p>
+<p>The service is running OK, and it is able to change the fan configuration with my configuration. The problem is that although the configuration is set, the fan is always active. This is the output of the `thinkfan` service:</p>
+<p>&#8220;`<br />
+systemctl status thinkfan<br />
+● thinkfan.service &#8211; simple and lightweight fan control program<br />
+     Loaded: loaded (/usr/lib/systemd/system/thinkfan.service; enabled; vendor preset: disabled)<br />
+    Drop-In: /etc/systemd/system/thinkfan.service.d<br />
+             └─override.conf<br />
+     Active: active (running) since Wed 2021-12-15 11:04:50 CET; 5min ago<br />
+    Process: 14552 ExecStart=/usr/bin/thinkfan $THINKFAN_ARGS (code=exited, status=0/SUCCESS)<br />
+   Main PID: 14553 (thinkfan)<br />
+      Tasks: 1 (limit: 18785)<br />
+     Memory: 532.0K<br />
+        CPU: 24ms<br />
+     CGroup: /system.slice/thinkfan.service<br />
+             └─14553 /usr/bin/thinkfan -b0</p>
+<p>Dec 15 11:04:50 druizz-pc systemd[1]: Starting simple and lightweight fan control program&#8230;<br />
+Dec 15 11:04:50 druizz-pc thinkfan[14552]: Daemon PID: 14553<br />
+Dec 15 11:04:50 druizz-pc systemd[1]: Started simple and lightweight fan control program.<br />
+Dec 15 11:04:50 druizz-pc thinkfan[14553]: Temperatures(bias): 40(0), 43(0), 34(0), 37(0) -&gt; Fans: level 0<br />
+Dec 15 11:10:05 druizz-pc thinkfan[14553]: Temperatures(bias): 38(0), 56(0), 35(0), 85(0) -&gt; Fans: level full-speed<br />
+Dec 15 11:10:07 druizz-pc thinkfan[14553]: Temperatures(bias): 34(0), 37(0), 32(0), 33(0) -&gt; Fans: level 0<br />
+&#8220;`</p>
+<p>As you can see, the level changes with the temperatures, but my fan still runs.</p>
+<p>If I stop the `thinkfan` service and set the configuration manually, I can see the change when I execute `cat /proc/acpi/ibm/fan`, but the fan still runs although the level 0 is set:</p>
+<p>&#8220;`</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-27' data-commentid="27" data-postid="451" data-belowelement="div-comment-27" data-respondelement="respond" data-replyto="Reply to druizz" aria-label='Reply to druizz'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment even depth-2" id="comment-28" >
+  <div id ="div-comment-28" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/b3a2021944766a4d984612e52e55f1d0?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/b3a2021944766a4d984612e52e55f1d0?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            druizz                      </div>
+          <time class="comment-date comment-metadata" datetime="11:25">
+            <span>December 15, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-28">11:25</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Sorry, I pressed the enter key by error 🙂</p>
+<p> As I wrote above, `thinkfan` is able to edit `/proc/acpi/ibm/fan`, but the changes seem to not be applied. The fan speed always shows `32768`,  it would be 0 or 7:</p>
+<p>&#8220;`<br />
+% cat /proc/acpi/ibm/fan<br />
+status:		disabled<br />
+speed:		32768<br />
+level:		0<br />
+commands:	level  ( is 0-7, auto, disengaged, full-speed)<br />
+commands:	enable, disable<br />
+commands:	watchdog  ( is 0 (off), 1-120 (seconds))<br />
+&#8220;`</p>
+<p>After setting level 7 manually:</p>
+<p>&#8220;`<br />
+cat /proc/acpi/ibm/fan<br />
+status:		enabled<br />
+speed:		32768<br />
+level:		7<br />
+commands:	level  ( is 0-7, auto, disengaged, full-speed)<br />
+commands:	enable, disable<br />
+commands:	watchdog  ( is 0 (off), 1-120 (seconds))<br />
+&#8220;`</p>
+<p>This is my configuration, I only monitor the CPU temperature:</p>
+<p>&#8220;`<br />
+% cat /etc/thinkfan.conf<br />
+sensors:<br />
+  &#8211; hwmon: /sys/class/hwmon<br />
+    name: coretemp<br />
+    indices: [2, 3, 4, 5]<br />
+fans:<br />
+  &#8211; tpacpi: /proc/acpi/ibm/fan<br />
+levels:<br />
+  &#8211; [0, 0, 60]<br />
+  &#8211; [2, 60, 65]<br />
+  &#8211; [3, 65, 70]<br />
+  &#8211; [5, 70, 75]<br />
+  &#8211; [6, 75, 80]<br />
+  &#8211; [7, 80, 85]<br />
+  &#8211; [&#8220;level full-speed&#8221;, 85, 32767]<br />
+&#8220;`<br />
+About my model, is a Thinkpad L13 2 Gen.</p>
+<p>Have you any idea for solving the problem? I just updated the BIOS to the last version, but the fan still runs in level 0.</p>
+<p>Thank you!</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-28' data-commentid="28" data-postid="451" data-belowelement="div-comment-28" data-respondelement="respond" data-replyto="Reply to druizz" aria-label='Reply to druizz'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor odd alt depth-3" id="comment-30" >
+  <div id ="div-comment-30" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="11:34">
+            <span>December 15, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-30">11:34</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hey druizz,<br />
+Hmm, interesting, from the output you provided it seems like the fan runs at the same speed no matter what level you have specified there. </p>
+<p>Can you install <code>lm-sensors</code> package (at least that&#8217;s the package name in Ubuntu, not sure if it&#8217;s the same in Arch), then run <code>sensors</code> command and provide it&#8217;s output here?</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-30' data-commentid="30" data-postid="451" data-belowelement="div-comment-30" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment even depth-4" id="comment-31" >
+  <div id ="div-comment-31" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/12a6d62ba75894e06d1de9d81ba6ef64?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/12a6d62ba75894e06d1de9d81ba6ef64?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            druizz                      </div>
+          <time class="comment-date comment-metadata" datetime="13:37">
+            <span>December 15, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-31">13:37</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Thank you for your quick response!</p>
+<p>I have installed this package, this is the output:</p>
+<p>sensors<br />
+ucsi_source_psy_USBC000:002-isa-0000<br />
+Adapter: ISA adapter<br />
+in0:           5.00 V  (min =  +5.00 V, max =  +5.00 V)<br />
+curr1:         3.00 A  (max =  +3.00 A)</p>
+<p>ucsi_source_psy_USBC000:001-isa-0000<br />
+Adapter: ISA adapter<br />
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)<br />
+curr1:         0.00 A  (max =  +0.00 A)</p>
+<p>thinkpad-isa-0000<br />
+Adapter: ISA adapter<br />
+fan1:        32768 RPM<br />
+temp1:         +1.0°C<br />
+temp2:         +1.0°C<br />
+temp3:         +4.0°C<br />
+temp4:        +65.0°C<br />
+temp5:        +60.0°C<br />
+temp6:        +60.0°C<br />
+temp7:        +16.0°C<br />
+temp8:        +66.0°C<br />
+temp9:        +64.0°C<br />
+temp10:        +1.0°C<br />
+temp11:       -80.0°C<br />
+temp12:        +0.0°C<br />
+temp13:        +0.0°C<br />
+temp14:       +64.0°C<br />
+temp15:        +0.0°C<br />
+temp16:        +0.0°C  </p>
+<p>BAT0-acpi-0<br />
+Adapter: ACPI interface<br />
+in0:          17.40 V  </p>
+<p>iwlwifi_1-virtual-0<br />
+Adapter: Virtual device<br />
+temp1:        +39.0°C  </p>
+<p>coretemp-isa-0000<br />
+Adapter: ISA adapter<br />
+Package id 0:  +62.0°C  (high = +100.0°C, crit = +100.0°C)<br />
+Core 0:        +62.0°C  (high = +100.0°C, crit = +100.0°C)<br />
+Core 1:        +61.0°C  (high = +100.0°C, crit = +100.0°C)<br />
+Core 2:        +57.0°C  (high = +100.0°C, crit = +100.0°C)<br />
+Core 3:        +61.0°C  (high = +100.0°C, crit = +100.0°C)</p>
+<p>nvme-pci-0400<br />
+Adapter: PCI adapter<br />
+Composite:    +39.9°C  (low  = -20.1°C, high = +77.8°C)<br />
+                       (crit = +81.8°C)<br />
+Sensor 1:     +39.9°C  (low  = -273.1°C, high = +65261.8°C)</p>
+<p>acpitz-acpi-0<br />
+Adapter: ACPI interface<br />
+temp1:        +63.0°C  (crit = +99.0°C)</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-31' data-commentid="31" data-postid="451" data-belowelement="div-comment-31" data-respondelement="respond" data-replyto="Reply to druizz" aria-label='Reply to druizz'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor odd alt depth-5" id="comment-32" >
+  <div id ="div-comment-32" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="14:45">
+            <span>December 15, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-32">14:45</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hmm, it looks like your fan is always at max rpm.<br />
+I&#8217;ve recently got a firmware update from Lenovo for my laptop that has broken fan control for me as well, by default the fan was always at 0 RPM in Linux no matter the temperature. But they fixed that with another update a week later, so it works fine now. Also, manual fan control (via the proc file) was working fine regardless of the update.<br />
+Knowing how chaotic Arch could be sometimes, I&#8217;d try spinning up the latest Ubuntu from a USB drive and see if the `sensors` output is the same there. If it will be the same, then it might be that you have a faulty fan and might need to contact Lenovo&#8217;s warranty support.</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-32' data-commentid="32" data-postid="451" data-belowelement="div-comment-32" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment even depth-6" id="comment-33" >
+  <div id ="div-comment-33" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/b3a2021944766a4d984612e52e55f1d0?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/b3a2021944766a4d984612e52e55f1d0?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            druizz                      </div>
+          <time class="comment-date comment-metadata" datetime="08:36">
+            <span>December 16, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-33">08:36</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Yes, I&#8217;ll try with the same version of Ubuntu than you-</p>
+<p>Yesterday I updated my BIOS with the last version, but nothing changes 🙁</p>
+<p>I also installed other kernel in Arch (I use the LTS so I installed the &#8220;normal&#8221; that is more recent) and the results are the same.</p>
+<p>Thank you for your support, I&#8217;ll write an update with the result of the test.</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-33' data-commentid="33" data-postid="451" data-belowelement="div-comment-33" data-respondelement="respond" data-replyto="Reply to druizz" aria-label='Reply to druizz'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor odd alt depth-7" id="comment-34" >
+  <div id ="div-comment-34" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="08:50">
+            <span>December 16, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-34">08:50</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>One more thing you can try to do is follow this guide: <a href="https://forum.manjaro.org/t/how-to-choose-the-proper-acpi-kernel-argument/1405" rel="nofollow ugc">https://forum.manjaro.org/t/how-to-choose-the-proper-acpi-kernel-argument/1405</a>. To be more specific, I think you can try <code>acpi_osi='Windows 2017'</code> (i.e. tell your BIOS you&#8217;re running Windows 10), or maybe try <code>apci_osi=Linux</code> instead. AFAIK Linux kernel pretends to be Windows by default, since that provides the best compatibility. So maybe setting <code>acpi_osi</code> to Linux will change how the fan works for you. Give it a shot!</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-34' data-commentid="34" data-postid="451" data-belowelement="div-comment-34" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment even depth-8" id="comment-36" >
+  <div id ="div-comment-36" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/12a6d62ba75894e06d1de9d81ba6ef64?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/12a6d62ba75894e06d1de9d81ba6ef64?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            druizz                      </div>
+          <time class="comment-date comment-metadata" datetime="12:00">
+            <span>December 16, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-36">12:00</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Just tested with `Windows 2017` and `Linux` with both kernels (LTS and normal) without success 🙁 Thank you for giving me support again! It&#8217;s really weird</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-36' data-commentid="36" data-postid="451" data-belowelement="div-comment-36" data-respondelement="respond" data-replyto="Reply to druizz" aria-label='Reply to druizz'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor odd alt depth-9" id="comment-37" >
+  <div id ="div-comment-37" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="12:22">
+            <span>December 16, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-37">12:22</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Sorry to hear that. I hope you get it solved one way or another! My bet is that it&#8217;s a hardware issue.</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-37' data-commentid="37" data-postid="451" data-belowelement="div-comment-37" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment even depth-10" id="comment-39" >
+  <div id ="div-comment-39" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/b3a2021944766a4d984612e52e55f1d0?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/b3a2021944766a4d984612e52e55f1d0?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            druizz                      </div>
+          <time class="comment-date comment-metadata" datetime="15:13">
+            <span>December 21, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-39">15:13</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>With the latest version of Ubuntu, I was not able to start in normal mode (black screen), and after tried with the safe mode, a kernel panic happened and my bootloader was broken (I had to reinstall GRUB with a rescue USB image, very strage).</p>
+<p>I am going to ask in Lenovo forums, and probably I will send the laptop to the technical service.</p>
+<p>Thank you for your support, and for your guide, I will use it again when my laptop would be repaired (or replaced).</p>
+</div>
+                </div>
+  </div></li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment odd alt depth-6" id="comment-35" >
+  <div id ="div-comment-35" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/b3a2021944766a4d984612e52e55f1d0?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/b3a2021944766a4d984612e52e55f1d0?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            druizz                      </div>
+          <time class="comment-date comment-metadata" datetime="10:37">
+            <span>December 16, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-35">10:37</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>For adding more detail, this is my configuration of the `thinkpad_acpi` module:</p>
+<p>sudo systool -m thinkpad_acpi -av<br />
+Module = &#8220;thinkpad_acpi&#8221;</p>
+<p>  Attributes:<br />
+    coresize            = &#8220;118784&#8221;<br />
+    initsize            = &#8220;0&#8221;<br />
+    initstate           = &#8220;live&#8221;<br />
+    refcnt              = &#8220;0&#8221;<br />
+    srcversion          = &#8220;BC9414C14C416F6770115BF&#8221;<br />
+    taint               = &#8220;&#8221;<br />
+    uevent              =<br />
+    version             = &#8220;0.26&#8221;</p>
+<p>  Parameters:<br />
+    brightness_enable   = &#8220;2&#8221;<br />
+    brightness_mode     = &#8220;4&#8221;<br />
+    enable              = &#8220;Y&#8221;<br />
+    experimental        = &#8220;0&#8221;<br />
+    fan_control         = &#8220;Y&#8221;<br />
+    force_load          = &#8220;N&#8221;<br />
+    id                  = &#8220;ThinkPadEC&#8221;<br />
+    index               = &#8220;-536870912&#8221;<br />
+    software_mute       = &#8220;Y&#8221;<br />
+    volume_capabilities = &#8220;0&#8221;<br />
+    volume_control      = &#8220;N&#8221;<br />
+    volume_mode         = &#8220;3&#8221;</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-35' data-commentid="35" data-postid="451" data-belowelement="div-comment-35" data-respondelement="respond" data-replyto="Reply to druizz" aria-label='Reply to druizz'>Reply</a>    </div>
+  </div></li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even thread-even depth-1" id="comment-17" >
+  <div id ="div-comment-17" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/278f945584fda9a955130d58724e0906?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/278f945584fda9a955130d58724e0906?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            Gordan Ovčarić                      </div>
+          <time class="comment-date comment-metadata" datetime="19:44">
+            <span>December 11, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-17">19:44</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hello!<br />
+First and foremost, thank you for this tutorial! :)))</p>
+<p>Second, my question:<br />
+I&#8217;m trying to set-up thinkfan for my Lenovo P1 Gen4 (because it is ridiculous to me that fan is 2500rpm on CPU temp 45C).<br />
+And the command &#8216;cat /proc/acpi/ibm/fan&#8217; returns only:<br />
+status:		enabled<br />
+speed:		2469<br />
+level:		auto</p>
+<p>How do I know how to set-up the levels then? How do I know how many levels are there?</p>
+<p>Thanks! 🙂</p>
+<p>P.S. is this tutorial &#8220;permanent&#8221; solution -&gt; do it once and forget about it, or will it reset after pc is turned off/restarted?</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-17' data-commentid="17" data-postid="451" data-belowelement="div-comment-17" data-respondelement="respond" data-replyto="Reply to Gordan Ovčarić" aria-label='Reply to Gordan Ovčarić'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor odd alt depth-2" id="comment-18" >
+  <div id ="div-comment-18" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="21:09">
+            <span>December 11, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-18">21:09</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hey Gordan, you&#8217;re welcome!</p>
+<p>Regarding your question: is the output you shared are the only 3 lines you get when you call <code>cat /proc/acpi/ibm/fan</code>? There are supposed to be 3 extra lines starting with <code>commands</code> (see the example output in the article), what you need is the line like this <code>level <level> (</level><level> is 0-7, auto, disengaged, full-speed)</level></code>. Basically, what it says is: there are 8 levels available &#8211; 0 to 7 (+ extra such as: auto, disengaged and full-speed).</p>
+<p>And yeah, the solution is permanent, so you configure it once and forget about it.</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-18' data-commentid="18" data-postid="451" data-belowelement="div-comment-18" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment even depth-3" id="comment-20" >
+  <div id ="div-comment-20" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/278f945584fda9a955130d58724e0906?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/278f945584fda9a955130d58724e0906?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            Gordan Ovčarić                      </div>
+          <time class="comment-date comment-metadata" datetime="23:19">
+            <span>December 11, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-20">23:19</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hey, Andrei!</p>
+<p>Thank you for your reply! 🙂</p>
+<p>Yes, those three lines are all I get from mentioned command (I&#8217;ve tried also locating the file, nothing more is inside when I look at it with Text Editor).<br />
+For example, in that folder I found &#8220;driver&#8221; file and it says &#8220;ThinkPad ACPI Extras + version 0.26&#8221;, if that helps.<br />
+Also, &#8220;bluetooth&#8221; file in that folder has &#8216;commands: enable, disable&#8217; line&#8230;. </p>
+<p>First question: Is it safe to assume that I also have this 0-7 levels as you do?<br />
+Second question: If I want to revert, and undo this setup, how to do it?</p>
+<p>Thank you  a lot for your help! 🙂</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-20' data-commentid="20" data-postid="451" data-belowelement="div-comment-20" data-respondelement="respond" data-replyto="Reply to Gordan Ovčarić" aria-label='Reply to Gordan Ovčarić'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor odd alt depth-4" id="comment-22" >
+  <div id ="div-comment-22" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="13:15">
+            <span>December 12, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-22">13:15</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hey Gordan,<br />
+Ah, ok, I see. Probably you don&#8217;t see the &#8220;commands&#8221; lines because you haven&#8217;t enabled fan control. It&#8217;s the first item in the article&#8217;s list of how to set it up.<br />
+Unless you see the &#8220;commands&#8221; lines, there&#8217;s no way to control the fan speed, i.e. you can&#8217;t send commands to control the fan speed.<br />
+To answer your first question: I wouldn&#8217;t just assume that, it&#8217;s better to be sure.<br />
+As for the second question: it&#8217;s rather easy to undo it, just remove thinkfan app with `sudo apt remove thinkfan`.</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-22' data-commentid="22" data-postid="451" data-belowelement="div-comment-22" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment even depth-5" id="comment-23" >
+  <div id ="div-comment-23" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/278f945584fda9a955130d58724e0906?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/278f945584fda9a955130d58724e0906?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            Gordan Ovčarić                      </div>
+          <time class="comment-date comment-metadata" datetime="22:45">
+            <span>December 12, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-23">22:45</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hey Andrei,</p>
+<p>Thanks a lot for your answers, it is clear to me now 🙂</p>
+<p>Yeah, I didn&#8217;t start the whole process until I was sure what I was doing. Now, after your explanations, I understand it all and will try it 🙂</p>
+<p>Thanks again, and all the best 🙂</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-23' data-commentid="23" data-postid="451" data-belowelement="div-comment-23" data-respondelement="respond" data-replyto="Reply to Gordan Ovčarić" aria-label='Reply to Gordan Ovčarić'>Reply</a>    </div>
+  </div><ul class="children">
+<li class="comment byuser comment-author-monosoul bypostauthor odd alt depth-6" id="comment-24" >
+  <div id ="div-comment-24" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='Andrei Nevedomskii' src='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-80x80.jpg' srcset='https://blog.monosoul.dev/wp-content/uploads/2020/09/photo_2020-08-23_19-58-06-160x160.jpg 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            <a href='https://blog.monosoul.dev' rel='external nofollow ugc' class='url'>Andrei Nevedomskii</a>                          <span class="small">Post author</span>
+                      </div>
+          <time class="comment-date comment-metadata" datetime="00:11">
+            <span>December 13, 2021,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-24">00:11</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hey Gordan,<br />
+You&#8217;re welcome!<br />
+If you end up with a different configuration of temperatures/fan speeds, please, share it in the comments here.<br />
+I&#8217;d be curious to try it myself and other people might find it useful!</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-24' data-commentid="24" data-postid="451" data-belowelement="div-comment-24" data-respondelement="respond" data-replyto="Reply to Andrei Nevedomskii" aria-label='Reply to Andrei Nevedomskii'>Reply</a>    </div>
+  </div></li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+<li class="comment even depth-5" id="comment-114" >
+  <div id ="div-comment-114" class="comment-section clearfix">
+    <div class="col-avatar">
+      <figure class="comment-avatar">
+        <img alt='' src='https://secure.gravatar.com/avatar/28552446bb04def739b34aafc0f3a691?s=80&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/28552446bb04def739b34aafc0f3a691?s=160&#038;d=retro&#038;r=g 2x' class='avatar avatar-80 photo' height='80' width='80' loading='lazy'/>      </figure>
+    </div>
+    <div class="comment-body" role="complementary">
+      <header class="comment-meta">
+        <div clas="comment-meta-top">
+          <div class="comment-author vcard">
+            BlaY0                      </div>
+          <time class="comment-date comment-metadata" datetime="13:24">
+            <span>June 24, 2022,</span>
+            <a class="comment-time comment-link" href="https://blog.monosoul.dev/2021/10/17/how-to-control-thinkpad-p14s-fan-speed-in-linux/#comment-114">13:24</a>
+          </time>
+        </div>
+              </header>
+      <div class="comment-content tc-content-inner"><p>Hi Andrei,</p>
+<p>Maybe it is worth noting that when you add fan_control option to the thinkpad_acpi module in /etc/modprobe.d you probably have to rebuild initramfs since module could already be loaded at that stage. To see whether option was really applied, one can check   /sys/module/thinkpad_acpi/parameters/fan_control (contains Y if enabled or N if not).</p>
+</div>
+            <a rel='nofollow' class='comment-reply-link' href='#comment-114' data-commentid="114" data-postid="451" data-belowelement="div-comment-114" data-respondelement="respond" data-replyto="Reply to BlaY0" aria-label='Reply to BlaY0'>Reply</a>    </div>
+  </div></li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+      </ul>
+    </div>
+  </div>
+  </section>
+</div>  </div>
+            </div><!-- .column-content-wrapper -->
+
+            
+
+          </div><!-- .container -->
+
+          <div id="czr-push-footer" ></div>
+    </div><!-- #main-wrapper -->
+
+    
+          <div class="container-fluid">
+        <div class="post-navigation row " >
+  <nav id="nav-below" class="col-12">
+    <h2 class="sr-only">Post navigation</h2>
+    <ul class="czr_pager row flex-row flex-no-wrap">
+      <li class="previous col-5 text-left">
+              <span class="sr-only">Previous post</span>
+        <span class="nav-previous nav-dir"><a href="https://blog.monosoul.dev/2021/10/16/ubuntu-21-10-and-acpi-call-dkms-bug/" rel="prev"><span class="meta-nav"><i class="arrow icn-left-open-big"></i><span class="meta-nav-title">Ubuntu 21.10 and acpi-call-dkms bug</span></span></a></span>
+            </li>
+      <li class="nav-back col-2 text-center">
+                <a href="https://blog.monosoul.dev/" title="Back to post list">
+          <span><i class="icn-grid-empty"></i></span>
+          <span class="sr-only">Back to post list</span>
+        </a>
+              </li>
+      <li class="next col-5 text-right">
+              <span class="sr-only">Next post</span>
+        <span class="nav-next nav-dir"><a href="https://blog.monosoul.dev/2021/11/07/how-to-unblock-yourself/" rel="next"><span class="meta-nav"><span class="meta-nav-title">How to unblock yourself</span><i class="arrow icn-right-open-big"></i></span></a></span>
+            </li>
+  </ul>
+  </nav>
+</div>
+      </div>
+    
+<footer id="footer" class="footer__wrapper" >
+  <div id="footer-widget-area" class="widget__wrapper" role="complementary" >
+  <div class="container widget__container">
+    <div class="row">
+                      <div id="footer_one" class="col-md-4 col-12">
+            <aside id="tag_cloud-3" class="widget widget_tag_cloud"><h5 class="widget-title">Tags</h5><div class="tagcloud"><a href="https://blog.monosoul.dev/tag/agile/" class="tag-cloud-link tag-link-25 btn btn-skin-dark-oh inverted tag-link-position-1" style="font-size: 1em;" aria-label="agile (1 item)">agile<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/containers/" class="tag-cloud-link tag-link-16 btn btn-skin-dark-oh inverted tag-link-position-2" style="font-size: 1em;" aria-label="containers (1 item)">containers<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/database/" class="tag-cloud-link tag-link-30 btn btn-skin-dark-oh inverted tag-link-position-3" style="font-size: 1em;" aria-label="database (1 item)">database<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/developer/" class="tag-cloud-link tag-link-4 btn btn-skin-dark-oh inverted tag-link-position-4" style="font-size: 1em;" aria-label="developer (2 items)">developer<span class="tag-link-count"> (2)</span></a>
+<a href="https://blog.monosoul.dev/tag/development/" class="tag-cloud-link tag-link-5 btn btn-skin-dark-oh inverted tag-link-position-5" style="font-size: 1em;" aria-label="development (7 items)">development<span class="tag-link-count"> (7)</span></a>
+<a href="https://blog.monosoul.dev/tag/docker/" class="tag-cloud-link tag-link-14 btn btn-skin-dark-oh inverted tag-link-position-6" style="font-size: 1em;" aria-label="docker (3 items)">docker<span class="tag-link-count"> (3)</span></a>
+<a href="https://blog.monosoul.dev/tag/fedora/" class="tag-cloud-link tag-link-33 btn btn-skin-dark-oh inverted tag-link-position-7" style="font-size: 1em;" aria-label="fedora (1 item)">fedora<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/gradle/" class="tag-cloud-link tag-link-23 btn btn-skin-dark-oh inverted tag-link-position-8" style="font-size: 1em;" aria-label="gradle (1 item)">gradle<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/jacoco/" class="tag-cloud-link tag-link-22 btn btn-skin-dark-oh inverted tag-link-position-9" style="font-size: 1em;" aria-label="jacoco (1 item)">jacoco<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/java/" class="tag-cloud-link tag-link-8 btn btn-skin-dark-oh inverted tag-link-position-10" style="font-size: 1em;" aria-label="java (6 items)">java<span class="tag-link-count"> (6)</span></a>
+<a href="https://blog.monosoul.dev/tag/kotlin/" class="tag-cloud-link tag-link-7 btn btn-skin-dark-oh inverted tag-link-position-11" style="font-size: 1em;" aria-label="kotlin (5 items)">kotlin<span class="tag-link-count"> (5)</span></a>
+<a href="https://blog.monosoul.dev/tag/kubernetes/" class="tag-cloud-link tag-link-31 btn btn-skin-dark-oh inverted tag-link-position-12" style="font-size: 1em;" aria-label="kubernetes (1 item)">kubernetes<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/lean-startup/" class="tag-cloud-link tag-link-27 btn btn-skin-dark-oh inverted tag-link-position-13" style="font-size: 1em;" aria-label="lean startup (1 item)">lean startup<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/linux/" class="tag-cloud-link tag-link-13 btn btn-skin-dark-oh inverted tag-link-position-14" style="font-size: 1em;" aria-label="linux (7 items)">linux<span class="tag-link-count"> (7)</span></a>
+<a href="https://blog.monosoul.dev/tag/liquibase/" class="tag-cloud-link tag-link-29 btn btn-skin-dark-oh inverted tag-link-position-15" style="font-size: 1em;" aria-label="liquibase (1 item)">liquibase<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/management/" class="tag-cloud-link tag-link-28 btn btn-skin-dark-oh inverted tag-link-position-16" style="font-size: 1em;" aria-label="management (1 item)">management<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/metrics/" class="tag-cloud-link tag-link-21 btn btn-skin-dark-oh inverted tag-link-position-17" style="font-size: 1em;" aria-label="metrics (1 item)">metrics<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/monitoring/" class="tag-cloud-link tag-link-20 btn btn-skin-dark-oh inverted tag-link-position-18" style="font-size: 1em;" aria-label="monitoring (1 item)">monitoring<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/opensource/" class="tag-cloud-link tag-link-9 btn btn-skin-dark-oh inverted tag-link-position-19" style="font-size: 1em;" aria-label="opensource (7 items)">opensource<span class="tag-link-count"> (7)</span></a>
+<a href="https://blog.monosoul.dev/tag/software/" class="tag-cloud-link tag-link-6 btn btn-skin-dark-oh inverted tag-link-position-20" style="font-size: 1em;" aria-label="software (4 items)">software<span class="tag-link-count"> (4)</span></a>
+<a href="https://blog.monosoul.dev/tag/spring/" class="tag-cloud-link tag-link-17 btn btn-skin-dark-oh inverted tag-link-position-21" style="font-size: 1em;" aria-label="spring (5 items)">spring<span class="tag-link-count"> (5)</span></a>
+<a href="https://blog.monosoul.dev/tag/spring-boot/" class="tag-cloud-link tag-link-19 btn btn-skin-dark-oh inverted tag-link-position-22" style="font-size: 1em;" aria-label="spring boot (1 item)">spring boot<span class="tag-link-count"> (1)</span></a>
+<a href="https://blog.monosoul.dev/tag/spring-framework/" class="tag-cloud-link tag-link-18 btn btn-skin-dark-oh inverted tag-link-position-23" style="font-size: 1em;" aria-label="spring framework (5 items)">spring framework<span class="tag-link-count"> (5)</span></a>
+<a href="https://blog.monosoul.dev/tag/ubuntu/" class="tag-cloud-link tag-link-15 btn btn-skin-dark-oh inverted tag-link-position-24" style="font-size: 1em;" aria-label="ubuntu (1 item)">ubuntu<span class="tag-link-count"> (1)</span></a></div>
+</aside>          </div>
+                  <div id="footer_two" class="col-md-4 col-12">
+            <aside id="categories-4" class="widget widget_categories"><h5 class="widget-title">Categories</h5>
+			<ul>
+					<li class="cat-item cat-item-12"><a href="https://blog.monosoul.dev/category/development/">development</a> (9)
+</li>
+	<li class="cat-item cat-item-11"><a href="https://blog.monosoul.dev/category/linux/">linux</a> (6)
+</li>
+	<li class="cat-item cat-item-24"><a href="https://blog.monosoul.dev/category/management/">management</a> (1)
+</li>
+	<li class="cat-item cat-item-3"><a href="https://blog.monosoul.dev/category/offtopic/">offtopic</a> (6)
+</li>
+			</ul>
+
+			</aside>          </div>
+                  <div id="footer_three" class="col-md-4 col-12">
+            <aside id="meta-4" class="widget widget_meta"><h5 class="widget-title">Meta</h5>
+		<ul>
+						<li><a rel="nofollow" href="https://blog.monosoul.dev/wp-login.php">Log in</a></li>
+			<li><a href="https://blog.monosoul.dev/feed/">Entries feed</a></li>
+			<li><a href="https://blog.monosoul.dev/comments/feed/">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</aside><aside id="block-3" class="widget widget_block widget_text">
+<p><a href="https://blog.monosoul.dev/privacy-policy/" data-type="URL" data-id="https://blog.monosoul.dev/privacy-policy/" target="_blank" rel="noreferrer noopener">Privacy policy</a></p>
+</aside>          </div>
+                  </div>
+  </div>
+</div>
+<div id="colophon" class="colophon " >
+  <div class="container-fluid">
+    <div class="colophon__row row flex-row justify-content-between">
+      <div class="col-12 col-sm-auto">
+        <div id="footer__credits" class="footer__credits credits" >
+  <p class="czr-copyright">
+    <span class="fc-copyright">
+      <span class="fc-copyright-text">© 2022</span>
+      <span class="fc-copyright-link"><a href="https://blog.monosoul.dev" title="Monosoul&#039;s Dev Blog" rel="bookmark" >Monosoul&#039;s Dev Blog</a></span>          <span class="fc-separator ">&ndash;</span>
+      <span class="fc-copyright-after-text">All rights reserved</span>
+        </span>
+  </p>
+  </div>
+      </div>
+            <div class="col-12 col-sm-auto">
+        <div class="social-links">
+          <ul class="socials " >
+  <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-github"  title="Follow me on GitHub" aria-label="Follow me on GitHub" href="https://github.com/monosoul"  target="_blank"  style="font-size:20px"><i class="fab fa-github"></i></a></li> <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-telegram"  title="Follow me on Telegram" aria-label="Follow me on Telegram" href="https://t.me/monosouldev"  target="_blank"  style="font-size:20px"><i class="fab fa-telegram"></i></a></li> <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-linkedin"  title="Follow me on Linkedin" aria-label="Follow me on Linkedin" href="https://www.linkedin.com/in/monosoul/"  target="_blank"  style="font-size:20px"><i class="fab fa-linkedin"></i></a></li> <li ><a rel="nofollow noopener noreferrer" class="social-icon icon-feed"  title="Subscribe to my rss feed" aria-label="Subscribe to my rss feed" href="https://blog.monosoul.dev/feed/rss/"  target="_blank"  style="font-size:20px"><i class="fas fa-rss"></i></a></li></ul>
+        </div>
+      </div>
+          </div>
+  </div>
+</div>
+</footer>
+    </div><!-- end #tc-page-wrap -->
+
+    <button class="btn czr-btt czr-btta right" ><i class="icn-up-small"></i></button>
+<script id="wfc-front-localized">var wfcFrontParams = {"effectsAndIconsSelectorCandidates":[],"wfcOptions":null};</script>          <script id="wfc-front-script">!function(){var e=wfcFrontParams.effectsAndIconsSelectorCandidates;var o,t,c,r,i=(r={},o=navigator.userAgent.toLowerCase(),(c={browser:(t=/(chrome)[ /]([\w.]+)/.exec(o)||/(webkit)[ /]([\w.]+)/.exec(o)||/(opera)(?:.*version|)[ /]([\w.]+)/.exec(o)||/(msie) ([\w.]+)/.exec(o)||o.indexOf("compatible")<0&&/(mozilla)(?:.*? rv:([\w.]+)|)/.exec(o)||[])[1]||"",version:t[2]||"0"}).browser&&(r[c.browser]=!0,r.version=c.version),r.chrome?r.webkit=!0:r.webkit&&(r.safari=!0),r),s="",a=0;for(var n in i)a>0||(s=n,a++);var f=document.querySelectorAll("body");f&&f[0]&&f[0].classList.add(s||"");try{!function(){for(var o in e){var t=e[o];if(t.static_effect){if("inset"==t.static_effect&&!0===i.mozilla)continue;var c=document.querySelectorAll(t.static_effect_selector);c&&c.forEach(function(e,o){e.classList.add("font-effect-"+t.static_effect)})}}}()}catch(e){window.console&&console.log&&console.log("Font customizer error => could not apply effects",e)}}();</script>
+        <script id='wpo_min-footer-0-js-extra'>
+var tocplus = {"visibility_show":"show","visibility_hide":"hide","width":"Auto"};
+</script>
+<script defer src='https://blog.monosoul.dev/wp-content/cache/wpo-minify/1664466435/assets/wpo-minify-footer-a7391055.min.js' id='wpo_min-footer-0-js'></script>
+<script defer src='https://blog.monosoul.dev/wp-content/cache/wpo-minify/1664466435/assets/wpo-minify-footer-47a412da.min.js' id='wpo_min-footer-1-js'></script>
+<script id="fpu-front-localized">var FPUFront = {"Spanvalue":"4","ThemeName":"customizr-pro","imageCentered":"1","smartLoad":"1"};</script>
+        <script>!function(e){"use strict";var t=function(t,n,o,r){function i(e){return l.body?e():void setTimeout(function(){i(e)})}function d(){s.addEventListener&&s.removeEventListener("load",d),s.media=o||"all"}var a,l=e.document,s=l.createElement("link");if(n)a=n;else{var f=(l.body||l.getElementsByTagName("head")[0]).childNodes;a=f[f.length-1]}var u=l.styleSheets;if(r)for(var c in r)r.hasOwnProperty(c)&&s.setAttribute(c,r[c]);s.rel="stylesheet",s.href=t,s.media="only x",i(function(){a.parentNode.insertBefore(s,n?a:a.nextSibling)});var v=function(e){for(var t=s.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){v(e)})};return s.addEventListener&&s.addEventListener("load",d),s.onloadcssdefined=v,v(d),s};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this);</script>
+  </body>
+  </html>

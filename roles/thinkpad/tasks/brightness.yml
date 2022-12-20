@@ -1,7 +1,0 @@
----
-- name: Install brightness packages (Thinkpad)
-  pacman:
-    name:
-      - xf86-video-intel
-      - xorg-xbacklight
-    state: present

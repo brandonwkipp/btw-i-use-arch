@@ -14,7 +14,6 @@
       - go
       - jq
       - libreoffice-still
-      - lm_sensors
       - pcmanfm
       - python
       - sxiv
@@ -35,7 +34,6 @@
       - authy
       - nvm
       - qFlipper
-      - thinkfan
       - viber
     use: makepkg
     state: present

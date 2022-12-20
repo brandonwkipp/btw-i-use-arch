@@ -1,0 +1,17 @@
+---
+- name: Install Thinkpad-related packages
+  pacman:
+    name:
+      - lm_sensors
+      - xf86-video-intel
+      - xorg-xbacklight
+    state: present
+
+- name: Install Thinkpad-related AUR packages
+  kewlfft.aur.aur:
+    name:
+      - thinkfan
+    use: makepkg
+    state: present
+  become: yes
+  become_user: brandon
