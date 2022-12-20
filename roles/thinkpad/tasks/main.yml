@@ -1,3 +1,6 @@
 ---
 # Install Thinkpad-related packages
 - include_tasks: packages.yml
+
+# Configure GRUB for fan_control
+- include_tasks: grub.yml
