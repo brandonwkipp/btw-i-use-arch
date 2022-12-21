@@ -9,12 +9,9 @@ It is very much a work in progress.
 - backups (timeshift, betterFs)
 - track pad freezing
 - talon
-- hostname
 - dwmblocks clone & list/compile patches
 - volume button shortcuts dwm
-- timezone
 - samba credentials file
-- firewire?
 - lv2-plugins (group?)
 - LinVST
 
