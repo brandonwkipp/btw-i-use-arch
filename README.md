@@ -9,7 +9,6 @@ It is very much a work in progress.
 - backups (timeshift, betterFs)
 - track pad freezing
 - talon
-- dwmblocks clone & list/compile patches
 - volume button shortcuts dwm
 - samba credentials file
 - lv2-plugins (group?)

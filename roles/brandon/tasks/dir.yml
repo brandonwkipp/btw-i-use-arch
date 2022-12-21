@@ -1,7 +1,7 @@
 ---
-- name: Create ~/builds
+- name: Create ~/www
   ansible.builtin.file:
-    path: /home/brandon/builds
+    path: /home/brandon/www
     state: directory
     owner: brandon
     group: wheel
