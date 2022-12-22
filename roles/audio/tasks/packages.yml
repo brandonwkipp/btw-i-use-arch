@@ -19,6 +19,7 @@
       - vlc
       - wireplumber
       - yabridge
+      - yabridgectl
     state: present
 
 - name: Install bitwig-studio
