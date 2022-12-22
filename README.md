@@ -9,10 +9,10 @@ It is very much a work in progress.
 - backups (timeshift, betterFs)
 - track pad freezing
 - talon
-- volume button shortcuts dwm
 - samba credentials file
 - lv2-plugins (group?)
 - LinVST
+- yabridge config?
 
 ### Wine
 - Ozone

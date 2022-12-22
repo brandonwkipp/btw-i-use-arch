@@ -18,6 +18,7 @@
       - supercollider
       - vlc
       - wireplumber
+      - yabridge
     state: present
 
 - name: Install bitwig-studio
