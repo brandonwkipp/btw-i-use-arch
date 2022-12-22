@@ -23,13 +23,6 @@
   become: yes
   become_user: brandon
 
-- name: Clone dwmblocks blocks.h
-  ansible.builtin.copy:
-    src: ../files/config/dwmblocks/blocks.h
-    dest: /home/brandon/www/dwmblocks
-  become: yes
-  become_user: brandon
-
 - name: Install dwmblocks
   ansible.builtin.shell:
     chdir: /home/brandon/www/dwmblocks
