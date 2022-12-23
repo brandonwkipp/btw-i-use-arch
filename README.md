@@ -6,7 +6,7 @@ It is very much a work in progress.
 
 ## TODO
 - vital synth
-- backups (timeshift, backintime)
+- backups config
 - track pad freezing
 - talon
 - samba credentials file
