@@ -19,7 +19,6 @@
       - sxiv
       - terraform
       - thunderbird
-      - timeshift
       - ttf-hack
       - wine-staging
       - winetricks
@@ -33,9 +32,9 @@
   kewlfft.aur.aur:
     name:
       - authy
-      - backintime
       - nvm
       - qFlipper
+      - timeshift
       - viber
     use: makepkg
     state: present
