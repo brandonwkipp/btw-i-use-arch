@@ -12,9 +12,24 @@ The `.wle` file is installed when you activate licenses to your machine and is r
 While I technically have Waves Central working in stock `wine-7.22` (not wine-staging), it automatically updated itself to v13.4.1 without asking for my consent. It works...right now, but it's a matter of time before it breaks. 
 
 #### Other Waves paths
-WavesLogsPath::\\users\\$USER\\AppData\\Local\\Waves Audio\\Logs
-WavesSharedDataPath::\\ProgramData\\Waves Audio
-WavesUserCachePath::\\users\\$USER\\AppData\\Local\\Waves Audio
-WavesSoftwareRootPath::\\Program Files (x86)\\Waves
-WavesDataPath::\\Program Files (x86)\\Waves\\Data
-WavesPreferencePath::\\users\\$USER\\AppData\\Roaming\\Waves Audio\\Preferences
+`WavesLogsPath::\\users\\$USER\\AppData\\Local\\Waves Audio\\Logs`
+`WavesSharedDataPath::\\ProgramData\\Waves Audio`
+`WavesUserCachePath::\\users\\$USER\\AppData\\Local\\Waves Audio`
+`WavesSoftwareRootPath::\\Program Files (x86)\\Waves`
+`WavesDataPath::\\Program Files (x86)\\Waves\\Data`
+`WavesPreferencePath::\\users\\$USER\\AppData\\Roaming\\Waves Audio\\Preferences`
+
+#### Update response payload?
+```
+0368:fixme:winsock:setsockopt Ignoring SO_RANDOMIZE_PORT
+20:29:02 [info]     Update for version 13.4.1 is not available (latest version: 13.4.1, downgrade is disallowed).
+20:29:02 [verbose]  ElectronMainUpdate::checkUpdate no update {
+  success: true,
+  updateAvailable: false,
+  isMandatory: false,
+  releaseDateAsString: '2022/10/12',
+  releaseNotes: 'Update',
+  version: '13.4.1',
+  installOnExit: false
+}
+```
