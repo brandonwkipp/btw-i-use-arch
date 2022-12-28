@@ -15,11 +15,11 @@ It is very much a work in progress.
 - yabridge config?
 
 ### Wine
+[x] Waves Central (v11, but it auto updated to v13.4.1 which still seems to work) 
+[x] XLN Installer aka RC-20 (works out of the box, except that it doesn't draw the Noise & Wobble waveforms?)
 - Ozone
 - Autotune
-- Waves
 - FL Studio
-- RC-20
 - Soundtoys
 - iLok
 - MPC?

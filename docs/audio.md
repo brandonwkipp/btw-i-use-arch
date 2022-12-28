@@ -33,3 +33,22 @@ While I technically have Waves Central working in stock `wine-7.22` (not wine-st
   installOnExit: false
 }
 ```
+
+#### License Transfer??? (this turned out to be successful in actually activating the license to my machine
+```
+20:33:49 [error]    WleGetLicensedProducts::getProducts failed {
+  centralParsedError: true,
+  message: 'getLicenseFiles timed out after 40 second(s)',
+  stack: ''
+}
+20:33:49 [info]     WleGetLicensedProducts::doGetProducts completed after 41.57s
+20:33:49 [info]     ProductGuidsStore::update all products are known
+0198:fixme:dxgi:d3d11_swapchain_Present1 Ignored present parameters 000000000081DC70.
+20:33:49 [info]     ProductGuidsStore::update completed after 0.01s
+20:33:49 [info]     BundleContentStore::update completed after 0.00s
+20:33:49 [info]     SessionGetProducts::logUpdates completed after 0.00s
+20:33:49 [info]     SessionGetProducts::handleMisreportedProductsAndUpdates completed after 0.04s
+20:33:49 [info]     SessionGetProducts::getProducts completed after 41.62s
+20:33:49 [info]     SessionRefreshProcess::perform completed after 41.64s
+
+```
