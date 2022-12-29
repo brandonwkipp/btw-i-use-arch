@@ -20,13 +20,13 @@ It is very much a work in progress.
 - [x] XLN Installer aka RC-20 (works out of the box, except that it doesn't draw the Noise & Wobble waveforms?)
 - [x] MPC?
 
-Basically, anything involving an `iLok` doesn't work yet/ The license manager will install just fine, even going so far as to let you login successfully. Given all that though, `wine` does not seem to be able to actually detect the physical `iLok` and I'm not sure if that's a serial problem or what. None of the following will work the "right" way as of now.
-- ~~iZotope~~
-- ~~Autotune~~
-- ~~Soundtoys~~
-- ~~iLok~~
-- ~~ProTools~~
-- ~~Serum~~
+Basically, anything involving an `iLok` doesn't work fully. The license manager will install just fine, even going so far as to let you login successfully. However, `wine` does not seem to actually detect the physical `iLok` and I'm not sure if that's a serial data problem or not. None of the following will work the "right" way as of now:
+- [] ~~iZotope~~
+- [] ~~Autotune~~
+- [] ~~Soundtoys~~
+- [] ~~iLok~~
+- [] ~~ProTools~~
+- ~~[] Serum~~
 
 ### Evaluation
 - Ardour
