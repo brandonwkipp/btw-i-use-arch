@@ -21,12 +21,12 @@ It is very much a work in progress.
 - [x] MPC?
 
 Basically, anything involving an `iLok` doesn't work fully. The license manager will install just fine, even going so far as to let you login successfully. However, `wine` does not seem to actually detect the physical `iLok` and I'm not sure if that's a serial data problem or not. None of the following will work the "right" way as of now:
-- [] ~~iZotope~~
-- [] ~~Autotune~~
-- [] ~~Soundtoys~~
-- [] ~~iLok~~
-- [] ~~ProTools~~
-- ~~[ ] Serum~~
+- [ ] ~~iZotope~~
+- [ ] ~~Autotune~~
+- [ ] ~~Soundtoys~~
+- [ ] ~~iLok~~
+- [ ] ~~ProTools~~
+- [ ] ~~Serum~~
 
 ### Evaluation
 - Ardour
