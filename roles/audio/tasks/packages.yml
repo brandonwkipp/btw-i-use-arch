@@ -22,9 +22,11 @@
       - yabridgectl
     state: present
 
-- name: Install bitwig-studio
+- name: Install audio AUR packages
   kewlfft.aur.aur:
-    name: bitwig-studio
+    name:
+      - bitwig-studio
+      - vital-synth
     use: makepkg
     state: present
   become: yes
