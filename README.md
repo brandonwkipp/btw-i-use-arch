@@ -26,7 +26,7 @@ Basically, anything involving an `iLok` doesn't work fully. The license manager 
 - [] ~~Soundtoys~~
 - [] ~~iLok~~
 - [] ~~ProTools~~
-- ~~[] Serum~~
+- ~~[ ] Serum~~
 
 ### Evaluation
 - Ardour
