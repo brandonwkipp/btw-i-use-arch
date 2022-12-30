@@ -1,7 +1,9 @@
 ---
 - name: Install packages for brandon
   include_tasks: packages.yml
-  tags: packages
+  tags:
+    - aur
+    - packages
 
 - name: Install Uxn & ROMs
   include_tasks: uxn.yml

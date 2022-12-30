@@ -5,8 +5,11 @@
 # Copy configs
 - include_tasks: config.yml
 
-# Install packages & AUR packages
-- include_tasks: packages.yml
+- name: Install packages & AUR packages
+  include_tasks: packages.yml
+  tags:
+    - aur
+    - packages
 
 # Install dwm
 - include_tasks: dwm.yml

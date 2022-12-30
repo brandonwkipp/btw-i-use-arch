@@ -26,6 +26,7 @@
       - xcompmgr
       - xwallpaper
     state: present
+  tags: packages
 
 - name: Install AUR packages
   kewlfft.aur.aur:
@@ -39,3 +40,6 @@
     state: present
   become: yes
   become_user: brandon
+  tags:
+    - packages
+    - aur

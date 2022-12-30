@@ -1,12 +1,13 @@
 ---
-# Set hostname
-- include_tasks: hostname.yml
+- name: Set hostname
+  include_tasks: hostname.yml
 
-# Enable additional repositories
-- include_tasks: repo.yml
+- name: Enable additional repositories
+  include_tasks: repo.yml
 
-# Install base packages
-- include_tasks: packages.yml
+- name: Install base packages
+  include_tasks: packages.yml
+  tags: packages
 
-# Configure GRUB
-- include_tasks: grub.yml
+- name: Configure GRUB
+  include_tasks: grub.yml

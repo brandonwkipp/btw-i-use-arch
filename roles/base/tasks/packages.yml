@@ -28,3 +28,4 @@
       - xterm
       - zsh
     state: present
+  tags: packages

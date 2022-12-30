@@ -21,6 +21,7 @@
       - yabridge
       - yabridgectl
     state: present
+  tags: packages
 
 - name: Install audio AUR packages
   kewlfft.aur.aur:
@@ -30,3 +31,4 @@
     state: present
   become: yes
   become_user: brandon
+  tags: aur
