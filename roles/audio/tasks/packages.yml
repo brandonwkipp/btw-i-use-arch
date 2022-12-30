@@ -26,7 +26,6 @@
   kewlfft.aur.aur:
     name:
       - bitwig-studio
-      - vital-synth
     use: makepkg
     state: present
   become: yes
