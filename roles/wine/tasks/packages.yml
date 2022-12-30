@@ -1,0 +1,10 @@
+---
+# TODO: Pin version?
+
+- name: Install wine
+  pacman:
+    name:
+      - wine
+      - winetricks
+    state: present
+  tags: wine

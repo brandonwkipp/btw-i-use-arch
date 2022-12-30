@@ -1,0 +1,4 @@
+---
+
+- name: Install wine packages
+  include_tasks: packages.yml

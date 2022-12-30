@@ -21,8 +21,6 @@
       - terraform
       - thunderbird
       - ttf-hack
-      - wine-staging
-      - winetricks
       - wireshark-cli
       - wireshark-qt
       - xcompmgr
