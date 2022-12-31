@@ -9,6 +9,7 @@ Here are some notes in getting Waves Central v11 working. There is a file named 
 The `.wle` file is installed when you activate licenses to your machine and is removed when you deactivate them. Waves Central v11 autoupdates itself to v13.4.1 at the moment and while it does work on stock `wine-7.22` (not wine-staging), it's a matter of time before it breaks. 
 
 #### License Transfer??? (this turned out to be successful in actually activating the license to my machine
+```
 20:33:49 [error]    WleGetLicensedProducts::getProducts failed {
   centralParsedError: true,
   message: 'getLicenseFiles timed out after 40 second(s)',
