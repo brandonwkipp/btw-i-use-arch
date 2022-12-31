@@ -32,6 +32,7 @@
   kewlfft.aur.aur:
     name:
       - authy
+      - httptoolkit-bin
       - nvm
       - qFlipper
       - timeshift
