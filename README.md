@@ -9,7 +9,6 @@ It is very much a work in progress.
 - backups config
 - track pad freezing
 - talon
-- samba credentials file
 - lv2-plugins (group?)
 - LinVST
 - yabridge config?

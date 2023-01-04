@@ -11,3 +11,7 @@
 
 - name: Configure GRUB
   include_tasks: grub.yml
+
+- name: Setup samba credentials
+  include_tasks: samba.yml
+  tags: samba
