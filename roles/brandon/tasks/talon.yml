@@ -1,0 +1,28 @@
+---
+- name: Install packages
+  pacman:
+    name:
+      - qt5-speech
+    state: present
+  tags:
+    - packages
+    - talon
+
+- name: Fetch latest Talon
+  ansible.builtin.get_url:
+    url: https://talonvoice.com/dl/latest/talon-linux.tar.xz
+    dest: /tmp/talon-linux.tar.xz
+  tags: talon
+
+- name: Unarchive Talon
+  ansible.builtin.unarchive:
+    src: /tmp/talon-linux.tar.xz
+    dest: /tmp
+  tags: talon
+
+- name: Install Talon
+  ansible.builtin.shell:
+    chdir: /tmp/talon
+    cmd: ./run.sh
+  become: yes
+  become_user: brandon

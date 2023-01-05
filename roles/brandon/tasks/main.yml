@@ -11,5 +11,12 @@
     - aur
     - packages
 
-# Install dwm
-- include_tasks: dwm.yml
+- name: Install dwm
+  include_tasks: dwm.yml
+  tags: dwm
+
+- name: Install Talon
+  include_tasks: talon.yml
+  tags:
+    - packages
+    - talon

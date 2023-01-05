@@ -25,6 +25,14 @@
     mode: u=rwx,g=r,o=r
     backup: yes
 
+- name: Copy .vimrc
+  ansible.builtin.file:
+    src: ../files/config/.vimrc
+    dest: /home/brandon/.vimrc
+    owner: brandon
+    group: wheel
+    mode: u=rwx,g=r,o=r
+
 - name: Copy .zprofile
   ansible.builtin.copy:
     src: ../files/config/.zprofile
