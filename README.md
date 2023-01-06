@@ -5,7 +5,6 @@ This repository holds the `ansible` configurations for my adventures in tuning a
 It is very much a work in progress.
 
 ## TODO
-- vital synth
 - backups config
 - track pad freezing
 - talon
