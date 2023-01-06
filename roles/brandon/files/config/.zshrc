@@ -24,6 +24,7 @@ source /usr/share/nvm/init-nvm.sh
 # Aliases
 alias ansible-playbook="sudo ansible-playbook"
 alias dmesg="sudo dmesg"
+alias history="history 0"
 alias mount="sudo mount"
 alias mountshare="sudo mountshare"
 alias pacman="sudo pacman"

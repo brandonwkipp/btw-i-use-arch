@@ -6,6 +6,7 @@
     owner: brandon
     group: wheel
     mode: u=rw,g=r,o=r
+  tags: config
 
 - name: Copy .xinitrc
   ansible.builtin.copy:
@@ -15,6 +16,7 @@
     group: wheel
     mode: u=rw,g=r,o=r
     backup: yes
+  tags: config
 
 - name: Copy .xprofile
   ansible.builtin.copy:
@@ -24,14 +26,16 @@
     group: wheel
     mode: u=rwx,g=r,o=r
     backup: yes
+  tags: config
 
 - name: Copy .vimrc
-  ansible.builtin.file:
+  ansible.builtin.copy:
     src: ../files/config/.vimrc
     dest: /home/brandon/.vimrc
     owner: brandon
     group: wheel
     mode: u=rwx,g=r,o=r
+  tags: config
 
 - name: Copy .zprofile
   ansible.builtin.copy:
@@ -40,6 +44,7 @@
     owner: brandon
     group: wheel
     mode: u=rw,g=r,o=r
+  tags: config
 
 - name: Copy .zshrc
   ansible.builtin.copy:
@@ -48,8 +53,10 @@
     owner: brandon
     group: wheel
     mode: u=rw,g=r,o=r
+  tags: config
 
 - name: Set zsh as shell of choice
   user:
     name: brandon
     shell: /usr/bin/zsh
+  tags: config

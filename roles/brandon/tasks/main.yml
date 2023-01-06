@@ -2,8 +2,9 @@
 # Create dirs
 - include_tasks: dir.yml
 
-# Copy configs
-- include_tasks: config.yml
+- name: Copy configs
+  include_tasks: config.yml
+  tags: config
 
 - name: Install packages & AUR packages
   include_tasks: packages.yml
