@@ -6,6 +6,7 @@
       - bluez-utils
       - calf
       - dragonfly-reverb
+      - ecasound
       - pd
       - pipewire
       - pipewire-alsa
