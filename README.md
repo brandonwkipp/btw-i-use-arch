@@ -7,7 +7,6 @@ It is very much a work in progress.
 ## TODO
 - backups config
 - track pad freezing
-- talon
 - lv2-plugins (group?)
 - LinVST
 - yabridge config?
