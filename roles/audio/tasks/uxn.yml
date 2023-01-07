@@ -32,7 +32,7 @@
 
 - name: Install orca
   ansible.builtin.shell: |
-    cd /home/brandon/builds/orca-toy
+    cd /home/brandon/www/orca-toy
     mkdir -p /home/brandon/www/orca-toy/bin
     uxnasm src/orca.tal /home/brandon/www/orca-toy/bin/orca.rom
   become: yes
