@@ -1,0 +1,7 @@
+---
+- name: Add brandon to the docker group
+  ansible.builtin.user:
+    name: brandon
+    append: true
+    groups: docker
+  tags: brandon

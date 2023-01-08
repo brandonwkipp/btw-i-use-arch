@@ -9,8 +9,6 @@
       - blender
       - code
       - cups
-      - docker
-      - docker-compose
       - gimp
       - go
       - jq

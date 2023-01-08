@@ -12,6 +12,10 @@
     - aur
     - packages
 
+- name: Install & setup docker
+  include_tasks: docker.yml
+  tags: docker
+
 - name: Install dwm
   include_tasks: dwm.yml
   tags: dwm
