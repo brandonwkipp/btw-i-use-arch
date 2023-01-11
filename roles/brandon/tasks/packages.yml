@@ -22,6 +22,7 @@
       - wireshark-cli
       - wireshark-qt
       - xcompmgr
+      - xorg-xwd
       - xwallpaper
     state: present
   tags: packages

@@ -4,12 +4,13 @@ This repository holds the `ansible` configurations for my adventures in tuning a
 
 It is very much a work in progress.
 
-## TODO
-- backups config
+## TODO:
 - track pad freezing
+
+## Late stage TODO:
+- backups config
 - lv2-plugins (group?)
-- LinVST
-- yabridge config?
+- yabridge automation
 
 ### Wine Programs (vanilla wine, v7.22)
 - [x] FL Studio
