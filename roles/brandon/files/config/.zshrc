@@ -17,6 +17,9 @@ compinit
 # Set terminal prompt
 PS1='[%n@%m %~]$ '
 
+# npm & yarn exports
+export PATH="$PATH:$(npm bin -g)"
+export PATH="$PATH:$HOME/.yarn/bin"
 
 # Set up Node Version Manager
 source /usr/share/nvm/init-nvm.sh
