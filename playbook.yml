@@ -7,4 +7,3 @@
     - { role: brandon, tags: ['brandon'] }
     - { role: thinkpad, tags: ['thinkpad'] }
     - { role: audio, tags: ['audio'] }
-    - { role: services, tags: ['services'] }

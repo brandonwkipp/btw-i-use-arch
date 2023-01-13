@@ -1,0 +1,8 @@
+- name: Enable Bluetooth
+  ansible.builtin.systemd:
+    name: bluetooth
+    enabled: yes
+    state: started
+  tags:
+    - audio
+    - bluetooth

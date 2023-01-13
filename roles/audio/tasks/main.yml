@@ -2,9 +2,16 @@
 - name: Install packages for brandon
   include_tasks: packages.yml
   tags:
+    - audio
     - aur
     - packages
 
 - name: Install Uxn & ROMs
   include_tasks: uxn.yml
   tags: uxn
+
+- name: Enable & start bluetooth daemon
+  include_tasks: bluetooth.yml
+  tags:
+    - audio
+    - bluetooth
