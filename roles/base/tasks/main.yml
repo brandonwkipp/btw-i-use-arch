@@ -12,6 +12,9 @@
 - name: Configure GRUB
   include_tasks: grub.yml
 
+- name: Enable & start systemd-resolved
+  include_tasks: networking.yml
+
 - name: Setup samba credentials
   include_tasks: samba.yml
   tags: samba

@@ -1,0 +1,10 @@
+- name: Enable & start systemd-resolved
+  ansible.builtin.systemd:
+    name: systemd-resolved.service
+    enabled: yes
+    state: started
+
+- name: Copy resolv.conf for drill
+  ansible.builtin.copy:
+    src: ../files/resolv.conf
+    dest: /etc/resolv.conf
