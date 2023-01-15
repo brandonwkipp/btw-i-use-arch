@@ -19,6 +19,7 @@
       - terraform
       - thunderbird
       - ttf-hack
+      - whois
       - wireshark-cli
       - wireshark-qt
       - xcompmgr
