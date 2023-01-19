@@ -1,0 +1,15 @@
+---
+- name: Install necessary packages
+  pacman:
+    name:
+      - cups
+      - cups-pdf
+      - dpkg
+      - sane
+  state: present
+  tags: printer
+
+# dpkg driver
+# install lp
+# start/enable cups
+# lpadmin -d DCPL2550DW
