@@ -13,6 +13,8 @@
       - go
       - jq
       - libreoffice-still
+      - lynx
+      - octave
       - pcmanfm
       - python
       - sxiv
