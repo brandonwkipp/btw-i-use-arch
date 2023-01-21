@@ -5,9 +5,17 @@
       - cups
       - cups-pdf
       - dpkg
+      - libtiff
       - sane
+      - xsane
   state: present
   tags: printer
+
+- name: Install 3rd party applications
+  kewlfft.aur.aur:
+    name:
+      - brsaneconfig4
+      - brscan-skey
 
 # dpkg driver
 # install lp
