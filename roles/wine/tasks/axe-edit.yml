@@ -1,0 +1,13 @@
+---
+- name: Compile axe-edit cursor patch
+  ansible.builtin.shell:
+    gcc
+  tags:
+    - wine
+
+- name: Move cursor patch to correct location
+  ansible.builtin.copy:
+    src: ../files/axe-edit/libaxe-edit-cursor.so
+    dest: /usr/lib64/libaxe-edit-cursor.so
+  tags:
+    - wine
