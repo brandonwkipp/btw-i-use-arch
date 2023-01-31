@@ -1,0 +1,22 @@
+---
+- name: Install dependencies for printer/scanner programs
+  pacman:
+    name:
+      - cups
+      - cups-pdf
+      - dpkg
+      - libtiff
+      - sane
+    state: present
+  tags:
+    - printer
+
+- name: Install (Brother) 3rd party applications
+  kewlfft.aur.aur:
+    name:
+      - brsaneconfig4
+      - brscan-skey
+    use: makepkg
+    state: presnt
+  tags:
+    - printer

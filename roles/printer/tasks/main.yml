@@ -1,23 +1,7 @@
 ---
-- name: Install necessary packages
-  pacman:
-    name:
-      - cups
-      - cups-pdf
-      - dpkg
-      - libtiff
-      - sane
-      - xsane
-  state: present
-  tags: printer
-
-- name: Install 3rd party applications
-  kewlfft.aur.aur:
-    name:
-      - brsaneconfig4
-      - brscan-skey
+- name: Install packages & dependencies
+  include_tasks: packages.yml
 
 # dpkg driver
-# install lp
 # start/enable cups
 # lpadmin -d DCPL2550DW

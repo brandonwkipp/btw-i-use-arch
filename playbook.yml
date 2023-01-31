@@ -6,4 +6,5 @@
     - { role: user, tags: ['user'] }
     - { role: brandon, tags: ['brandon'] }
     - { role: thinkpad, tags: ['thinkpad'] }
+    - { role: printer, tags: ['printer'] }
     - { role: audio, tags: ['audio'] }
