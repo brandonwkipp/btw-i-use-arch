@@ -1,0 +1,21 @@
+---
+- name: Install vst dependencies
+  pacman:
+    name:
+      - cmake
+      - gcc
+      - gcc-libs
+      - libxcb
+      - libxkbcommon
+      - libxkbcommon-x11
+      - fontconfig
+      - cairo
+      - gtkmm
+      - sqlite3
+      - xcb-util
+      - xcb-util-cursor
+      - xcb-util-keysyms
+    state: present
+  tags:
+    - audio
+    - vst

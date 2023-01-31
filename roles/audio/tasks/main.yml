@@ -10,6 +10,12 @@
   include_tasks: uxn.yml
   tags: uxn
 
+- name: Install packages for vst development
+  include_tasks: vst.yml
+  tags:
+   - audio
+   - vst
+
 - name: Enable & start bluetooth daemon
   include_tasks: bluetooth.yml
   tags:
