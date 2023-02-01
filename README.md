@@ -10,6 +10,7 @@ It is very much a work in progress.
 ## Late stage TODO:
 - backups config
 - lv2-plugins (group?)
+- lynx SET_COOKIES false
 - yabridge automation
 
 ### Wine Programs (vanilla wine, v7.22)
