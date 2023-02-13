@@ -11,6 +11,7 @@
       - fontconfig
       - cairo
       - gtkmm
+      - qtcreator
       - sqlite3
       - xcb-util
       - xcb-util-cursor

@@ -17,6 +17,7 @@
       - octave
       - pcmanfm
       - python
+      - rustup
       - sxiv
       - terraform
       - thunderbird
