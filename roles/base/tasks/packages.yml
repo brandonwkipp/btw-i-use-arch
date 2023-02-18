@@ -20,6 +20,7 @@
       - reflector
       - smbclient
       - tcpdump
+      - tmux
       - traceroute
       - usbutils
       - vim
