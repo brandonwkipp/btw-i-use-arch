@@ -11,6 +11,7 @@ It is very much a work in progress.
 - backups config
 - lv2-plugins (group?)
 - lynx SET_COOKIES false
+- vlc [midi support](https://wiki.archlinux.org/title/MIDI)
 - yabridge automation
 
 ### Wine Programs (vanilla wine, v7.22)
