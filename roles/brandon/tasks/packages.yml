@@ -14,7 +14,7 @@
       - jq
       - libreoffice-still
       - lynx
-      - noto-fonts-emoji
+      - noto-fonts-emoji # dwmblocks scripts emoji rendering
       - octave
       - pcmanfm
       - python
@@ -22,7 +22,7 @@
       - sxiv
       - terraform
       - thunderbird
-      - ttf-hack
+      - ttf-hack # st font
       - whois
       - wireshark-cli
       - wireshark-qt
