@@ -7,6 +7,7 @@
       - calf
       - dragonfly-reverb
       - ecasound
+      - fluidsynth # vlc midi support
       - pd
       - pipewire
       - pipewire-alsa
@@ -15,6 +16,7 @@
       - pipewire-pulse
       - qpwgraph
       - reaper
+      - soundfont-fluid # vlc midi support
       - sox
       - supercollider
       - vlc
@@ -28,6 +30,7 @@
   kewlfft.aur.aur:
     name:
       - bitwig-studio
+      - vlc-plugin-fluidsynth-bin # vlc midi support
     use: makepkg
     state: present
   become: yes
