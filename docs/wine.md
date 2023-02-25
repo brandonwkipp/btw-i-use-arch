@@ -2,10 +2,16 @@
 
 - 64-bit seems ok
 - Windows 10 seems to work better than the default
-- `wine-staging` works better than the default
+- `wine v7.22` has worked pretty well for the things that have actually worked
 - download all the fonts at the start of the bottle
 
+## Does not work
+
+- Splice's Desktop app
+- iLok detection
+
 ### Packages
+
 TODO
 
 ### Electron
