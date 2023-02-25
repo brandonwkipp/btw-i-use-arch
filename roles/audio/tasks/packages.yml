@@ -19,6 +19,7 @@
       - soundfont-fluid # vlc midi support
       - sox
       - supercollider
+      - ttf-dejavu # default font for pure data
       - vlc
       - wireplumber
       - yabridge
