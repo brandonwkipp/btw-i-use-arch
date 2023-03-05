@@ -60,3 +60,12 @@
     name: brandon
     shell: /usr/bin/zsh
   tags: config
+
+- name: Copy newsboat urls
+  ansible.builtin.copy:
+    src: ../files/config/.newsboat/urls
+    dest: /home/brandon/.newsboat/urls
+    owner: brandon
+    group: wheel
+    mode: u=rw,g=r,o=r
+  tags: config
