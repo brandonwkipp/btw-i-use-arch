@@ -1,0 +1,9 @@
+#!/bin/bash
+
+headphones="88:C9:E8:13:C7:D1"
+microkey="D0:17:69:A5:30:FB"
+
+bluetoothctl power on
+bluetoothctl connect $headphones
+bluetoothctl connect $microkey
+
