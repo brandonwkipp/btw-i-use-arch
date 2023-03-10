@@ -21,3 +21,9 @@
   tags:
     - audio
     - bluetooth
+
+- name: Configure MIDI
+  include_tasks: midi.yml
+  tags:
+    - audio
+    - midi

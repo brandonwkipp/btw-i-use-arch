@@ -1,0 +1,10 @@
+---
+- name: Add and persist the snd_virmidi module
+  community.general.modprobe:
+    name: snd_virmidi
+    state: present
+    params: 'midi_devs=1'
+    persistent: present
+  tags:
+    - audio
+    - midi
