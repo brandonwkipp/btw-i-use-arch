@@ -8,6 +8,7 @@
       - dragonfly-reverb
       - ecasound
       - fluidsynth # vlc midi support
+      - lsp-plugins
       - pd
       - pipewire
       - pipewire-alsa
