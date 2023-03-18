@@ -4,11 +4,8 @@
       - ardour
       - bluez
       - bluez-utils
-      - calf
-      - dragonfly-reverb
       - ecasound
       - fluidsynth # vlc midi support
-      - lsp-plugins
       - pd
       - pipewire
       - pipewire-alsa
@@ -27,6 +24,26 @@
       - yabridgectl
     state: present
   tags: packages
+
+- name: Install plugin packages
+  pacman:
+    name:
+      - artyfx
+      - bchoppr
+      - bshapr
+      - bslizr
+      - calf
+      - dexed
+      - dragonfly-reverb
+      - drumkv1
+      - fabla
+      - lsp-plugins
+      - samplv1
+      - spectmorph
+      - swh-plugins
+      - synthv1
+      - wolfshaper
+      - x42-plugins
 
 - name: Install audio AUR packages
   kewlfft.aur.aur:
