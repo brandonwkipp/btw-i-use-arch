@@ -1,5 +1,5 @@
 ---
-- name: Install packages for brandon
+- name: Install audio packages
   include_tasks: packages.yml
   tags:
     - audio
@@ -15,6 +15,13 @@
   tags:
    - audio
    - vst
+
+- name: Install external plugins
+  include_tasks: plugins/main.yml
+  tags:
+    - audio
+    - midi
+    - plugins
 
 - name: Enable & start bluetooth daemon
   include_tasks: bluetooth.yml

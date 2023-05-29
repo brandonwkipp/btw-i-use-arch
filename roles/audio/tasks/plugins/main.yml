@@ -1,0 +1,7 @@
+---
+- name: Install TAL plugins
+  include_tasks: tal.yml
+  tags:
+    - audio
+    - midi
+    - plugins

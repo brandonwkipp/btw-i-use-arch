@@ -4,6 +4,7 @@
       - ardour
       - bluez
       - bluez-utils
+      - cdrtools # burning cds
       - ecasound
       - fluidsynth # vlc midi support
       - pd
