@@ -2,9 +2,17 @@
 - name: Install uxn dependencies
   pacman:
     name:
+      - portmidi
       - sdl2
     state: present
   tags: uxn
+
+# https://lists.gnu.org/archive/html/denemo-devel/2013-09/msg00023.html
+- name: Link portmidi to porttime
+  ansible.builtin.file:
+    src: /usr/lib/libportmidi.so
+    dest: /usr/lib/libporttime.so
+    state: link
 
 - name: Clone uxn
   ansible.builtin.git:
@@ -39,3 +47,22 @@
   become_user: brandon
   ignore_errors: true
   tags: uxn
+
+- name: Clone shim
+  ansible.builtin.git:
+    repo: https://git.sr.ht/~rabbits/shim
+    dest: /home/brandon/www/shim
+  become: yes
+  become_user: brandon
+  tags: uxn
+
+- name: Install shim
+  ansible.builtin.shell: |
+    cd /home/brandon/www/shim
+    mkdir -p /home/brandon/www/shim/bin
+    ./build.sh
+  become: yes
+  become_user: brandon
+  ignore_errors: true
+  tags: uxn
+
