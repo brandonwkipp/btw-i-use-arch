@@ -4,6 +4,7 @@
       - acpi
       - base
       - base-devel
+      - dhcpcd
       - efibootmgr
       - firefox
       - firefox-ublock-origin
