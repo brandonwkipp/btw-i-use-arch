@@ -43,13 +43,14 @@
       - spectmorph
       - swh-plugins
       - synthv1
-      - wolfshaper
+      - wolf-shaper
       - x42-plugins
 
 - name: Install audio AUR packages
   kewlfft.aur.aur:
     name:
       - bitwig-studio
+      - butler #auburn audio plugins
       - vlc-plugin-fluidsynth-bin # vlc midi support
     use: makepkg
     state: present

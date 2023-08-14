@@ -6,6 +6,7 @@ This repository holds the `ansible` configurations for my adventures in tuning a
 - Auburn Sounds plugins
 - backups config
 - ethernet (dhcpcd enp0s25)
+- itchio config -> ~/.config/itch/butler_creds
 - lynx SET_COOKIES false
 - yabridge automation
 
