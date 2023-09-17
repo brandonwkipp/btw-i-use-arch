@@ -8,3 +8,12 @@
   ansible.builtin.copy:
     src: ../files/resolv.conf
     dest: /etc/resolv.conf
+
+- name: Copy iwd config
+  ansible.builtin.copy:
+    src: ../files/iwd/BCNet.8021x
+    dest: /var/lib/iwd/BCNet.8021x
+    decrypt: yes
+    owner: root
+    group: root
+    mode: 600
