@@ -16,4 +16,4 @@
     decrypt: yes
     owner: root
     group: root
-    mode: 600
+    mode: 0600
