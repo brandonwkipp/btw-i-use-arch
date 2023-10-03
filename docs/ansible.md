@@ -10,8 +10,7 @@ sudo ansible-vault encrypt_string --vault-id ~/.ansible/arch-secret.txt --stdin 
 
 ### Encrypt Files
 ```
-sudo ansible-vault encrypt $SOME_FILE
-
+sudo ansible-vault encrypt $SOME_FILE --vault-id ~/.ansible/arch-secret.txt
 
 # reference in task
 - name: Copy server private key
