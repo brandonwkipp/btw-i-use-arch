@@ -2,3 +2,10 @@
 
 - name: Install wine packages
   include_tasks: packages.yml
+  tags:
+    - packages
+    - wine
+
+- name: Copy scripts/aliases
+  include_tasks: scripts.yml
+  tags: wine
