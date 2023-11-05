@@ -1,6 +1,6 @@
 ### dwm setup
 
-My instance of `dwm` is [slightly customized](https://github.com/brandonwkipp/dwm/tree/patched). This is where I'm documenting my changes.
+My instance of `dwm` is [slightly customized](https://github.com/brandonwkipp/dwm/commits/patched). This is where I'm documenting my changes.
 
 #### List of patches (in order)
 
