@@ -1,6 +1,6 @@
 ### dwm setup
 
-My instance of `dwm` is slightly customized. This is where I'm documenting my changes.
+My instance of `dwm` is [slightly customized](https://github.com/brandonwkipp/dwm). This is where I'm documenting my changes.
 
 #### List of patches (in order)
 
