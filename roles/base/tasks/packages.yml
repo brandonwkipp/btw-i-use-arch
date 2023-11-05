@@ -23,6 +23,7 @@
       - tcpdump
       - tmux
       - traceroute
+      - unarchiver
       - usbutils
       - vim
       - xclip
