@@ -3,7 +3,6 @@
   pacman:
     name:
       - lm_sensors
-      - xf86-video-intel
       - xorg-xbacklight
     state: present
 
