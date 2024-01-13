@@ -1,9 +1,9 @@
 ---
-- name: Install Thinkpad-related packages
+- name: Install Thinkpad-related & other hardware packages
   pacman:
     name:
+      - acpilight
       - lm_sensors
-      - xorg-xbacklight
     state: present
 
 - name: Install Thinkpad-related AUR packages

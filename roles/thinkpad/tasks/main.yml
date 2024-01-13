@@ -4,3 +4,8 @@
   tags:
     - packages
 
+- name: Add udev rule to allow use of xbacklight without sudo
+  include_tasks: udev.yml
+  tags:
+   - thinkpad
+

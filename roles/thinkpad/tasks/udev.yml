@@ -1,0 +1,6 @@
+---
+- name: Add backlight permissions
+  ansible.builtin.copy:
+    src: ../files/udev/90-backlight.rules
+    dest: /etc/udev/rules.d/90-backlight.rules
+  tags: thinkpad
