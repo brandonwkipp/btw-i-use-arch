@@ -5,19 +5,21 @@
       - base
       - base-devel
       - dhcpcd
+      - dosfstools
       - efibootmgr
       - firefox
       - firefox-ublock-origin
       - git
+      - gparted
       - grub
       - iwd
       - ldns
       - linux
       - linux-firmware
-      - linux-lts
       - linux-rt
-      - linux-rt-lts
+      - lsof
       - man-db
+      - mtools
       - reflector
       - smbclient
       - tcpdump

@@ -51,7 +51,7 @@
     name:
       - bitwig-studio
       - butler #auburn audio plugins
-      - vlc-plugin-fluidsynth-bin # vlc midi support
+      - jamulus
     use: makepkg
     state: present
   become: yes
