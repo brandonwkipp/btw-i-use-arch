@@ -20,3 +20,7 @@ sudo ansible-vault encrypt $SOME_FILE --vault-id ~/.ansible/arch-secret.txt
     decrypt: yes
     ...
 ```
+
+### AUR Ansible Collection (kewlfft.aur)
+Install this
+```ansible-galaxy collection install kewlfft.aur```
