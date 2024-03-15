@@ -9,8 +9,8 @@
   include_tasks: packages.yml
   tags: packages
 
-- name: Configure GRUB
-  include_tasks: grub.yml
+  #- name: Configure GRUB
+  # include_tasks: grub.yml
 
 - name: Configure networking
   include_tasks: networking.yml

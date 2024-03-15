@@ -1,18 +1,18 @@
 - name: Install base dependencies
   pacman:
     name:
-      - acpi
+      - acpi # do we need this?
       - base
       - base-devel
       - dhcpcd
-      - dosfstools
+      - dosfstools # allows for formatting to FAT32
       - efibootmgr
       - firefox
       - firefox-ublock-origin
       - git
-      - gparted
-      - grub
-      - iwd
+      - gparted # for partitioning via gui
+      # - grub
+      - iwd # wifi
       - ldns
       - linux
       - linux-firmware
@@ -20,6 +20,7 @@
       - lsof
       - man-db
       - mtools
+      - openssh
       - pacman-contrib
       - reflector
       - smbclient
@@ -27,11 +28,14 @@
       - tmux
       - traceroute
       - unarchiver
+      - unzip
       - usbutils
       - vim
+      - whois # mkpasswd
       - xclip
-      - xorg-xinit
       - xorg-server
+      - xorg-xinit
+      - xorg-xrandr # set resolution
       - xterm
       - zsh
     state: present
