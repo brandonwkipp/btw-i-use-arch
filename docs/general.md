@@ -1,9 +1,16 @@
-# General
+# Setup
 
-### Sync reflector
-sudo reflector --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+## Arch Install
+Do yourself a favor and just run `archinstall`
 
-### Sync time
+## Ansible Setup
+We need to setup our vault to decrypt values in the playbook. Copy the secret from the password manager and place it here:
 ```
-sudo timedatectl set-ntp true
+/root/.ansible/arch-secret.txt
+```
+
+### AUR Ansible Collection (kewlfft.aur)
+To install from the AUR, we need to download this collection:
+```
+ansible-galaxy collection install kewlfft.aur
 ```
