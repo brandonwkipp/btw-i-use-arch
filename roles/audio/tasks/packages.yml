@@ -1,12 +1,12 @@
 - name: Install audio packages
   pacman:
     name:
-      - ardour
+      #- ardour
       - bluez
       - bluez-utils
       - cdrtools # burning cds
       - ecasound
-      - fluidsynth # vlc midi support
+      #      - fluidsynth # vlc midi support
       - pd
       - pipewire
       - pipewire-alsa
@@ -15,7 +15,7 @@
       - pipewire-pulse
       - qpwgraph
       - reaper
-      - soundfont-fluid # vlc midi support
+      # - soundfont-fluid # vlc midi support
       - sox
       - supercollider
       - ttf-dejavu # default font for pure data
@@ -51,7 +51,7 @@
     name:
       - bitwig-studio
       - butler #auburn audio plugins
-      - jamulus
+      # - jamulus
     use: makepkg
     state: present
   become: yes
