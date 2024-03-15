@@ -9,3 +9,7 @@
   tags:
    - thinkpad
 
+- name: Copy libinput config
+  include_tasks: config.yml
+  tags:
+    - thinkpad

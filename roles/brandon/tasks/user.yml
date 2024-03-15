@@ -1,7 +1,31 @@
 ---
-- name: Add brandon to the docker group
+- name: Add brandon user
   ansible.builtin.user:
     name: brandon
-    append: true
-    groups: docker
+    groups:
+      # docker
+      # libvirt
+      - tty
+      - wheel
+      # wireshark
+    password: $6$D5amdKNl99w04aAa$VdmohuQFTDWxCjGWeSLEnotd1DU/PWKGPK4EylOH2yKH1X7q6biG0pS4Q3GrUR6h8i9UVRMiWLxEsqxmCQsZd/
+    shell: /bin/zsh
+    state: present
+  tags: brandon
+
+- name: Ensure correct permissions on home dir
+  ansible.builtin.file:
+    path: /home/brandon
+    state: directory
+    owner: brandon
+    group: wheel
+  tags: brandon
+
+- name: Allow brandon to run pacman without password
+  become: yes
+  ansible.builtin.lineinfile:
+    path: /etc/sudoers.d/11-brandon
+    line: 'brandon ALL=(ALL) NOPASSWD: /usr/bin/dmesg, /usr/bin/mount, /usr/bin/pacman, /usr/bin/umount, /home/brandon/.local/bin/mountshare'
+    create: yes
+    validate: 'visudo -cf %s'
   tags: brandon

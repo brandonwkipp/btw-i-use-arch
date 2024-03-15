@@ -1,5 +1,5 @@
 # Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
+HISTFILE=$HOME/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd
@@ -18,7 +18,6 @@ compinit
 PS1='[%n@%m %~]$ '
 
 # npm & yarn exports
-export PATH="$PATH:$(npm bin -g)"
 export PATH="$PATH:$HOME/.yarn/bin"
 
 # Functions

@@ -5,3 +5,6 @@ xwallpaper --center ~/Downloads/wall.png
 
 # For transparency
 xcompmgr &
+
+# Set resolution
+xrandr --output HDMI-1 --mode 1920x1080

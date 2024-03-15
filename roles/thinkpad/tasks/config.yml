@@ -1,0 +1,9 @@
+---
+- name: Copy libinput for X
+  ansible.builtin.copy:
+    src: ../files/config/libinput
+    dest: /etc/X11/xorg.conf.d/99-brandon.conf
+    owner: brandon
+    group: wheel
+    mode: 0644
+  tags: config

@@ -1,13 +1,4 @@
 ---
-- name: Copy libinput for X
-  ansible.builtin.copy:
-    src: ../files/config/libinput
-    dest: /etc/X11/xorg.conf.d/99-brandon.conf
-    owner: brandon
-    group: wheel
-    mode: u=rw,g=r,o=r
-  tags: config
-
 - name: Copy .xinitrc
   ansible.builtin.copy:
     src: ../files/config/.xinitrc
@@ -61,11 +52,11 @@
     shell: /usr/bin/zsh
   tags: config
 
-- name: Copy newsboat urls
-  ansible.builtin.copy:
-    src: ../files/config/.newsboat/urls
-    dest: /home/brandon/.newsboat/urls
-    owner: brandon
-    group: wheel
-    mode: u=rw,g=r,o=r
-  tags: config
+#- name: Copy newsboat urls
+#  ansible.builtin.copy:
+#    src: ../files/config/.newsboat/urls
+#    dest: /home/brandon/.newsboat/urls
+#    owner: brandon
+#    group: wheel
+#    mode: u=rw,g=r,o=r
+#  tags: config

@@ -1,27 +1,29 @@
 ---
 # Create dirs
+- include_tasks: user.yml
+
 - include_tasks: dir.yml
 
 - name: Copy configs
   include_tasks: config.yml
   tags: config
 
-- name: Install packages & AUR packages
-  include_tasks: packages.yml
-  tags:
-    - aur
-    - packages
+  #- name: Install packages & AUR packages
+  #  include_tasks: packages.yml
+  #  tags:
+  #  - aur
+  #  - packages
 
-- name: Install & setup docker
-  include_tasks: docker.yml
-  tags: docker
+#- name: Install & setup docker
+#  include_tasks: docker.yml
+#  tags: docker
 
 - name: Install dwm
   include_tasks: dwm.yml
   tags: dwm
 
-- name: Install Talon
-  include_tasks: talon.yml
-  tags:
-    - packages
-    - talon
+#- name: Install Talon
+#  include_tasks: talon.yml
+#  tags:
+#    - packages
+#    - talon

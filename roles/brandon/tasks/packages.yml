@@ -16,7 +16,6 @@
       - libreoffice-still
       - lynx
       - noto-fonts-emoji # dwmblocks scripts emoji rendering
-      - octave
       - pcmanfm
       - python
       - rustup
@@ -25,7 +24,6 @@
       - terraform
       - thunderbird
       - ttf-hack # st font
-      - whois
       - wireshark-cli
       - wireshark-qt
       - xcompmgr
