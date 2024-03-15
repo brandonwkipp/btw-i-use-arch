@@ -1,13 +1,30 @@
+- name: Copy dchpcd config
+  ansible.builtin.copy:
+    src: ../files/dhcpcd.conf
+    dest: /etc/dhcpcd.conf
+  tags: networking
+
 - name: Enable & start systemd-resolved
   ansible.builtin.systemd:
     name: systemd-resolved.service
     enabled: yes
     state: started
+  tags: networking
 
-- name: Copy resolv.conf for drill
+- name: Copy resolv.conf.head
   ansible.builtin.copy:
-    src: ../files/resolv.conf
-    dest: /etc/resolv.conf
+    src: ../files/resolv.conf.head
+    dest: /etc/resolv.conf.head
+  tags: networking
+
+- name: Create iwd directory 
+  ansible.builtin.file:
+    path: /var/lib/iwd
+    state: directory
+    mode: 0700
+  tags:
+    - networking
+    - wifi
 
 - name: Copy iwd config
   ansible.builtin.copy:
@@ -17,3 +34,15 @@
     owner: root
     group: root
     mode: 0600
+  tags:
+    - networking
+    - wifi
+
+- name: Enable & start iwd
+  ansible.builtin.systemd:
+    name: iwd.service
+    enabled: yes
+    state: started
+  tags:
+    - networking
+    - wifi
