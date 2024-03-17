@@ -26,6 +26,17 @@
     - networking
     - wifi
 
+- name: Copy iwd main.conf 
+  ansible.builtin.copy:
+    src: ../files/iwd/main.conf
+    dest: /etc/iwd/main.conf
+    owner: root
+    group: root
+    mode: 0600
+  tags:
+    - networking
+    - wifi
+
 - name: Copy iwd config
   ansible.builtin.copy:
     src: ../files/iwd/BCNet.8021x

@@ -1,0 +1,15 @@
+---
+- name: Set git config global values
+  ansible.builtin.shell:
+    git config --global core.editor /usr/bin/vim 
+    git config --global user.email "brandonwkipp@gmail.com"
+    git config --global user.name "brandonwkipp"
+    
+- name: Create ~/www
+  ansible.builtin.file:
+    path: /home/brandon/www
+    state: directory
+    owner: brandon
+    group: wheel
+
+# rustup default stable ???

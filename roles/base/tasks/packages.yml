@@ -4,6 +4,7 @@
       - acpi # do we need this?
       - base
       - base-devel
+      - devtools
       - dhcpcd
       - dosfstools # allows for formatting to FAT32
       - efibootmgr
@@ -17,6 +18,7 @@
       - linux
       - linux-firmware
       - linux-rt
+      - lm_sensors
       - lsof
       - man-db
       - mtools

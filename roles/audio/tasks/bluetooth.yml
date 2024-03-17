@@ -13,7 +13,7 @@
     dest: /home/brandon/.local/bin
     owner: brandon
     group: wheel
-    mode: u=rwx,g=r,o=r
+    mode: 0755
   tags:
     - audio
     - bluetooth

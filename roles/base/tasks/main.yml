@@ -14,6 +14,9 @@
 
 - name: Configure networking
   include_tasks: networking.yml
+  tags: 
+    - networking
+    - wifi
 
 - name: Setup samba credentials
   include_tasks: samba.yml

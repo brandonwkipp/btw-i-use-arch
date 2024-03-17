@@ -1,4 +1,0 @@
----
-- name: Set git config editor
-  ansible.builtin.shell:
-    git config --global core.editor /usr/bin/vim 

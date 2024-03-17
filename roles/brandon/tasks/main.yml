@@ -1,18 +1,20 @@
 ---
-# Create dirs
-- include_tasks: user.yml
+- name: Create brandon user
+  include_tasks: user.yml
 
-- include_tasks: dir.yml
+- name: Install packages & AUR packages
+  include_tasks: packages.yml
+  tags:
+    - aur
+    - packages
 
 - name: Copy configs
   include_tasks: config.yml
-  tags: config
+  tags: 
+    - config
 
-  #- name: Install packages & AUR packages
-  #  include_tasks: packages.yml
-  #  tags:
-  #  - aur
-  #  - packages
+- name: Setup dev env
+  include_tasks: dev.yml
 
 #- name: Install & setup docker
 #  include_tasks: docker.yml

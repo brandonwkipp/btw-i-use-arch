@@ -1,10 +1,9 @@
 ---
 - hosts: localhost
   become: yes
-  roles: 
+  roles:
     - { role: base, tags: ['base'] }
-    - { role: user, tags: ['user'] }
     - { role: brandon, tags: ['brandon'] }
+    - { role: audio, tags: ['audio'] }
     - { role: thinkpad, tags: ['thinkpad'] }
     - { role: printer, tags: ['printer'] }
-    - { role: audio, tags: ['audio'] }

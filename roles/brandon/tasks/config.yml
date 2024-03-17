@@ -1,11 +1,26 @@
 ---
+- name: Create ~/.local/bin
+  ansible.builtin.file:
+    path: /home/brandon/.local/bin
+    state: directory
+    owner: brandon
+    group: wheel
+
+- name: Copy scripts into ~/.local/bin
+  ansible.builtin.copy:
+    src: ../files/scripts/
+    dest: /home/brandon/.local/bin
+    owner: brandon
+    group: wheel
+    mode: 0755
+
 - name: Copy .xinitrc
   ansible.builtin.copy:
     src: ../files/config/.xinitrc
     dest: /home/brandon/.xinitrc
     owner: brandon
     group: wheel
-    mode: u=rw,g=r,o=r
+    mode: 0655
     backup: yes
   tags: config
 
@@ -15,7 +30,7 @@
     dest: /home/brandon/.xprofile
     owner: brandon
     group: wheel
-    mode: u=rwx,g=r,o=r
+    mode: 0755
     backup: yes
   tags: config
 
@@ -25,7 +40,7 @@
     dest: /home/brandon/.vimrc
     owner: brandon
     group: wheel
-    mode: u=rwx,g=r,o=r
+    mode: 0755
   tags: config
 
 - name: Copy .zprofile
@@ -34,7 +49,7 @@
     dest: /home/brandon/.zprofile
     owner: brandon
     group: wheel
-    mode: u=rw,g=r,o=r
+    mode: 0655
   tags: config
 
 - name: Copy .zshrc
@@ -43,7 +58,7 @@
     dest: /home/brandon/.zshrc
     owner: brandon
     group: wheel
-    mode: u=rw,g=r,o=r
+    mode: 0655
   tags: config
 
 - name: Set zsh as shell of choice

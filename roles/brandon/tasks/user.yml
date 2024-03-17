@@ -1,5 +1,5 @@
 ---
-- name: Add brandon user
+- name: Create brandon user
   ansible.builtin.user:
     name: brandon
     groups:

@@ -3,7 +3,6 @@
   pacman:
     name:
       - acpilight
-      - lm_sensors
     state: present
 
 - name: Install Thinkpad-related AUR packages
