@@ -5,12 +5,13 @@ This repository holds the `ansible` configurations for my adventures in tuning a
 ## Setup
 
 ### Arch Install
-Do yourself a favor and just run `archinstall`
+Do yourself a favor and just run `archinstall`. While you're at it, install the following additional packages: `ansible`, `dhcpcd`, `git`, & `vim`. Once the install is complete, `chroot` in and modify `/etc/dhcpcd.conf` to have [this content](https://github.com/brandonwkipp/btw-i-use-arch/blob/main/roles/base/files/dhcpcd.conf).
 
 ### Ansible Setup
 We need to setup our vault to decrypt values in the playbook. Copy the secret from the password manager and place it here:
 ```
-/root/.ansible/arch-secret.txt
+mkdir -p ~/.ansible
+vim ~/.ansible/arch-secret.txt
 ```
 
 ### AUR Ansible Collection (kewlfft.aur)
