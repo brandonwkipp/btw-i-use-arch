@@ -11,7 +11,7 @@ Do yourself a favor and just run `archinstall`. While you're at it, install the 
 We need to setup our vault to decrypt values in the playbook. Copy the secret from the password manager and place it here:
 ```
 mkdir -p ~/.ansible
-vim ~/.ansible/arch-secret.txt
+vim ~/.ansible/arch-secret.txt <- PLACE SECRET IN THIS FILE
 ```
 
 ### AUR Ansible Collection (kewlfft.aur)
@@ -21,8 +21,6 @@ ansible-galaxy collection install kewlfft.aur
 ```
 
 ## Documentation
-
-Setting up `ansible` on a clean machine is the first step to provisioning that machine. One of the first things you'll need to do after getting that installed is to sync the vault password onto that machine. Instructions for doing so are in the `ansible` documentation below.
 
 - [ansible](docs/ansible.md)
 - [dwm](docs/dwm.md)
