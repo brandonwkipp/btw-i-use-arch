@@ -1,7 +1,4 @@
 ---
-- name: Set hostname
-  include_tasks: hostname.yml
-
 - name: Enable additional repositories
   include_tasks: repo.yml
 

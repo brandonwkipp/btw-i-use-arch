@@ -1,5 +1,0 @@
----
-- name: Write hostname
-  ansible.builtin.copy:
-    content: 'radium'
-    dest: /etc/hostname
