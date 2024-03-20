@@ -7,7 +7,6 @@
       - wine
       - winetricks
     state: present
-    extra_args: "--ignore=wine"
   tags:
     - packages
     - wine

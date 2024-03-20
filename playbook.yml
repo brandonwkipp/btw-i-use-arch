@@ -7,3 +7,4 @@
     - { role: audio, tags: ['audio'] }
     - { role: thinkpad, tags: ['thinkpad'] }
     - { role: printer, tags: ['printer'] }
+    - { role: wine, tags: ['wine'] }

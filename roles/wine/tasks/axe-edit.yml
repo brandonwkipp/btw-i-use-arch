@@ -1,7 +1,7 @@
 ---
 - name: Compile axe-edit cursor patch
   ansible.builtin.shell:
-    gcc
+    gcc -rdynamic -shared roles/wine/files/axe-edit/axe-edit-cursor-patch.c -o roles/wine/files/axe-edit/libaxe-edit-cursor.so 
   tags:
     - wine
 
@@ -9,5 +9,15 @@
   ansible.builtin.copy:
     src: ../files/axe-edit/libaxe-edit-cursor.so
     dest: /usr/lib64/libaxe-edit-cursor.so
+  tags:
+    - wine
+
+- name: Copy scripts/aliases
+  ansible.builtin.copy:
+    src: ../files/scripts/AxeFxIII
+    dest: /home/brandon/.local/bin/AxeFxIII
+    owner: brandon
+    group: wheel
+    mode: 0755
   tags:
     - wine
