@@ -1,0 +1,8 @@
+---
+- name: DeepCool packages
+  pacman:
+    name:
+      - python-hidapi
+      - python-psutil
+    state: present
+  tags: deepcool

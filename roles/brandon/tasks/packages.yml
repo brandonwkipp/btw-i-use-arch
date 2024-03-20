@@ -2,29 +2,21 @@
 - name: Install packages
   pacman:
     name:
-      - arduino
-      - aws-cli-v2
       - bitwarden
       - bitwarden-cli
       - blender
-      - code
       - gimp
-      - go
       - inkscape
-      - jq
       - libreoffice-still
       - lynx
+      - newsboat
       - noto-fonts-emoji # dwmblocks scripts emoji rendering
       - pcmanfm
-      - python
-      - rustup
-      - spice
+      - pipewire
+      - pipewire-jack # override for jack2 conflicts
       - sxiv
-      - terraform
       - thunderbird
       - ttf-hack # st font
-      - wireshark-cli
-      - wireshark-qt
       - xcompmgr
       - xorg-xwd
       - xwallpaper
@@ -35,11 +27,8 @@
   kewlfft.aur.aur:
     name:
       - authy
-      - httptoolkit-bin
-      - nvm
+      - debtap # to install .deb files
       - opensnitch
-      - quickemu
-      - qFlipper
       - timeshift
       - viber
     use: makepkg

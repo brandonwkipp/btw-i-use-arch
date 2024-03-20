@@ -1,0 +1,10 @@
+---
+- name: Install packages for USB display
+  include_tasks: packages.yml
+  tags:
+    - packages
+    - wine
+
+- name: Configure AxeEdit
+  include_tasks: axe-edit.yml
+  tags: wine

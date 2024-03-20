@@ -1,4 +1,39 @@
 ---
+- name: Install dev packages
+  pacman:
+    name:
+      - arduino
+      - aws-cli-v2
+      - code
+      - docker
+      - docker-compose
+      - go
+      - jq
+      - python
+      - rustup
+      - spice
+      - terraform
+      - wireshark-cli
+      - wireshark-qt
+      - virtualbox
+    state: present
+  tags: packages
+
+- name: Install AUR packages
+  kewlfft.aur.aur:
+    name:
+      - httptoolkit-bin
+      - nvm
+      - quickemu
+      - qFlipper
+    use: makepkg
+    state: present
+  become: yes
+  become_user: brandon
+  tags:
+    - packages
+    - aur
+
 - name: Set git config global values
   ansible.builtin.shell:
     git config --global core.editor /usr/bin/vim 
@@ -11,5 +46,12 @@
     state: directory
     owner: brandon
     group: wheel
+
+- name: Add brandon to the docker group
+  ansible.builtin.user:
+    name: brandon
+    append: true
+    groups: docker
+  tags: docker
 
 # rustup default stable ???
