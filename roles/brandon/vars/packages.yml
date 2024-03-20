@@ -1,0 +1,128 @@
+audio:
+  - bluez
+  - bluez-utils
+  - cdrtools # burning cds
+  - ecasound
+  # - fluidsynth # vlc midi support
+  - pd
+  - pipewire
+  - pipewire-alsa
+  - pipewire-audio
+  - pipewire-jack
+  - pipewire-pulse
+  - portmidi # orca
+  - qpwgraph
+  - reaper
+  - sdl2 # orca
+  # - soundfont-fluid # vlc midi support
+  - sox
+  - supercollider
+  - ttf-dejavu # default font for pure data
+  - vlc
+  - wireplumber
+  - yabridge
+  - yabridgectl
+base:
+  - acpi # do we need this?
+  - base
+  - base-devel
+  - devtools
+  - dhcpcd
+  - dosfstools # allows for formatting to FAT32
+  - efibootmgr
+  - firefox
+  - firefox-ublock-origin
+  - git
+  - gparted # for partitioning via gui
+  - iwd # wifi
+  - ldns
+  - linux
+  - linux-firmware
+  - linux-rt
+  - lm_sensors
+  - lsof
+  - man-db
+  - mtools
+  - openssh
+  - pacman-contrib
+  - reflector
+  - smbclient
+  - tcpdump
+  - tmux
+  - traceroute
+  - unarchiver
+  - unzip
+  - usbutils
+  - vim
+  - whois # mkpasswd
+  - xclip
+  - xorg-server
+  - xorg-xinit
+  - xorg-xrandr # set resolution
+  - xterm
+  - zsh
+brandon:
+  - bitwarden
+  - bitwarden-cli
+  - blender
+  - dmenu # dwm
+  - gimp
+  - inkscape
+  - libreoffice-still
+  - lynx
+  - newsboat
+  - noto-fonts-emoji # dwmblocks scripts emoji rendering
+  - pcmanfm
+  - pipewire
+  - pipewire-jack # override for jack2 conflicts
+  - sxiv
+  - thunderbird
+  - ttf-hack # st font
+  - xcompmgr
+  - xorg-xwd
+  - xwallpaper
+deepcool:
+  - python-hidapi
+  - python-psutil
+dev:
+  - arduino
+  - aws-cli-v2
+  - code
+  - docker
+  - docker-compose
+  - go
+  - jq
+  - python
+  - qt5-speech # talon
+  - rustup
+  - spice
+  - terraform
+  - wireshark-cli
+  - wireshark-qt
+  - virtualbox
+printer:
+  - cups
+  - cups-pdf
+  - dpkg
+  - libtiff
+  - sane
+thinkpad:
+  - acpilight
+wine:
+  - wine
+  - winetricks
+vst:
+  - cmake
+  - gcc
+  - gcc-libs
+  - libxcb
+  - libxkbcommon
+  - libxkbcommon-x11
+  - fontconfig
+  - cairo
+  - gtkmm
+  - qtcreator
+  - sqlite3
+  - xcb-util
+  - xcb-util-cursor
+  - xcb-util-keysyms
