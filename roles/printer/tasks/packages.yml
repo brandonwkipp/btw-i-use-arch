@@ -14,7 +14,8 @@
 - name: Install (Brother) 3rd party applications
   kewlfft.aur.aur:
     name:
-      - brsaneconfig4
+      - brother-dcp-l2550dw
+      - brscan4
       - brscan-skey
     use: makepkg
     state: presnt
