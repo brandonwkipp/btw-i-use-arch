@@ -48,6 +48,7 @@
 - name: Install audio AUR packages
   kewlfft.aur.aur:
     name:
+      - a-sid
       - bitwig-studio
       - butler #auburn audio plugins
       # - jamulus

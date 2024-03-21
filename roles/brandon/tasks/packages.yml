@@ -28,6 +28,7 @@
     name:
       - authy
       - debtap # to install .deb files
+      - localsend-bin
       - opensnitch
       - timeshift
       - viber
