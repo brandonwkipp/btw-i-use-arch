@@ -18,7 +18,7 @@
   ansible.builtin.git:
     repo: https://git.sr.ht/~rabbits/uxn
     dest: /home/brandon/www/uxn
-  become: yes
+  become: true
   become_user: brandon
   tags: uxn
 
@@ -34,7 +34,7 @@
   ansible.builtin.git:
     repo: https://git.sr.ht/~rabbits/orca-toy
     dest: /home/brandon/www/orca-toy
-  become: yes
+  become: true
   become_user: brandon
   tags: uxn
 
@@ -43,7 +43,7 @@
     cd /home/brandon/www/orca-toy
     mkdir -p /home/brandon/www/orca-toy/bin
     uxnasm src/orca.tal /home/brandon/www/orca-toy/bin/orca.rom
-  become: yes
+  become: true
   become_user: brandon
   ignore_errors: true
   tags: uxn
@@ -52,7 +52,7 @@
   ansible.builtin.git:
     repo: https://git.sr.ht/~rabbits/shim
     dest: /home/brandon/www/shim
-  become: yes
+  become: true
   become_user: brandon
   tags: uxn
 
@@ -61,8 +61,7 @@
     cd /home/brandon/www/shim
     mkdir -p /home/brandon/www/shim/bin
     ./build.sh
-  become: yes
+  become: true
   become_user: brandon
   ignore_errors: true
   tags: uxn
-

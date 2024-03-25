@@ -9,7 +9,9 @@
       - docker-compose
       - go
       - jq
+      - py-env
       - python
+      - python-poetry
       - rustup
       - spice
       - terraform
@@ -28,18 +30,17 @@
       - qFlipper
     use: makepkg
     state: present
-  become: yes
+  become: true
   become_user: brandon
   tags:
     - packages
     - aur
 
 - name: Set git config global values
-  ansible.builtin.shell:
-    git config --global core.editor /usr/bin/vim 
+  ansible.builtin.shell: git config --global core.editor /usr/bin/vim
     git config --global user.email "brandonwkipp@gmail.com"
     git config --global user.name "brandonwkipp"
-    
+
 - name: Create ~/www
   ansible.builtin.file:
     path: /home/brandon/www
@@ -53,5 +54,4 @@
     append: true
     groups: docker
   tags: docker
-
 # rustup default stable ???

@@ -9,7 +9,7 @@
     repo: https://github.com/brandonwkipp/st
     dest: /home/brandon/www/st
     version: patches
-  become: yes
+  become: true
   become_user: brandon
 
 - name: Install st
@@ -22,7 +22,7 @@
     repo: https://github.com/brandonwkipp/dwmblocks
     dest: /home/brandon/www/dwmblocks
     version: patches
-  become: yes
+  become: true
   become_user: brandon
 
 - name: Install dwmblocks
@@ -35,7 +35,7 @@
     repo: https://github.com/brandonwkipp/dwm
     dest: /home/brandon/www/dwm
     version: patches
-  become: yes
+  become: true
   become_user: brandon
 
 - name: Install dwm

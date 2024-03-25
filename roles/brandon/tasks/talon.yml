@@ -12,7 +12,7 @@
   ansible.builtin.get_url:
     url: https://talonvoice.com/dl/latest/talon-linux.tar.xz
     dest: /home/brandon/talon-linux.tar.xz
-  become: yes
+  become: true
   become_user: brandon
   tags: talon
 
@@ -20,7 +20,7 @@
   ansible.builtin.unarchive:
     src: /home/brandon/talon-linux.tar.xz
     dest: /home/brandon
-  become: yes
+  become: true
   become_user: brandon
   tags: talon
 
@@ -28,4 +28,4 @@
   ansible.builtin.file:
     path: /home/brandon/talon-linux.tar.xz
     state: absent
-  tags: talon 
+  tags: talon

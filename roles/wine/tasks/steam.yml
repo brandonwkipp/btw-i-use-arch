@@ -1,0 +1,6 @@
+---
+- name:
+  pacman:
+    - gamescope
+  state: present
+  tags: packages
