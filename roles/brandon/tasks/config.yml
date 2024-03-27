@@ -43,6 +43,24 @@
     mode: 0755
   tags: config
 
+
+- name: Create colorschems dir
+  ansible.builtin.file:
+    path: /home/brandon/.vim/colors
+    state: directory
+    owner: brandon
+    group: wheel
+  tags: config
+
+- name: Copy vim colorschemes
+  ansible.builtin.copy:
+    src: ../files/config/colorschemes/
+    dest: /home/brandon/.vim/colors/
+    owner: brandon
+    group: wheel
+    mode: 0755
+  tags: config
+
 - name: Copy .zprofile
   ansible.builtin.copy:
     src: ../files/config/.zprofile

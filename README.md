@@ -26,3 +26,6 @@ ansible-galaxy collection install kewlfft.aur
 - [dwm](docs/dwm.md)
 - [manual tasks](docs/manual-tasks.md)
 - [wine](docs/wine.md)
+
+## Special Thanks
+- [Rigellute](https://github.com/Rigellute/shades-of-purple.vim)
