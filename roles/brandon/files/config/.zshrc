@@ -28,6 +28,7 @@ source /usr/share/nvm/init-nvm.sh
 # Aliases
 alias ansible-playbook="sudo ansible-playbook"
 alias dmesg="sudo dmesg"
+alias go2bios="systemctl reboot --firmware-setup"
 alias history="history 0"
 alias mount="sudo mount"
 alias mountshare="sudo mountshare"
