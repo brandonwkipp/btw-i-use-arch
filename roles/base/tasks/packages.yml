@@ -12,7 +12,6 @@
       - firefox-ublock-origin
       - git
       - gparted # for partitioning via gui
-      # - grub
       - iwd # wifi
       - ldns
       - linux
