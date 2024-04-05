@@ -9,7 +9,7 @@
       - docker-compose
       - go
       - jq
-      - py-env
+      - pyenv
       - python
       - python-poetry
       - rustup

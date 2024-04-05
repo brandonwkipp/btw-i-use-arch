@@ -43,8 +43,7 @@
     mode: 0755
   tags: config
 
-
-- name: Create colorschems dir
+- name: Create colorschemes dir
   ansible.builtin.file:
     path: /home/brandon/.vim/colors
     state: directory
@@ -86,10 +85,11 @@
   tags: config
 
 - name: Copy newsboat urls
- ansible.builtin.copy:
-   src: ../files/config/.newsboat/urls
-   dest: /home/brandon/.newsboat/urls
-   owner: brandon
-   group: wheel
-   mode: u=rw,g=r,o=r
- tags: config
+  ansible.builtin.copy:
+    src: ../files/config/.newsboat/urls
+    dest: /home/brandon/.newsboat/urls
+    owner: brandon
+    group: wheel
+    mode: 0644
+  tags: config
+
