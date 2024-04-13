@@ -9,6 +9,11 @@
       - docker-compose
       - go
       - jq
+<<<<<<< Updated upstream
+=======
+      - jupyter-nbclient
+      - jupyter-nbconvert
+>>>>>>> Stashed changes
       - pyenv
       - python
       - python-poetry
