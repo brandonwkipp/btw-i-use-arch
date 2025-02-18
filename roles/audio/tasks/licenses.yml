@@ -1,0 +1,12 @@
+---
+
+- name: Copy Reaper license
+  ansible.builtin.copy:
+    src: ../files/licenses/reaper-license.rk
+    dest: /home/brandon/.config/REAPER/reaper-license.rk
+    decrypt: yest
+    owner: brandon
+    group: brandon
+    mode: 0644
+  tags:
+    - audio
