@@ -23,6 +23,12 @@
     - midi
     - plugins
 
+- name: Install licenses
+  include_tasks: licenses.yml
+  tags:
+    - audio
+    - licenses
+
 - name: Enable & start bluetooth daemon
   include_tasks: bluetooth.yml
   tags:

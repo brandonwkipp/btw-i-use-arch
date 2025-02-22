@@ -51,6 +51,7 @@
       - a-sid
       - bitwig-studio
       - butler #auburn audio plugins
+      - roomeqwizard
       # - jamulus
     use: makepkg
     state: present
