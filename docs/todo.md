@@ -6,3 +6,4 @@
 - lynx SET_COOKIES false
 - node setup (consistent, bw)
 - yabridge automation
+- Server Mono font: https://servermono.com/
