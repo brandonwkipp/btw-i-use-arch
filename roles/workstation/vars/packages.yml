@@ -1,0 +1,171 @@
+audio:
+  - artyfx # plugin
+  - bchoppr # plugin
+  - bluez
+  - bluez-utils
+  - bshapr # plugin
+  - bslizr # plugin
+  - calf # plugin
+  - cairo # vst
+  - cdrtools # burning cds
+  - cmake # vst
+  - dexed # plugin
+  - dragonfly-reverb # plugin
+  - drumkv1 # plugin
+  - ecasound
+  - fabla # plugin
+  - fontconfig # vst
+  - gcc # vst
+  - gcc-libs # vst
+  - gtkmm # vst
+  - libxcb # vst
+  - libxkbcommon # vst
+  - libxkbcommon-x11 # vst
+  - lsp-plugins # plugin
+  - pd
+  - pipewire
+  - pipewire-alsa
+  - pipewire-audio
+  - pipewire-jack
+  - pipewire-pulse
+  - portmidi # orca
+  - qpwgraph
+  - qtcreator # vst
+  - reaper
+  - samplv1 # plugin
+  - sdl2 # orca
+  - sox
+  - spectmorph # plugin
+  - sqlite3 # vst
+  - supercollider
+  - swh-plugins # plugin
+  - synthv1 # plugin
+  - ttf-dejavu # default font for pure data
+  - vlc
+  - wireplumber
+  - wolf-shaper # plugin
+  - x42-plugins # plugin
+  - xcb-util # vst
+  - xcb-util-cursor # vst
+  - xcb-util-keysyms # vst
+  - yabridge
+  - yabridgectl
+
+aur:
+  # Audio
+  - a-sid
+  - bitwig-studio
+  # - jamulus
+  - roomeqwizard
+  # Base
+  - debtap # to install .deb files
+  - localsend-bin
+  - opensnitch
+  - timeshift
+  - viber
+
+workstation:
+  - acpi # Advanced Configuration and Power Interface
+  - acpilight # screen brightness
+  - arduino
+  - aws-cli-v2
+  - base
+  - base-devel
+  - bitwarden
+  - bitwarden-cli
+  - blender
+  - brother-dcp-l2550dw # printer
+  - brscan-skey # printer
+  - brscan4 # printer
+  - code
+  - devtools
+  - dmenu # dwm
+  - docker
+  - docker-compose
+  - dosfstools # allows for formatting to FAT32
+  - efibootmgr
+  - firefox
+  - firefox-ublock-origin
+  - gamescope # morrowind
+  - gimp
+  - git
+  - go
+  - gparted # for partitioning via gui
+  - inkscape
+  - iwd # wifi
+  - jq
+  - ldns
+  - libreoffice-still
+  - linux
+  - linux-firmware
+  - linux-rt
+  - lm_sensors
+  - lsof
+  - lynx
+  - man-db
+  - mtools
+  - newsboat
+  - noto-fonts-emoji # dwm
+  - openssh
+  - pacman-contrib
+  - pcmanfm
+  - python
+  - qemu-desktop
+  - qt5-speech # talon
+  - reflector
+  - rustup
+  - smbclient
+  - spice
+  - sxiv
+  - tcpdump
+  - terraform
+  - thunderbird
+  - tmux
+  - traceroute
+  - ttf-hack # st
+  - unarchiver
+  - unzip
+  - usbutils
+  - virtualbox
+  - vim
+  - whois # mkpasswd
+  - wine
+  - winetricks
+  - wireshark-cli
+  - wireshark-qt
+  - xclip # bitwarden helper script (bwc)
+  - xcompmgr
+  - xorg-server
+  - xorg-xinit
+  - xorg-xrandr # set resolution
+  - xorg-xwd
+  - xterm
+  - xwallpaper
+  - zsh
+
+osmium:
+  - python-hidapi
+  - python-psutil
+
+printer:
+  - cups
+  - cups-pdf
+  - dpkg
+  - libtiff
+  - sane
+
+vst:
+  - cmake
+  - gcc
+  - gcc-libs
+  - libxcb
+  - libxkbcommon
+  - libxkbcommon-x11
+  - fontconfig
+  - cairo
+  - gtkmm
+  - qtcreator
+  - sqlite3
+  - xcb-util
+  - xcb-util-cursor
+  - xcb-util-keysyms

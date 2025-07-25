@@ -1,6 +1,0 @@
----
-- name:
-  pacman:
-    - gamescope # morrowind
-  state: present
-  tags: packages

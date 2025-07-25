@@ -2,9 +2,7 @@
 - hosts: localhost
   become: true
   roles:
-    - { role: base, tags: ['base'] }
-    - { role: brandon, tags: ['brandon'] }
-    - { role: audio, tags: ['audio'] }
-    - { role: thinkpad, tags: ['thinkpad'] }
-    - { role: printer, tags: ['printer'] }
-    - { role: wine, tags: ['wine'] }
+    - { role: core, tags: ['core'] }
+    - { role: osmium, tags: ['osmium'] }
+    - { role: radium, tags: ['radium'] }
+    - { role: workstation, tags: ['workstation'] }

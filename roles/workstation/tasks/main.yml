@@ -1,0 +1,36 @@
+---
+- name: Create brandon user
+  include_tasks: user.yml
+
+- name: Install packages & AUR packages
+  include_tasks: packages.yml
+  tags:
+    - aur
+    - packages
+
+- name: Copy configs
+  include_tasks: config.yml
+  tags:
+    - config
+
+- name: Setup dev env
+  include_tasks: dev.yml
+
+- name: Install dwm
+  include_tasks: dwm.yml
+  tags: dwm
+
+#- name: Install Talon
+#  include_tasks: talon.yml
+#  tags:
+#    - packages
+#    - talon
+
+- name: Add udev rule to allow use of xbacklight without sudo
+  include_tasks: udev.yml
+  tags:
+    - thinkpad
+
+- name: Configure AxeEdit
+  include_tasks: axe-edit.yml
+  tags: wine

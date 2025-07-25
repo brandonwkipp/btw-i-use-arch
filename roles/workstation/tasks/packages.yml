@@ -1,0 +1,17 @@
+---
+- name: Install packages
+  pacman:
+    name: "{{ audio + vm}}"
+    state: present
+  tags: packages
+
+- name: Install AUR packages
+  kewlfft.aur.aur:
+    name: "{{ aur }}"
+    use: makepkg
+    state: present
+  become: true
+  become_user: brandon
+  tags:
+    - packages
+    - aur

@@ -1,0 +1,10 @@
+---
+- name: Install Thinkpad-related packages
+  include_tasks: packages.yml
+  tags:
+    - packages
+
+- name: Copy libinput config
+  include_tasks: config.yml
+  tags:
+    - thinkpad

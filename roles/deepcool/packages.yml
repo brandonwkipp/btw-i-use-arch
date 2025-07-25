@@ -1,9 +1,0 @@
----
-- name: DeepCool machine-specific packages
-  pacman:
-    name:
-      - nvidia
-      - python-hidapi
-      - python-psutil
-    state: present
-  tags: deepcool

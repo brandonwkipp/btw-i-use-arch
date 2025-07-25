@@ -1,0 +1,9 @@
+---
+- name: Install Thinkpad-related AUR packages
+  kewlfft.aur.aur:
+    name:
+      - thinkfan
+    use: makepkg
+    state: present
+  become: true
+  become_user: brandon

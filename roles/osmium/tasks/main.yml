@@ -1,0 +1,10 @@
+---
+- name: Install osmium-specific packages
+  pacman:
+    name:
+      - nvidia
+      - python-hidapi
+      - python-psutil
+    state: present
+  tags:
+    - osmium

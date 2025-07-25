@@ -1,7 +1,0 @@
----
-- name: Install packages & dependencies
-  include_tasks: packages.yml
-
-# dpkg driver
-# start/enable cups
-# lpadmin -d DCPL2550DW
