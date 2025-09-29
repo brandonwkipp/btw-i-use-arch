@@ -1,0 +1,7 @@
+packages_extra:
+  - nvidia
+  - python-hidapi
+  - python-psutil
+
+extra_scripts: []
+extra_configs: []

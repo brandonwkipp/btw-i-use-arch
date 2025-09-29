@@ -1,0 +1,5 @@
+---
+- name: test role - no-op confirmation
+  debug:
+    msg: "test role ran on {{ ansible_hostname }} (machine_name={{ machine_name }})"
+  changed_when: false

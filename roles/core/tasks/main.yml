@@ -2,9 +2,9 @@
 - name: Enable additional repositories
   include_tasks: repo.yml
 
-- name: Install base packages
-  include_tasks: packages.yml
-  tags: packages
+# - name: Install base packages
+#   include_tasks: packages.yml
+#   tags: packages
 
 - name: Configure networking
   include_tasks: networking.yml

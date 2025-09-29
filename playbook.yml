@@ -1,8 +1,27 @@
 ---
 - hosts: localhost
   become: true
+  connection: local
+  gather_facts: true
+
+  vars_files:
+    - vars/common.yml
+
+  pre_tasks:
+    - name: Decide machine name (CLI wins, else hostname)
+      set_fact:
+        machine_name: "{{ machine | default(ansible_hostname | lower) }}"
+      tags: [always]
+
+    - name: Load machine profile
+      include_vars:
+        file: "vars/machines/{{ machine_name }}.yml"
+      tags: [always]
+
   roles:
-    - { role: core, tags: ['core'] }
-    - { role: osmium, tags: ['osmium'] }
-    - { role: radium, tags: ['radium'] }
-    - { role: workstation, tags: ['workstation'] }
+    - role: core
+      tags: [core]
+    - role: test
+      tags: [test]
+    - role: workstation
+      tags: [workstation]

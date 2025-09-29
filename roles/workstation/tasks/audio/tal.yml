@@ -1,64 +1,71 @@
 ---
-- name: Check if TAL Sampler is installed
-  stat:
-    path: ansible_env.HOME/.vst3/TAL-Sampler.vst3
-  register: sampler_vst3
-  tags:
-    - audio
-    - midi
-    - plugins
+vars:
+  vst3_dir: "{{ ansible_env.HOME }}/.vst3"
+  vst_owner: brandon
+  vst_group: wheel
+  tal_plugins:
+    - name: TAL-Sampler
+      zip: https://tal-software.com/downloads/plugins/TAL-Sampler_64_linux.zip
+      vst3: TAL-Sampler.vst3
+    - name: TAL-Vocoder-2
+      zip: https://tal-software.com/downloads/plugins/TAL-Vocoder-2_64_linux.zip
+      vst3: TAL-Vocoder-2.vst3
+    - name: TAL-Chorus-LX
+      zip: https://tal-software.com/downloads/plugins/TAL-Chorus-LX_64_linux.zip
+      vst3: TAL-Chorus-LX.vst3
+    - name: TAL-Drum
+      zip: https://tal-software.com/downloads/plugins/TAL-Drum_64_linux.zip
+      vst3: TAL-Drum.vst3
+    - name: TAL-NoiseMaker
+      zip: https://tal-software.com/downloads/plugins/TAL-NoiseMaker_64_linux.zip
+      vst3: TAL-NoiseMaker.vst3
 
-- name: Install TAL Sampler if not installed
-  when: not sampler_vst3.stat.exists
-  block:
-    - name: Download TAL Sampler
-      ansible.builtin.unarchive:
-        src: https://tal-software.com/downloads/plugins/TAL-Sampler_64_linux.zip
-        dest: /tmp
-        remote_src: yes
-        list_files: yes
-      register: tal_sampler_archive
+tasks:
+  - name: Ensure VST3 directory exists
+    file:
+      path: "{{ vst3_dir }}"
+      state: directory
+      owner: "{{ vst_owner }}"
+      group: "{{ vst_group }}"
+      mode: "0755"
+    tags: [audio, midi, plugins]
 
-    - name: Copy TAL Sampler into VST3 dir
-      ansible.builtin.copy:
-        src: "/tmp/{{ tal_sampler_archive.files[0].split('/')[0] }}/TAL-Sampler.vst3"
-        dest: /home/brandon/.vst3
-        owner: brandon
-        group: wheel
-        mode: "0755"
-  tags:
-    - audio
-    - midi
-    - plugins
+  - name: Check if TAL plugins are installed
+    stat:
+      path: "{{ vst3_dir }}/{{ item.vst3 }}"
+    register: tal_stat
+    loop: "{{ tal_plugins }}"
+    loop_control:
+      label: "{{ item.vst3 }}"
+    tags: [audio, midi, plugins]
 
-- name: Check if TAL Vocoder is installed
-  stat:
-    path: ansible_env.HOME/.vst3/TAL-Vocoder.vst3
-  register: vocoder_vst3
-  tags:
-    - audio
-    - midi
-    - plugins
+  - name: Install missing TAL plugins
+    when: not tal_stat.results[loop.index0].stat.exists
+    block:
+      - name: Download & extract {{ item.name }}
+        ansible.builtin.unarchive:
+          src: "{{ item.zip }}"
+          dest: /tmp
+          remote_src: yes
+        register: tal_unpacked
 
-- name: Download TAL Vocoder if not installed
-  when: not vocoder_vst3.stat.exists
-  block:
-    - name: Download TAL Vocoder
-      ansible.builtin.unarchive:
-        src: https://tal-software.com/downloads/plugins/TAL-Vocoder-2_64_linux.zip
-        dest: /tmp
-        remote_src: yes
-        list_files: yes
-      register: tal_vocoder_archive
+      - name: Locate extracted {{ item.vst3 }}
+        ansible.builtin.find:
+          paths: /tmp
+          patterns: "{{ item.vst3 }}"
+          recurse: yes
+          file_type: file
+          depth: 3
+        register: tal_found
 
-    - name: Copy TAL Vocoder into VST3 dir
-      ansible.builtin.copy:
-        src: "/tmp/{{ tal_vocoder_archive.files[0].split('/')[0] }}/TAL-Vocoder-2.vst3"
-        dest: /home/brandon/.vst3
-        owner: brandon
-        group: wheel
-        mode: "0755"
-  tags:
-    - audio
-    - midi
-    - plugins
+      - name: Copy {{ item.vst3 }} into VST3 dir
+        ansible.builtin.copy:
+          src: "{{ tal_found.files[0].path }}"
+          dest: "{{ vst3_dir }}/{{ item.vst3 }}"
+          owner: "{{ vst_owner }}"
+          group: "{{ vst_group }}"
+          mode: "0755"
+    loop: "{{ tal_plugins }}"
+    loop_control:
+      label: "{{ item.vst3 }}"
+    tags: [audio, midi, plugins]

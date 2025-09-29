@@ -1,9 +1,35 @@
+# ---
+# - name: Install packages
+#   pacman:
+#     name: "{{ audio + vm}}"
+#     state: present
+#   tags: packages
+
+# - name: Install AUR packages
+#   kewlfft.aur.aur:
+#     name: "{{ aur }}"
+#     use: makepkg
+#     state: present
+#   become: true
+#   become_user: brandon
+#   tags:
+#     - packages
+#     - aur
+
 ---
 - name: Install packages
   pacman:
-    name: "{{ audio + vm}}"
+    name: >
+      {{ 
+        audio
+        + workstation
+        + printer
+        + vst
+        + (packages_workstation_extra | default([])) 
+      }}
     state: present
-  tags: packages
+    update_cache: true
+  tags: [packages]
 
 - name: Install AUR packages
   kewlfft.aur.aur:
@@ -12,6 +38,4 @@
     state: present
   become: true
   become_user: brandon
-  tags:
-    - packages
-    - aur
+  tags: [aur]

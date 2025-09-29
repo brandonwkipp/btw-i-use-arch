@@ -57,16 +57,21 @@ aur:
   - bitwig-studio
   # - jamulus
   - roomeqwizard
+  - zl-equalizer-bin
   # Base
+  - acpilight # screen brightness
   - debtap # to install .deb files
   - localsend-bin
   - opensnitch
   - timeshift
   - viber
+  # printer
+  - brother-dcp-l2550dw # printer
+  - brscan-skey # printer
+  - brscan4 # printer
 
 workstation:
   - acpi # Advanced Configuration and Power Interface
-  - acpilight # screen brightness
   - arduino
   - aws-cli-v2
   - base
@@ -74,14 +79,9 @@ workstation:
   - bitwarden
   - bitwarden-cli
   - blender
-  - brother-dcp-l2550dw # printer
-  - brscan-skey # printer
-  - brscan4 # printer
   - code
   - devtools
   - dmenu # dwm
-  - docker
-  - docker-compose
   - dosfstools # allows for formatting to FAT32
   - efibootmgr
   - firefox
@@ -142,10 +142,6 @@ workstation:
   - xterm
   - xwallpaper
   - zsh
-
-osmium:
-  - python-hidapi
-  - python-psutil
 
 printer:
   - cups
