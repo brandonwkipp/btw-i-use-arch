@@ -65,7 +65,12 @@ aur:
   - opensnitch
   - timeshift
   - viber
-  # printer
+  # Dev
+  - httptoolkit-bin
+  - nvm
+  - quickemu
+  - qFlipper
+  # Printer
   - brother-dcp-l2550dw # printer
   - brscan-skey # printer
   - brscan4 # printer
@@ -109,7 +114,9 @@ workstation:
   - openssh
   - pacman-contrib
   - pcmanfm
+  - pyenv
   - python
+  - python-poetry
   - qemu-desktop
   - qt5-speech # talon
   - reflector

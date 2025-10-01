@@ -1,0 +1,31 @@
+---
+- name: Ensure udev rules dir exists
+  file:
+    path: /etc/udev/rules.d
+    state: directory
+    mode: "0755"
+
+- name: Add backlight permissions (radium only)
+  ansible.builtin.copy:
+    src: udev/90-backlight.rules
+    dest: /etc/udev/rules.d/90-backlight.rules
+    mode: "0644"
+  notify: udev-reload
+  tags: [radium]
+
+- name: Reload udev rules
+  command: udevadm control --reload
+  listen: udev-reload
+
+- name: Trigger udev
+  command: udevadm trigger
+  listen: udev-reload
+
+- name: Copy libinput for X
+  ansible.builtin.copy:
+    src: config/libinput
+    dest: /etc/X11/xorg.conf.d/99-radium.conf
+    owner: brandon
+    group: wheel
+    mode: 0644
+  tags: config

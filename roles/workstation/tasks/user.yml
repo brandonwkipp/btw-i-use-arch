@@ -38,3 +38,10 @@
     create: yes
     validate: "visudo -cf %s"
   tags: brandon
+
+- name: Create ~/www
+  ansible.builtin.file:
+    path: /home/brandon/www
+    state: directory
+    owner: brandon
+    group: wheel

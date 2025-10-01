@@ -60,6 +60,11 @@
     mode: 0755
   tags: config
 
+- name: Set git config global values
+  ansible.builtin.shell: git config --global core.editor /usr/bin/vim
+    git config --global user.email "brandonwkipp@gmail.com"
+    git config --global user.name "brandonwkipp"
+
 - name: Copy .zprofile
   ansible.builtin.copy:
     src: ../files/config/.zprofile
@@ -92,4 +97,3 @@
     group: wheel
     mode: 0644
   tags: config
-

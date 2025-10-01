@@ -13,9 +13,6 @@
   tags:
     - config
 
-- name: Setup dev env
-  include_tasks: dev.yml
-
 - name: Install dwm
   include_tasks: dwm.yml
   tags: dwm
@@ -26,11 +23,11 @@
 #    - packages
 #    - talon
 
-- name: Add udev rule to allow use of xbacklight without sudo
-  include_tasks: udev.yml
-  tags:
-    - thinkpad
-
 - name: Configure AxeEdit
   include_tasks: axe-edit.yml
   tags: wine
+
+- name: Radium-specific tweaks
+  include_tasks: radium.yml
+  when: machine_name == "radium"
+  tags: [radium]
